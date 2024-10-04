@@ -4,18 +4,18 @@ import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import { FaCheck } from "react-icons/fa";
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif,webp}",
+  "/src/assets/*.{jpeg,jpg,png,gif,webp}"
 );
 if (!images[data.imagePath]) {
   throw new Error(
-    `"${data.imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`,
+    `"${data.imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`
   );
 }
 ---
 
 <a
   href=`/acquisitions-sales/${slug}`
-  class="flex max-w-sm gap-2 group outline outline-dark-blue flex-col rounded-sm p-8 text-dark-blue hover:scale-[1.02] duration-200 relative"
+  class="flex max-w-sm gap-2 group outline outline-primary-600 flex-col rounded-sm p-8 text-primary-600 hover:scale-[1.02] duration-200 relative"
 >
   {
     data.hasRibbon && data.ribbonTitle && (
@@ -43,10 +43,10 @@ if (!images[data.imagePath]) {
   </div>
   <p class="font-semibold text-xl">{data.price}</p>
   <div
-    class="flex-1 text-dark-blue flex flex-col max-h-[28rem] justify-between"
+    class="flex-1 text-primary-600 flex flex-col max-h-[28rem] justify-between"
   >
     <p class="line-clamp-4 paragraph text-sm">{data.description[0]}</p>
-    <button class="btn-dark-blue mt-5 block w-full group-hover:bg-red-700"
+    <button class="btn-primary-600 mt-5 block w-full group-hover:bg-red-700"
       >More info</button
     >
   </div>

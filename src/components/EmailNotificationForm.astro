@@ -28,7 +28,7 @@ const EMAIL_FORM_WEBHOOK_URL = import.meta.env.EMAIL_FORM_WEBHOOK_URL;
     />
     <button
       type="submit"
-      class="btn-dark-blue hover:outline hover:outline-dark-blue hover:bg-white hover:text-dark-blue border-blue-800 px-8 lg:absolute lg:right-[1px] py-4 lg:top-[1px] mt-10 lg:mt-0"
+      class="btn-primary-600 hover:outline hover:outline-primary-600 hover:bg-white hover:text-primary-600 border-blue-800 px-8 lg:absolute lg:right-[1px] py-4 lg:top-[1px] mt-10 lg:mt-0"
     >
       Sign up
     </button>
@@ -70,7 +70,7 @@ const EMAIL_FORM_WEBHOOK_URL = import.meta.env.EMAIL_FORM_WEBHOOK_URL;
         xhr.open("POST", quickStartForm.action);
         xhr.setRequestHeader(
           "Content-Type",
-          "application/x-www-form-urlencoded",
+          "application/x-www-form-urlencoded"
         );
         xhr.onload = function () {
           // Check if the request was successful (status 200)

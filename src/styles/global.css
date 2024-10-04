@@ -3,17 +3,31 @@
 @tailwind utilities;
 
 @layer components {
-  .btn-dark-blue {
-    @apply text-center font-bold py-5 px-14 bg-dark-blue w-fit text-white rounded-full hover:bg-red-700 duration-300;
+  .btn-primary {
+    @apply text-center uppercase font-bold py-3 px-6 bg-primary-700 w-fit text-white rounded-sm hover:bg-primary-800 duration-300;
+  }
+
+  .btn-accent {
+    @apply text-center uppercase font-bold py-3 px-6 bg-accent w-fit text-primary-dark rounded-sm hover:bg-accent-300 duration-100;
+  }
+
+  .btn-animate {
+    @apply hover:before:bg-primary-600 relative overflow-hidden px-3 text-white transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-black before:transition-all before:duration-300 hover:before:left-0 hover:before:w-full ease-in-out;
   }
   .btn-white {
-    @apply text-center font-bold py-4 px-8 outline outline-1 outline-gray-700 w-fit bg-gray-100 text-dark-blue rounded-full;
+    @apply text-center uppercase font-bold py-3 px-6 ring-1 ring-white w-fit bg-white/10 hover:bg-primary-900/30 hover:ring-white/50 hover:text-white text-primary-50 rounded-sm duration-300;
   }
-  .btn-red {
-    @apply text-center font-bold py-5 px-14 bg-gradient-to-br from-red-600 to-red-800 w-fit text-white hover:from-white hover:to-gray-100 hover:text-dark-blue rounded-full duration-300;
-  }
+
   .paragraph {
-    @apply text-gray-500 lg:text-lg leading-loose;
+    @apply text-gray-600 lg:text-base leading-loose font-sans;
+  }
+
+  .tooltip {
+  @apply invisible opacity-0 absolute rounded-sm shadow-md shadow-slate-800/50 bg-gray-50 text-center text-gray-800;
+  }
+
+  .has-tooltip:hover .tooltip {
+    @apply visible opacity-95 transition-all duration-300 cursor-help;
   }
 }
 

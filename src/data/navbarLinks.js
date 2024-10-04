@@ -1,20 +1,43 @@
 export const navbarLinks = [
   {
-    name: "Home",
-    link: "/",
-    submenu: [],
-  },
-  {
     name: "New to Flying?",
-    link: "/why-become-a-pilot",
-    submenu: [],
-  },
-  {
-    name: "Training Programs",
     submenu: [
       {
+        name: "Why Become a Pilot?",
+        link: "/why-become-a-pilot",
+      },
+      {
+        name: "Discovery Flight",
+        link: "/discovery-flight",
+      },
+      {
+        name: "Flight Training",
+        link: "/flight-training-pilot-programs",
+      },
+      {
+        name: "Become a Professional Pilot",
+        link: "/professional-pilot-course",
+      },
+      {
+        name: "Financing",
+        link: "/stratus-finance",
+      },
+    ],
+  },
+  {
+    name: "Training Courses",
+    submenu: [
+      {
+        name: "Professional Pilot",
+        link: "/professional-pilot-course",
+      },
+      {
         name: "Private Pilot",
-        link: "/private-pilot",
+        link: "/private-pilot-training",
+      },
+      {
+        name: "Group Ground School",
+        link: "/group-ground-school",
       },
       {
         name: "Instrument Rating",
@@ -22,15 +45,49 @@ export const navbarLinks = [
       },
       {
         name: "Commercial Pilot",
-        link: "/commercial-pilot",
+        link: "/commercial-pilot-training",
       },
       {
-        name: "Certified Flight Instructor",
-        link: "/certified-flight-instructor",
+        name: "Multi-Engine Rating",
+        link: "/multi-engine-rating",
+      },
+      {
+        name: "Flight Instructor",
+        link: "/certified-flight-instructor-cfi",
       },
       {
         name: "Airline Transport Pilot",
-        link: "/airline-transport-pilot",
+        link: "/airline-transport-pilot-atp",
+      },
+      {
+        name: "Flight Review",
+        link: "/flight-review-bfr",
+      },
+      {
+        name: "Instrument Proficiency Check",
+        link: "/instrument-proficiency-check-ipc",
+      },
+      {
+        name: "Wingman Course",
+        link: "/wingman-family-member-training",
+      },
+      {
+        name: "Sea Plane Safari",
+        link: "/seaplane-pilot-training",
+      },
+    ],
+  },
+
+  {
+    name: "Youth Program",
+    submenu: [
+      {
+        name: "Experience Aviation",
+        link: "/experience-aviation",
+      },
+      {
+        name: "Aviation 101",
+        link: "/youth-aviation-class",
       },
     ],
   },
@@ -51,14 +108,14 @@ export const navbarLinks = [
         link: "/about/our-fleet",
       },
       {
-        name: "Learning Center",
-        link: "/about/learning-center",
+        name: "Blog",
+        link: "/blog",
       },
     ],
   },
   {
-    name: "CONTACT US",
-    link: "/contact",
+    name: "Start Today",
+    link: "/enroll-now",
     submenu: [],
   },
 ];

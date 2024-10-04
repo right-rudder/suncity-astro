@@ -74,7 +74,7 @@ const QUICK_START_FORM_WEBHOOK_URL = import.meta.env
     id="submit-button"
     disabled
     type="submit"
-    class="px-5 py-3 btn-dark-blue w-full cursor-not-allowed bg-gray-400 hover:bg-gray-400"
+    class="px-5 py-3 btn-primary-600 w-full cursor-not-allowed bg-gray-400 hover:bg-gray-400"
     >START FLYING</button
   >
 </form>
@@ -114,7 +114,7 @@ const QUICK_START_FORM_WEBHOOK_URL = import.meta.env
         xhr.open("POST", quickStartForm.action);
         xhr.setRequestHeader(
           "Content-Type",
-          "application/x-www-form-urlencoded",
+          "application/x-www-form-urlencoded"
         );
         xhr.onload = function () {
           // Check if the request was successful (status 200)
@@ -146,14 +146,14 @@ const QUICK_START_FORM_WEBHOOK_URL = import.meta.env
       submitButton.classList.remove(
         "cursor-not-allowed",
         "bg-gray-400",
-        "hover:bg-gray-400",
+        "hover:bg-gray-400"
       );
     } else {
       submitButton.disabled = true;
       submitButton.classList.add(
         "cursor-not-allowed",
         "bg-gray-400",
-        "hover:bg-gray-400",
+        "hover:bg-gray-400"
       );
     }
   });

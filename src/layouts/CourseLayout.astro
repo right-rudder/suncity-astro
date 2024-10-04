@@ -9,19 +9,19 @@ import EmailCTA from "../components/EmailCTA.astro";
 import GetInContact from "../components/GetInContact.astro";
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif,webp}",
+  "/src/assets/*.{jpeg,jpg,png,gif,webp}"
 );
 const TRAINING_COURSE_FORM_WEBHOOK_URL = import.meta.env
   .TRAINING_COURSE_FORM_WEBHOOK_URL;
 ---
 
 <section class="py-12 px-5">
-  <div class="max-w-7xl mx-auto text-dark-blue">
+  <div class="max-w-7xl mx-auto text-primary-600">
     <div
       class="flex justify-between flex-col lg:flex-row gap-10 py-10 items-center"
     >
       <h2 class="font-bold text-3xl">{data.date}</h2>
-      <a href="#sign-up-form" class="btn-dark-blue w-full lg:w-fit">
+      <a href="#sign-up-form" class="btn-primary-600 w-full lg:w-fit">
         Start Today
       </a>
     </div>
@@ -52,7 +52,7 @@ const TRAINING_COURSE_FORM_WEBHOOK_URL = import.meta.env
 
 <!-- two button section -->
 <section class="py-12 px-5">
-  <div class="max-w-xl lg:max-w-7xl mx-auto text-dark-blue">
+  <div class="max-w-xl lg:max-w-7xl mx-auto text-primary-600">
     <h2 class="font-extrabold text-5xl">Course Additional Info</h2>
     <div class="flex flex-col lg:flex-row gap-10 mt-10">
       <div class="lg:flex-1 flex flex-col">
@@ -73,8 +73,8 @@ const TRAINING_COURSE_FORM_WEBHOOK_URL = import.meta.env
 </section>
 
 <!-- Links to other courses -->
-<!-- <section class="py-16 px-5 bg-dark-blue">
-  <div class="max-w-xl lg:max-w-7xl mx-auto text-dark-blue">
+<!-- <section class="py-16 px-5 bg-primary-600">
+  <div class="max-w-xl lg:max-w-7xl mx-auto text-primary-600">
     <h2 class="font-extrabold text-5xl text-white">Future Pathways</h2>
     <div class="flex flex-col lg:flex-row gap-10 mt-10">
       {courses.map((course) => <CourseCard course={course} />)}
@@ -84,7 +84,7 @@ const TRAINING_COURSE_FORM_WEBHOOK_URL = import.meta.env
 <GetInContact />
 
 <section class="py-12 px-5 scroll-my-24" id="sign-up-form">
-  <div class="max-w-xl lg:max-w-7xl mx-auto text-dark-blue">
+  <div class="max-w-xl lg:max-w-7xl mx-auto text-primary-600">
     <div class="flex flex-col lg:flex-row gap-10 mt-10">
       <div class="lg:flex-1 flex flex-col gap-10">
         <h2 class="font-extrabold text-5xl">Take the first step...</h2>
@@ -181,7 +181,7 @@ const TRAINING_COURSE_FORM_WEBHOOK_URL = import.meta.env
             id="submit-button"
             disabled
             type="submit"
-            class="btn-dark-blue mx-auto cursor-not-allowed bg-gray-400 hover:bg-gray-400"
+            class="btn-primary-600 mx-auto cursor-not-allowed bg-gray-400 hover:bg-gray-400"
             >Sign up now</button
           >
         </form>
@@ -202,14 +202,14 @@ const TRAINING_COURSE_FORM_WEBHOOK_URL = import.meta.env
       submitButton.classList.remove(
         "cursor-not-allowed",
         "bg-gray-400",
-        "hover:bg-gray-400",
+        "hover:bg-gray-400"
       );
     } else {
       submitButton.disabled = true;
       submitButton.classList.add(
         "cursor-not-allowed",
         "bg-gray-400",
-        "hover:bg-gray-400",
+        "hover:bg-gray-400"
       );
     }
   });
@@ -248,7 +248,7 @@ const TRAINING_COURSE_FORM_WEBHOOK_URL = import.meta.env
         xhr.open("POST", trainingCourseForm.action);
         xhr.setRequestHeader(
           "Content-Type",
-          "application/x-www-form-urlencoded",
+          "application/x-www-form-urlencoded"
         );
         xhr.onload = function () {
           // Check if the request was successful (status 200)

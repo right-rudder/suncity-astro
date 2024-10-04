@@ -10,7 +10,12 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, keywords, image = "/blog-placeholder-1.jpg" } = Astro.props;
+const {
+  title,
+  description,
+  keywords,
+  image = "/blog-placeholder-1.jpg",
+} = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -76,7 +81,6 @@ const { title, description, keywords, image = "/blog-placeholder-1.jpg" } = Astr
 
   gtag("config", "YOURIDGOESHERE");
 </script>
-
 
 <!-- NEED TO UPDATE SCHEMA -->
 <script type="application/ld+json">
