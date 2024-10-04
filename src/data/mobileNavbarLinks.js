@@ -1,72 +1,97 @@
 export const mobileNavbarLinks = [
   {
-    name: "Why Become a Pilot?",
-    link: "/why-become-a-pilot",
-    submenu: [],
-  },
-  {
-    name: "Ground School",
+    name: "New to Flying?",
     submenu: [
       {
-        name: "Private Pilot",
-        link: "/ground-school/private-pilot",
+        name: "Why Become a Pilot?",
+        link: "/why-become-a-pilot",
       },
       {
-        name: "Instrument Rating",
-        link: "/ground-school/instrument-rating",
+        name: "Discovery Flight",
+        link: "/discovery-flight",
       },
       {
-        name: "Commercial Pilot",
-        link: "/ground-school/commercial-pilot",
+        name: "Flight Training",
+        link: "/flight-training-pilot-programs",
       },
       {
-        name: "Flight Instructor",
-        link: "/ground-school/flight-instructor",
+        name: "Become a Professional Pilot",
+        link: "/professional-pilot-course",
       },
       {
-        name: "Multi-Engine Rating",
-        link: "/ground-school/multi-engine-rating",
-      },
-      {
-        name: "Airline Transport Pilot",
-        link: "/ground-school/airline-transport-pilot",
+        name: "Financing",
+        link: "/stratus-finance",
       },
     ],
   },
   {
-    name: "Flight Training",
+    name: "Training Courses",
     submenu: [
       {
+        name: "Professional Pilot",
+        link: "/professional-pilot-course",
+      },
+      {
         name: "Private Pilot",
-        link: "/flight-training/private-pilot",
+        link: "/private-pilot-training",
+      },
+      {
+        name: "Group Ground School",
+        link: "/group-ground-school",
       },
       {
         name: "Instrument Rating",
-        link: "/flight-training/instrument-rating",
+        link: "/instrument-rating",
       },
       {
         name: "Commercial Pilot",
-        link: "/flight-training/commercial-pilot",
-      },
-      {
-        name: "Flight Instructor",
-        link: "/flight-training/flight-instructor",
+        link: "/commercial-pilot-training",
       },
       {
         name: "Multi-Engine Rating",
-        link: "/flight-training/multi-engine-rating",
+        link: "/multi-engine-rating",
+      },
+      {
+        name: "Flight Instructor",
+        link: "/certified-flight-instructor-cfi",
       },
       {
         name: "Airline Transport Pilot",
-        link: "/flight-training/airline-transport-pilot",
+        link: "/airline-transport-pilot-atp",
+      },
+      {
+        name: "Flight Review",
+        link: "/flight-review-bfr",
+      },
+      {
+        name: "Instrument Proficiency Check",
+        link: "/instrument-proficiency-check-ipc",
+      },
+      {
+        name: "Wingman Course",
+        link: "/wingman-family-member-training",
+      },
+      {
+        name: "Sea Plane Safari",
+        link: "/seaplane-pilot-training",
       },
     ],
   },
+
   {
-    name: "Aircraft Sales",
-    link: "/acquisitions-sales",
-    submenu: [],
+    name: "Youth Program",
+    submenu: [
+      {
+        name: "Experience Aviation",
+        link: "/experience-aviation",
+      },
+      {
+        name: "Aviation 101",
+        link: "/youth-aviation-class",
+      },
+    ],
   },
+
   {
     name: "About",
     submenu: [
@@ -83,14 +108,14 @@ export const mobileNavbarLinks = [
         link: "/about/our-fleet",
       },
       {
-        name: "Learning Center",
-        link: "/about/learning-center",
+        name: "Blog",
+        link: "/blog",
       },
     ],
   },
   {
-    name: "CONTACT US",
-    link: "/contact",
+    name: "Start Today",
+    link: "/enroll-now",
     submenu: [],
   },
 ];

@@ -34,7 +34,7 @@ const CourseInfo = ({ data }) => {
           <button
             key={tab.id}
             onClick={() => handleClick(tab.id)}
-            className={`btn-white w-full lg:w-auto ${selected === tab.id ? "bg-dark-blue text-white" : ""}`}
+            className={`btn-white w-full lg:w-auto ${selected === tab.id ? "bg-primary-600 text-white" : ""}`}
           >
             {tab.label}
           </button>
