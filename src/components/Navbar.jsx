@@ -105,7 +105,7 @@ const Navbar = ({ pathname }) => {
                   {navbarLinks.map((item, index) => (
                     <li
                       key={index}
-                      className={`${isActive(item, pathname) ? "decoration-transparent underline font-bold" : ""} uppercase font-medium relative group last:no-underline last:px-0`}
+                      className={`${isActive(item, pathname) ? "decoration-transparent underline font-bold" : "font-medium"} uppercase tracking-tight relative group last:no-underline last:px-0`}
                       onMouseEnter={() => setHoveredIndex(index)}
                       onMouseLeave={() => setHoveredIndex(null)}
                     >
@@ -113,23 +113,23 @@ const Navbar = ({ pathname }) => {
                         <a
                           href={item.link}
                           target={`${item.link.includes("http") ? "_blank" : "_self"}`}
-                          className="font-semibold text-lg duration-300 hover:underline decoration-accent-200 decoration-4 underline-offset-[10px] py-12 border-accent whitespace-nowrap group-last:font-bold group-last:hover:text-accent-900 group-last:bg-accent-300 group-last:ring-1 ring-accent-600 hover:ring-accent-50 group-last:py-3 group-last:px-5 group-last:rounded-sm group-last:hover:bg-accent-300 group-last:hover:no-underline"
+                          className="font-semibold text-lg duration-300 hover:underline decoration-accent-200 decoration-4 underline-offset-[10px] py-12 border-accent whitespace-nowrap group-last:font-bold group-last:hover:text-muted-950 group-last:bg-accent-300 group-last:py-3 group-last:px-5 group-last:rounded-sm group-last:hover:bg-accent-400 group-last:hover:no-underline"
                         >
                           <span className="relative">{item.name}</span>
                         </a>
                       ) : (
-                        <span className="font-bold cursor-default text-white text-lg duration-300 hover:underline decoration-accent-200 decoration-4 underline-offset-[10px] py-12 border-accent whitespace-nowrap">
+                        <span className="font-semibold cursor-default text-white text-lg duration-300 hover:underline decoration-accent-200 decoration-4 underline-offset-[10px] py-12 border-accent whitespace-nowrap">
                           {item.name}
                         </span>
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`absolute top-12 p-1 bg-accent-400/95 whitespace-nowrap text-primary-900-50 -left-4 duration-300 ease-in ${hoveredIndex === index ? "h-auto w-auto opacity-100" : "h-0 w-0 opacity-0 overflow-hidden"}`}
+                          className={`absolute top-12 p-1 bg-accent-300/95 whitespace-nowrap text-primary-950 -left-4 duration-300 ease-in ${hoveredIndex === index ? "h-auto w-auto opacity-100" : "h-0 w-0 opacity-0 overflow-hidden"}`}
                         >
                           {item.submenu.map((subitem, subIndex) => (
                             <li
                               key={subIndex}
-                              className={`${isActive(subitem, pathname) ? "bg-accent-200 text-primary-900" : ""} relative hover:bg-accent-200`}
+                              className={`${isActive(subitem, pathname) ? "bg-accent-200 text-primary-900" : ""} relative hover:bg-accent-200 drop-shadow-sm font-medium`}
                               onMouseEnter={() => setSubHoveredIndex(subIndex)}
                               onMouseLeave={() => setSubHoveredIndex(null)}
                             >
