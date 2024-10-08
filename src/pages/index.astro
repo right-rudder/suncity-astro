@@ -6,6 +6,11 @@ import type { ImageMetadata } from "astro";
 import HeaderScreen from "../components/HeaderScreen.astro";
 import ImageComp from "../components/ImageComp.astro";
 import ProgramSwiper from "../components/ProgramSwiper.astro";
+
+import ContentSplit from "../components/ContentSplit.astro";
+import CTAColor from "../components/CTAColor.astro";
+import Testimonials from "../components/Testimonials.astro";
+
 const { data } = homePage;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp}"
@@ -42,5 +47,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   </section>
 
   <ProgramSwiper content={data.programs} />
+  <ContentSplit content={data.whySuncity} />
+  <CTAColor content={data.flyWithUsCTA} />
+  <Testimonials content={data.testimonials} />
+  <script src="../scripts/creativeSwiper.js"></script>
 </BaseLayout>
-<script src="../scripts/creativeSwiper.js"></script>
