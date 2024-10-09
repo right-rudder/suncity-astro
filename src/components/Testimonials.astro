@@ -2,7 +2,7 @@
 const { content } = Astro.props;
 ---
 
-<section id="testimonials" class="bg-primary-200/20 py-24 sm:py-32">
+<section id="testimonials" class="bg-white lg:py-24">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="flex flex-wrap justify-evenly items-start align-middle">
       <div
@@ -47,7 +47,7 @@ const { content } = Astro.props;
         >
           {
             content.reviews.map((review, index) => (
-              <li class="mx-auto py-12">
+              <li class={`${index > 3 ? "hidden lg:block" : ""} py-12`}>
                 <blockquote class="relative mx-auto">
                   <svg
                     class="absolute -top-6 -start-8 size-16 text-accent-200"
