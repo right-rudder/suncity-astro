@@ -10,6 +10,7 @@ import ProgramSwiper from "../components/ProgramSwiper.astro";
 import ContentSplit from "../components/ContentSplit.astro";
 import CTAColor from "../components/CTAColor.astro";
 import Testimonials from "../components/Testimonials.astro";
+import ContentCTA from "../components/ContentCTA.astro";
 
 const { data } = homePage;
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -48,7 +49,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
   <ProgramSwiper content={data.programs} />
   <ContentSplit content={data.whySuncity} />
-  <CTAColor content={data.flyWithUsCTA} />
+  <ContentCTA content={data.quizCTA} />
   <Testimonials content={data.testimonials} />
+  <CTAColor content={data.flyWithUsCTA} />
   <script src="../scripts/creativeSwiper.js"></script>
 </BaseLayout>
