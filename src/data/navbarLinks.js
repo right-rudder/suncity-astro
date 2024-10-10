@@ -1,6 +1,7 @@
 export const navbarLinks = [
   {
     name: "New to Flying?",
+    link: "/pilot-training-guide",
     submenu: [
       {
         name: "Why Become a Pilot?",
@@ -26,6 +27,7 @@ export const navbarLinks = [
   },
   {
     name: "Training Courses",
+    link: "/flight-training-pilot-programs",
     submenu: [
       {
         name: "Professional Pilot",
@@ -80,6 +82,7 @@ export const navbarLinks = [
 
   {
     name: "Youth Program",
+    link: "/youth-aviation-programs",
     submenu: [
       {
         name: "Experience Aviation",
@@ -94,6 +97,7 @@ export const navbarLinks = [
 
   {
     name: "About",
+    link: "/about",
     submenu: [
       {
         name: "Our Story",

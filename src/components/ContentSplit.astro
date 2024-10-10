@@ -1,0 +1,90 @@
+---
+import ImageComp from "./ImageComp.astro";
+
+const { content } = Astro.props;
+---
+
+<section class="grid grid-cols-1 lg:grid-cols-2 lg:py-12 h-full bg-white">
+  <div class="px-4 lg:px-12 py-6 lg:py-0">
+    {
+      content.upperHeading && (
+        <h3 class="mx-auto mt-12 uppercase text-lg lg:text-xl font-sans font-bold tracking-tight text-accent-300">
+          {content.upperHeading}
+        </h3>
+      )
+    }
+    {
+      content.heading && (
+        <h2 class="mx-auto mb-3 text-3xl lg:text-5xl font-sans font-bold tracking-tight text-primary-800">
+          {content.heading}
+        </h2>
+      )
+    }
+    {
+      content.descriptions &&
+        content.descriptions.map((p) => (
+          <p
+            class="mx-auto mb-3 text-base tracking-loose text-muted-700"
+            set:html={p}
+          />
+        ))
+    }
+    {
+      content.bullets && (
+        <div class="mt-6 flex justify-center align-middle items-center">
+          <ul
+            role="list"
+            class="space-y-5 text-gray-600 mx-0 lg:mx-3 bg-gray-100 ring-1 ring-gray-300 py-9 px-6 rounded-lg"
+          >
+            {content.bullets.map((bullet) => (
+              <li class="flex gap-x-3 text-accent-400">
+                <svg
+                  class="mt-1 size-8 flex-none text-accent"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d={bullet.icon}
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="leading-snug">
+                  <strong class="font-bold text-muted-900 tracking-tight uppercase">
+                    {bullet.title}
+                  </strong>{" "}
+                  {bullet.descriptions.map((dec) => (
+                    <p class="mb-2 text-primary-700" set:html={dec} />
+                  ))}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+  </div>
+  <div
+    class="group relative aspect-square lg:aspect-auto bg-black overflow-hidden lg:rounded-lg order-first lg:order-last"
+  >
+    <ImageComp
+      imagePath={content.imagePath}
+      imageAlt={content.imageAlt}
+      styles="object-cover w-full h-full"
+      quality={100}
+    />
+    {
+      content.imagePath && (
+        <div class="absolute bottom-0 py-6 lg:translate-y-full w-full group-hover:translate-y-0 bg-black/50 backdrop-blur-md duration-300 ease-in-out">
+          <p
+            class="text-center font-bold leading-none text-xl text-accent-300 py-2"
+            set:html={content.imageLegend}
+          />
+        </div>
+      )
+    }
+  </div>
+</section>
