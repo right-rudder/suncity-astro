@@ -23,7 +23,7 @@ import { Image } from "astro:assets";
 const { pathname } = Astro.url;
 ---
 
-<footer class="relative bg-gradient-to-br from-primary-900 font-sans2 to-black">
+<footer class="relative bg-gradient-to-br from-primary-900 font-sans to-black">
   <div
     class="px-4 pt-24 pb-16 lg:pb-2 md:pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
   >
@@ -41,7 +41,7 @@ const { pathname } = Astro.url;
             class="object-contain h-36 w-auto px-5 lg:px-0 drop-shadow-lg"
           />
         </a>
-        <div class="mt-2 lg:max-w-sm">
+        <div class="mt-2 lg:max-w-sm font-sans2">
           <p
             class="text-sm text-white px-3 lg:px-0 text-center lg:text-justify"
           >
@@ -73,7 +73,7 @@ const { pathname } = Astro.url;
               <p class="font-bold text-xl font-sans lg:text-md tracking-wide text-accent-200">
                 {column.title}
               </p>
-              <ul class="mt-2 space-y-2 text-lg lg:text-sm">
+              <ul class="mt-2 space-y-2 text-lg font-sans2 lg:text-sm">
                 {column.links.map((link) => (
                   <li>
                     <a
@@ -91,27 +91,27 @@ const { pathname } = Astro.url;
         <div class="grid grid-cols-1 gap-y-4 lg:col-span-3">
           {
             LOCATIONS.map((location, index) => (
-              <div class="text-right lg:text-center bg-white/20 rounded pt-6 text-lg">
+              <div class="text-right lg:text-center bg-accent-100/20 rounded p-2 lg:pt-8 text-sm lg:text-lg">
                 <p
-                  class="font-bold tracking-wide text-accent-200 leading-none"
+                  class="font-bold tracking-wide text-base text-accent-200 leading-none"
                   set:html={location.title}
                 />
                 <a
                   href={location.gMaps}
                   target="_blank"
-                  class="mt-2 space-y-1 transition-colors duration-300 text-white hover:text-accent-100"
+                  class="mt-2 space-y-1 font-sans2 transition-colors text-xs lg:text-base duration-300 text-white hover:text-accent-100"
                 >
                   <>
-                    <span class="text-sm">{location.address}</span>
+                    <span class="">{location.address}</span>
                     <br />
-                    <span class="text-sm">
+                    <span class="">
                       {location.city}, {location.state} {location.zip}
                     </span>
                   </>
                 </a>
                 <a
                   href={`tel:${location.phone}`}
-                  class="mt-3 text-right justify-end lg:justify-center lg:text-center transition-colors duration-300 text-white hover:text-accent-100 flex items-center align-middle"
+                  class="mt-3 text-right justify-end lg:justify-center font-sans2 lg:text-center transition-colors duration-300 text-white hover:text-accent-100 flex items-center align-middle"
                 >
                   <FaPhoneSquareAlt className="mr-2 text-lg" />
                   {location.phone}
