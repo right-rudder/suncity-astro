@@ -11,9 +11,9 @@ const homePage = {
     //top header
     header: {
       stars: true,
-      imagePath: "/src/assets/sun-city-team-in-front-of-seaplane.webp",
+      imagePath: "/src/assets/sun-city-aviation-academy-flying-over-miami.jpg",
       imageAlt:
-        "fly over Right Rudder Marketing - Digital Marketing Agency for Flight Schools",
+        "sun city aviation academy airplane flying over the city of miami",
       headerH1: `Become a </br><span class="text-accent-300">Professional Pilot</span>`,
       paragraph:
         "Your path to becoming a professional pilot starts here. Our experienced instructors will help you achieve your aviation goals. Join the family at Sun City.",
@@ -84,7 +84,7 @@ const homePage = {
         },
         {
           title: "Airline Transport Pilot",
-          imagePath: "/src/assets/sun-city-atp.webp",
+          imagePath: "/src/assets/john-mcarthur-PrdNTrIrG8w-unsplash.jpg",
           imageAlt:
             "sun city aviation instruments panel of a commercial airline airplane cockpit",
           description:
@@ -93,7 +93,8 @@ const homePage = {
         },
         {
           title: "Multi-Engine Rating",
-          imagePath: "/src/assets/sun-city-multi-engine.webp",
+          imagePath:
+            "/src/assets/sun-city-aviation-academy-multi-engine-aircraft.jpg",
           imageAlt:
             "sun city aviation student and flight instructor in front of a multi-engine airplane",
           description:
@@ -119,7 +120,7 @@ const homePage = {
         },
         {
           title: "Instrument Proficiency Check",
-          imagePath: "/src/assets/sun-city-ipc.webp",
+          imagePath: "/src/assets/chuttersnap-M2-_GRvWWg0-unsplash.jpg",
           imageAlt: "sun city aviation clouds and sky",
           description:
             "Stay current with our Instrument Proficiency Check (IPC) to ensure your instrument flying skills are up to date.",
@@ -127,7 +128,7 @@ const homePage = {
         },
         {
           title: "Wingman Course",
-          imagePath: "/src/assets/sun-city-wingman.webp",
+          imagePath: "/src/assets/sun-city-wingman.jpg",
           imageAlt: "sun city aviation pilot's family in the flight simulator",
           description:
             "Equip your loved ones with essential aviation safety skills through our Wingman Course.",
@@ -135,7 +136,7 @@ const homePage = {
         },
         {
           title: "Sea Plane Safari",
-          imagePath: "/src/assets/sun-city-seaplane-bg2.webp",
+          imagePath: "/src/assets/sun-city-seaplane.jpeg",
           imageAlt: "sun city aviation seaplane floating on the water",
           description:
             "Seaplane flying opens up an extraordinary new world for pilots. Start SES training here.",
