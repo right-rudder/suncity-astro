@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeaderScreen from "../components/HeaderScreen.astro";
+import ProgramSwiper from "../components/ProgramSwiper.astro";
+import CTAColor from "../components/CTAColor.astro";
+import PageSummary from "../components/PageSummary.astro";
+import professionalPilotCourse from "../data/professional-pilot-course";
+import Zero2Hero from "../components/Zero2Hero";
+
+const { data } = professionalPilotCourse;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+  <PageSummary content={data.pageSummary} />
+
+  <section id="hero-to-zero-program" class="py-24">
+    <div class="">
+      {
+        data.zero2hero.upperHeading && (
+          <h3 class="mx-auto mt-12 uppercase text-lg lg:text-xl lg:max-w-3xl font-sans text-center font-bold tracking-tight text-accent-300">
+            {data.zero2hero.upperHeading}
+          </h3>
+        )
+      }
+      {
+        data.zero2hero.heading && (
+          <h2
+            class="mx-auto mb-3 text-4xl lg:text-6xl lg:max-w-3xl font-sans text-center font-bold tracking-tight text-primary-800"
+            set:html={data.zero2hero.heading}
+          />
+        )
+      }
+      {
+        data.zero2hero.description && (
+          <p class="mx-auto mb-12 text-lg max-w-3xl text-center tracking-loose text-muted-700">
+            {data.zero2hero.description}
+          </p>
+        )
+      }
+    </div>
+    <div
+      class="w-full lg:max-w-4xl mt-12 py-4 lg:py-12 lg:px-8 rounded bg-gradient-to-b from-accent-300 to-yellow-400 flex flex-col items-center lg:flex-1 mx-auto"
+    >
+      <Zero2Hero client:visible />
+    </div>
+  </section>
+
+  <ProgramSwiper content={data.programs} />
+  <CTAColor content={data.flyWithUsCTA} />
+  <script src="../scripts/creativeSwiper.js"></script>
+</BaseLayout>
