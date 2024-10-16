@@ -42,7 +42,23 @@ const professionalPilotCourse = {
       heading: "Our Professional<br>Pilot Course",
       upperHeading: "Breakdown",
       description:
-        "Our Professional Pilot Course is structured to ensure progressive learning and skill acquisition through hands-on training, expert instruction, and access to modern aircraft. This program covers all necessary ground and flight training courses*, culminating in a Multi-Engine Rating.",
+        "Our Professional Pilot Course is structured to ensure progressive learning and skill acquisition through hands-on training, expert instruction, and access to modern aircraft. This program covers all necessary ground and flight training courses, culminating in a Multi-Engine Rating.",
+    },
+
+    bookCTA: {
+      upperHeading: "Still looking for more information on pilot training?",
+      headerH1: `Get Your <span class="text-accent-300">FREE</span><br> Pilot Training Guide!`,
+      paragraph:
+        "We have a free booklet which explains everything you need to know for your pilot certificate.",
+      buttons: [
+        {
+          name: "Download Now",
+          link: "/book-download",
+          primary: true,
+        },
+      ],
+      imagePath: "/src/assets/sun-city-book-mock-up.webp",
+      imageAlt: "Right Rudder Marketing team on the runway",
     },
 
     programs: {

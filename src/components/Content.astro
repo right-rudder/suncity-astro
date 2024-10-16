@@ -13,7 +13,7 @@ if (!images[data.imagePath])
 ---
 
 <div
-  class="overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
+  class="overflow-hidden bg-gradient-to-b from-white to-90% to-muted-100 px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
 >
   <div
     class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10"
@@ -41,12 +41,12 @@ if (!images[data.imagePath])
       </div>
     </div>
     <div
-      class="-ml-12 -mt-12 p-12 lg:sticky lg:top-8 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
+      class="-ml-12 -mt-12 p-12 lg:h-screen lg:sticky lg:top-8 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
     >
       <Image
         src={images[data.imagePath]()}
         alt={data.imageAlt}
-        class="w-[48rem] max-w-2xl max-h-screen rounded-md bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
+        class="w-[48rem] max-w-2xl object-cover h-full max-h-screen rounded-md bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
         quality={100}
       />
     </div>
@@ -120,6 +120,18 @@ if (!images[data.imagePath])
                   ))}
                 </div>
               </>
+            )
+          }
+          {
+            data.finalButton && (
+              <div class="mt-6 flex flex-wrap justify-center w-full align-middle items-center gap-6 z-10">
+                <a
+                  href={data.finalButton.link}
+                  class={`${data.finalButton.primary ? "btn-accent" : "btn-white"} w-full md:w-auto`}
+                >
+                  {data.finalButton.name}
+                </a>
+              </div>
             )
           }
         </div>
