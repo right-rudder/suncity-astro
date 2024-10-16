@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeaderScreen from "../components/HeaderScreen.astro";
+import ProgramSwiper from "../components/ProgramSwiper.astro";
+import CTAColor from "../components/CTAColor.astro";
+import PageSummary from "../components/PageSummary.astro";
+import BookCTA from "../components/BookCTA.astro";
+import TrainingRoadmap from "../components/TrainingRoadmap.astro";
+import groupGroundSchool from "../data/group-ground-school";
+import Content from "../components/Content.astro";
+
+const { data } = groupGroundSchool;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+  <PageSummary content={data.pageSummary} />
+  <Content data={data.groupGroundContent} />
+  <BookCTA content={data.bookCTA} />
+  <ProgramSwiper content={data.programs} />
+  <CTAColor content={data.flyWithUsCTA} />
+  <script src="../scripts/creativeSwiper.js"></script>
+</BaseLayout>
