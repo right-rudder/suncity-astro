@@ -97,11 +97,11 @@ const Navbar = ({ pathname }) => {
                   aria-label="SunCity Aviation Academy Logo"
                   title="SunCity Aviation Academy"
                   loading="lazy"
-                  className={`${navBar || openMobile ? "h-20 lg:h-24 w-3/4" : "h-20 lg:h-28 w-full"} object-contain duration-500`}
+                  className={`${navBar || openMobile ? "h-16 lg:h-32 w-9/12 lg:w-10/12" : "h-20 lg:h-32 w-10/12 lg:w-full"} object-contain duration-500`}
                 />
               </a>
               <div className="hidden lg:flex justify-end w-full">
-                <ul className="flex justify-between align-middle w-11/12 items-center">
+                <ul className="flex justify-between align-middle w-10/12 items-center">
                   {navbarLinks.map((item, index) => (
                     <li
                       key={index}

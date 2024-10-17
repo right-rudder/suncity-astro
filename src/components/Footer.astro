@@ -19,6 +19,7 @@ import {
 import { footerLinks } from "../data/footerLinks";
 import logo from "../assets/sun-city-white-text-logo.webp";
 import { Image } from "astro:assets";
+import ImageComp from "./ImageComp.astro";
 
 const { pathname } = Astro.url;
 ---
@@ -128,8 +129,24 @@ const { pathname } = Astro.url;
       class="mx-auto flex flex-col gap-2 lg:flex-row justify-between items-center align-middle max-w-7xl"
     >
       <p class="text-sm text-gray-100 text-center">
-        © Copyright 2024 Right Rudder Marketing LLC. All rights reserved.
+        © Copyright 2024 &#x2022; SunCity Aviation Academy &#x2022; All rights
+        reserved.
       </p>
+      <span class="text-white text-center flex gap-2">
+        Powered by
+        <a
+          href="https://rightruddermarketing.com/"
+          target="_blank"
+          class="text-bold group hover:underline hover:text-white/70 flex gap-2 duration-200"
+        >
+          <ImageComp
+            imagePath="/src/assets/RRM-R-symbol-474.webp"
+            imageAlt="Right Rudder Marketing Logo"
+            styles="h-6 w-auto group-hover:scale-105 group-hover:brightness-125 drop-shadow-md duration-300"
+          />
+          More Right Rudder</a
+        >
+      </span>
       <div
         class="flex items-center justify-center align-middle mt-4 space-x-4 sm:mt-0"
       >
