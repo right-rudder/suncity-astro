@@ -19,17 +19,17 @@ const { content } = Astro.props;
       }
       {
         content.heading && (
-          <h2 class="mx-auto mb-3 text-3xl lg:text-5xl font-sans font-bold tracking-tight text-primary-800">
+          <h2 class="mx-auto px-5 lg:px-0 mb-3 text-3xl lg:text-5xl font-sans font-bold tracking-tight text-primary-800">
             {content.heading}
           </h2>
         )
       }
       {
         content.descriptions && (
-          <div class="max-w-4xl mx-auto">
+          <div class="max-w-4xl mx-auto px-4 lg:px-0">
             {content.descriptions.map((p) => (
               <p
-                class="mx-auto mb-4 text-base tracking-loose leading-relaxed text-muted-700"
+                class="mx-auto mb-4 text-lg tracking-loose leading-relaxed text-muted-700"
                 set:html={p}
               />
             ))}
@@ -41,9 +41,9 @@ const { content } = Astro.props;
       {
         content.steps.map((step, index) => (
           <div
-            class={`mt-12 flex flex-wrap justify-center gap-8 lg:gap-0 items-center align-middle`}
+            class={`relative mt-12 flex flex-wrap justify-center gap-8 lg:gap-0 items-center align-middle`}
           >
-            <div class="relative pt-32 lg:pt-16 flex flex-col justify-center align-middle items-center w-full lg:w-1/2">
+            <div class="pt-12 lg:pt-10 flex flex-col justify-center align-middle items-center w-full lg:w-1/2">
               <h3
                 class={`${index % 2 ? "right-2" : "left-2"} top-2 absolute font-sans text-5xl bg-accent-300 rounded-md py-2 px-5 font-semibold text-primary-900 -z-0`}
               >
@@ -57,7 +57,7 @@ const { content } = Astro.props;
                 </h3>
                 {step.paragraphs.map((par) => (
                   <p
-                    class="text-lg mb-2 font-sans2 text-gray-800"
+                    class="text-base mb-2 font-sans2 text-gray-800"
                     set:html={par}
                   />
                 ))}
@@ -76,9 +76,9 @@ const { content } = Astro.props;
         ))
       }
     </div>
-    <div class="mt-12">
+    <div class="mt-16 px-5 lg:px-0">
       <p
-        class="text-center mx-auto font-medium text-xl max-w-4xl"
+        class="text-center mx-auto font-medium text-xl max-w-5xl"
         set:html={content.finalParagraph}
       />
       {
