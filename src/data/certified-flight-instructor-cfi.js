@@ -40,9 +40,9 @@ const certifiedFlightInstructor = {
     },
 
     becomeCFI: {
-      imagePath: "/src/assets/sun-city-aviation-academy-be-pilot.jpg",
+      imagePath: "/src/assets/sun-city-aviation-academy-pilot-career.jpg",
       imageAlt:
-        "Sun City Aviation Academy student student pilot and instructor shaking hands",
+        "Sun City Aviation Academy flight instructor smiling in front of a plane",
       heading: "Certified Flight Instructor",
       upperHeading: "How to Become",
       description: `CFI certification represents a significant milestone in a pilot's journey, signifying a high level of flight proficiency and instructional capabilities. This certification holds immense value not only for the individual achieving it but also for the broader aviation community.`,

@@ -91,6 +91,7 @@ const Navbar = ({ pathname }) => {
             <div className="flex w-full items-center justify-between">
               <a
                 href="/"
+                title="SunCity Aviation Academy"
                 className="relative hover:brightness-110 duration-200 ease-in-out w-4/6 md:w-1/3 lg:w-2/12"
               >
                 <img
@@ -98,7 +99,7 @@ const Navbar = ({ pathname }) => {
                   alt="SunCity Aviation Academy Logo"
                   aria-label="SunCity Aviation Academy Logo"
                   title="SunCity Aviation Academy"
-                  loading="lazy"
+                  loading="eager"
                   className={`${navBar || openMobile ? "h-16 lg:h-32 w-9/12 lg:w-10/12" : "h-20 lg:h-32 w-10/12 lg:w-full"} object-contain duration-500`}
                 />
               </a>

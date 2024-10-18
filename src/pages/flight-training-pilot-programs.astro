@@ -1,14 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeaderScreen from "../components/HeaderScreen.astro";
-import ProgramSwiper from "../components/ProgramSwiper.astro";
 import CTAColor from "../components/CTAColor.astro";
 import ContentCTA from "../components/ContentCTA.astro";
-import pilotTrainingGuide from "../data/pilot-training-guide";
-import BentoDark from "../components/BentoDark.astro";
 import GridPrograms from "../components/GridPrograms.astro";
+import flightTrainingPrograms from "../data/flight-training-pilot-programs";
 
-const { data } = pilotTrainingGuide;
+const { data } = flightTrainingPrograms;
 ---
 
 <BaseLayout
