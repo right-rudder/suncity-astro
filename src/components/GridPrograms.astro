@@ -1,0 +1,53 @@
+---
+import ProgramCard from "./ProgramCard.astro";
+
+const { content } = Astro.props;
+---
+
+<section class="bg-gradient-to-b from-primary-50 to-muted-100 py-16 lg:py-24">
+  <div class="mx-auto max-w-9xl px-6 lg:px-8">
+    <div class="text-center mb-12">
+      {
+        content.upperHeading && (
+          <h3 class="mx-auto mt-12 uppercase text-lg lg:text-xl font-sans font-bold tracking-tight text-accent-300">
+            {content.upperHeading}
+          </h3>
+        )
+      }
+      {
+        content.heading && (
+          <h2 class="mx-auto mb-3 text-3xl lg:text-5xl font-sans font-bold tracking-tight text-primary-800">
+            {content.heading}
+          </h2>
+        )
+      }
+      {
+        content.description && (
+          <p
+            class="mx-auto mb-4 text-base tracking-loose leading-relaxed text-muted-700 max-w-4xl"
+            set:html={content.description}
+          />
+        )
+      }
+    </div>
+    <div class="mx-auto max-w-6xl">
+      <ul
+        role="list"
+        class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+      >
+        {
+          content.cards.map((program) => (
+            <ProgramCard
+              title={program.title}
+              imagePath={program.imagePath}
+              imageAlt={program.imageAlt}
+              link={program.link}
+              linkText={program.linkText}
+              description={program.description}
+            />
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>

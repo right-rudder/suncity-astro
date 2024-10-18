@@ -1,21 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import homePage from "../data/homePage";
-import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 import HeaderScreen from "../components/HeaderScreen.astro";
 import ImageComp from "../components/ImageComp.astro";
 import ProgramSwiper from "../components/ProgramSwiper.astro";
-
 import ContentSplit from "../components/ContentSplit.astro";
 import CTAColor from "../components/CTAColor.astro";
 import Testimonials from "../components/Testimonials.astro";
 import ContentCTA from "../components/ContentCTA.astro";
 
 const { data } = homePage;
-const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif,webp}"
-);
 ---
 
 <BaseLayout
