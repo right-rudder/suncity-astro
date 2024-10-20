@@ -1,0 +1,178 @@
+---
+import ImageComp from "./ImageComp.astro";
+
+const { content } = Astro.props;
+---
+
+<section class="bg-primary-950 py-24 sm:py-32">
+  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    <div class="text-center">
+      {
+        content.upperHeading && (
+          <h3 class="mx-auto mt-12 uppercase text-lg lg:text-xl font-sans font-bold tracking-tight text-accent-300">
+            {content.upperHeading}
+          </h3>
+        )
+      }
+      {
+        content.heading && (
+          <h2 class="mx-auto mb-3 text-3xl lg:text-5xl font-sans font-bold tracking-tight text-primary-100">
+            {content.heading}
+          </h2>
+        )
+      }
+      {
+        content.description && (
+          <p
+            class="mx-auto mb-4 max-w-3xl text-base tracking-loose leading-relaxed text-muted-300"
+            set:html={content.description}
+          />
+        )
+      }
+    </div>
+    <div
+      class="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2"
+    >
+      <div class="flex group p-px lg:col-span-4">
+        <div
+          class="overflow-hidden rounded-lg bg-muted-900 group-hover:bg-muted-800 duration-300 ring-1 ring-white/15 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"
+        >
+          <ImageComp
+            styles="h-80 object-cover object-top brightness-75 group-hover:brightness-100 duration-300 group-hover:scale-105"
+            imagePath={content.boxes[0].imagePath}
+            imageAlt={content.boxes[0].imageAlt}
+          />
+          <div class="p-10">
+            <h3
+              class="text-sm/4 font-semibold text-muted-200"
+              set:html={content.boxes[0].upperTitle}
+            />
+            <p
+              class="mt-1 text-lg/7 font-medium tracking-tight text-accent-200"
+              set:html={content.boxes[0].title}
+            />
+            <p
+              class="mt-2 max-w-xl text-sm/5 text-muted-300"
+              set:html={content.boxes[0].copy}
+            />
+            <div
+              class="mt-6 text-xs flex justify-center lg:justify-start align-middle items-center"
+            >
+              <a
+                href={content.boxes[0].button.link}
+                class={`${content.boxes[0].button.primary ? "btn-accent" : "btn-white"} w-full md:w-auto`}
+              >
+                {content.boxes[0].button.name}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex group p-px lg:col-span-2">
+        <div
+          class="overflow-hidden rounded-lg bg-muted-900 group-hover:bg-muted-800 duration-300 ring-1 ring-white/15 lg:rounded-tr-[2rem]"
+        >
+          <ImageComp
+            styles="h-80 object-cover object-center brightness-75 group-hover:brightness-100 duration-300 group-hover:scale-105"
+            imagePath={content.boxes[1].imagePath}
+            imageAlt={content.boxes[1].imageAlt}
+          />
+          <div class="p-10">
+            <h3
+              class="text-sm/4 font-semibold text-muted-200"
+              set:html={content.boxes[1].upperTitle}
+            />
+            <p
+              class="mt-1 text-lg/7 font-medium tracking-tight text-accent-200"
+              set:html={content.boxes[1].title}
+            />
+            <p
+              class="mt-2 max-w-lg text-sm/6 text-muted-300"
+              set:html={content.boxes[1].copy}
+            />
+            <div
+              class="mt-6 text-xs flex justify-center lg:justify-start align-middle items-center"
+            >
+              <a
+                href={content.boxes[1].button.link}
+                class={`${content.boxes[1].button.primary ? "btn-accent" : "btn-white"} w-full md:w-auto`}
+              >
+                {content.boxes[1].button.name}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex group p-px lg:col-span-2">
+        <div
+          class="overflow-hidden rounded-lg bg-muted-900 group-hover:bg-muted-800 duration-300 ring-1 ring-white/15 lg:rounded-bl-[2rem]"
+        >
+          <ImageComp
+            styles="h-80 object-cover object-center brightness-75 group-hover:brightness-100 duration-300 group-hover:scale-105"
+            imagePath={content.boxes[2].imagePath}
+            imageAlt={content.boxes[2].imageAlt}
+          />
+          <div class="p-10">
+            <h3
+              class="text-sm/4 font-semibold text-muted-200"
+              set:html={content.boxes[2].upperTitle}
+            />
+            <p
+              class="mt-1 text-lg/7 font-medium tracking-tight text-accent-200"
+              set:html={content.boxes[2].title}
+            />
+            <p
+              class="mt-2 max-w-lg text-sm/6 text-muted-300"
+              set:html={content.boxes[2].copy}
+            />
+            <div
+              class="mt-6 text-xs flex justify-center lg:justify-start align-middle items-center"
+            >
+              <a
+                href={content.boxes[2].button.link}
+                class={`${content.boxes[2].button.primary ? "btn-accent" : "btn-white"} w-full md:w-auto`}
+              >
+                {content.boxes[2].button.name}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex group p-px lg:col-span-4">
+        <div
+          class="overflow-hidden rounded-lg bg-muted-900 group-hover:bg-muted-800 duration-300 ring-1 ring-white/15 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"
+        >
+          <ImageComp
+            styles="h-80 object-cover object-center brightness-75 group-hover:brightness-100 duration-300 group-hover:scale-105"
+            imagePath={content.boxes[3].imagePath}
+            imageAlt={content.boxes[3].imageAlt}
+          />
+          <div class="p-10">
+            <h3
+              class="text-sm/4 font-semibold text-muted-200"
+              set:html={content.boxes[3].upperTitle}
+            />
+            <p
+              class="mt-2 text-lg/7 font-medium tracking-tight text-accent-200"
+              set:html={content.boxes[3].title}
+            />
+            <p
+              class="mt-2 max-w-xl text-sm/6 text-muted-300"
+              set:html={content.boxes[3].copy}
+            />
+            <div
+              class="mt-6 text-xs flex justify-center lg:justify-start align-middle items-center"
+            >
+              <a
+                href={content.boxes[3].button.link}
+                class={`${content.boxes[3].button.primary ? "btn-accent" : "btn-white"} w-full text-center md:w-auto`}
+              >
+                {content.boxes[3].button.name}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

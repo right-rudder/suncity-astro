@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeaderScreen from "../components/HeaderScreen.astro";
+import ProgramSwiper from "../components/ProgramSwiper.astro";
+import CTAColor from "../components/CTAColor.astro";
+import PageSummary from "../components/PageSummary.astro";
+import BookCTA from "../components/BookCTA.astro";
+import Content from "../components/Content.astro";
+import wingmanTraining from "../data/wingman-family-member-training";
+import programsSwiper from "../data/programSwiper";
+
+const { data } = wingmanTraining;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+  <PageSummary content={data.pageSummary} />
+  <Content data={data.expectWingman} />
+  <BookCTA content={data.bookCTA} />
+  <ProgramSwiper content={programsSwiper} />
+  <CTAColor content={data.flyWithUsCTA} />
+  <script src="../scripts/creativeSwiper.js"></script>
+</BaseLayout>

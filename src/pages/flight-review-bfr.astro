@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeaderScreen from "../components/HeaderScreen.astro";
+import ProgramSwiper from "../components/ProgramSwiper.astro";
+import CTAColor from "../components/CTAColor.astro";
+import PageSummary from "../components/PageSummary.astro";
+import BookCTA from "../components/BookCTA.astro";
+import Content from "../components/Content.astro";
+import flightReview from "../data/flight-review-bfr";
+import programsSwiper from "../data/programSwiper";
+
+const { data } = flightReview;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+  <PageSummary content={data.pageSummary} />
+  <Content data={data.expectBFR} />
+  <BookCTA content={data.bookCTA} />
+  <ProgramSwiper content={programsSwiper} />
+  <CTAColor content={data.flyWithUsCTA} />
+  <script src="../scripts/creativeSwiper.js"></script>
+</BaseLayout>

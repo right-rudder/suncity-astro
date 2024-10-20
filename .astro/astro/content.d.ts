@@ -150,23 +150,71 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"articles": {
-"Choosing-the-Right-Flight-School-six-Factors-to-Consider.md": {
-	id: "Choosing-the-Right-Flight-School-six-Factors-to-Consider.md";
-  slug: "choosing-the-right-flight-school-six-factors-to-consider";
-  body: string;
-  collection: "articles";
-  data: any
-} & { render(): Render[".md"] };
-};
-"blog": Record<string, {
-  id: string;
-  slug: string;
+		"blog": {
+"announcing-sun-city-aviation-s-girls-in-aviation-day-and-pilot-provisions-shop-opening.md": {
+	id: "announcing-sun-city-aviation-s-girls-in-aviation-day-and-pilot-provisions-shop-opening.md";
+  slug: "announcing-sun-city-aviation-s-girls-in-aviation-day-and-pilot-provisions-shop-opening";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">;
-  render(): Render[".md"];
-}>;
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"breaking-down-an-instrument-panel.md": {
+	id: "breaking-down-an-instrument-panel.md";
+  slug: "breaking-down-an-instrument-panel";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"choosing-your-aircraft-exploring-different-training-planes.md": {
+	id: "choosing-your-aircraft-exploring-different-training-planes.md";
+  slug: "choosing-your-aircraft-exploring-different-training-planes";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"preparing-for-the-faa-private-pilot-written-test.md": {
+	id: "preparing-for-the-faa-private-pilot-written-test.md";
+  slug: "preparing-for-the-faa-private-pilot-written-test";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sun-city-aviation-brings-surf-s-up-fun-to-mayor-s-kid-s-day-2024.md": {
+	id: "sun-city-aviation-brings-surf-s-up-fun-to-mayor-s-kid-s-day-2024.md";
+  slug: "sun-city-aviation-brings-surf-s-up-fun-to-mayor-s-kid-s-day-2024";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sun-city-aviation-hosts-aopa-s-2024-rusty-pilots-seminar.md": {
+	id: "sun-city-aviation-hosts-aopa-s-2024-rusty-pilots-seminar.md";
+  slug: "sun-city-aviation-hosts-aopa-s-2024-rusty-pilots-seminar";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"the-importance-of-flight-simulators-in-pilot-training.md": {
+	id: "the-importance-of-flight-simulators-in-pilot-training.md";
+  slug: "the-importance-of-flight-simulators-in-pilot-training";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"the-return-of-sea-plane-training-at-sun-city-aviation-academy.md": {
+	id: "the-return-of-sea-plane-training-at-sun-city-aviation-academy.md";
+  slug: "the-return-of-sea-plane-training-at-sun-city-aviation-academy";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"what-is-a-tfr-election-season-s-unique-flight-regulations.md": {
+	id: "what-is-a-tfr-election-season-s-unique-flight-regulations.md";
+  slug: "what-is-a-tfr-election-season-s-unique-flight-regulations";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+};
 
 	};
 

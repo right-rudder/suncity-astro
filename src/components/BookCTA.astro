@@ -1,0 +1,51 @@
+---
+import ImageComp from "./ImageComp.astro";
+
+const { content } = Astro.props;
+---
+
+<section
+  class="flex flex-wrap justify-center py-12 lg:py-20 items-center align-middle bg-white"
+>
+  <div
+    class="text-white w-full lg:w-1/2 text-center lg:text-left z-10 flex flex-col items-center lg:items-start gap-4 px-5 h-full justify-center"
+  >
+    <p
+      class="text-base mt-3 font-sans font-medium tracking-wide text-primary-500 max-w-xl"
+      set:html={content.upperHeading}
+    />
+    <h3
+      class="text-4xl md:text-5xl lg:text-6xl md:max-w-3xl lg:max-w-5xl font-bold tracking-normal text-muted-950"
+      set:html={content.headerH1}
+    />
+    <p
+      class="text-base lg:text-xl mt-3 font-sans font-semibold tracking-wide text-primary-600 max-w-xl"
+      set:html={content.paragraph}
+    />
+    <div
+      class="mt-6 flex flex-wrap justify-center lg:justify-start w-full align-middle items-center gap-6 z-10"
+    >
+      {
+        content.buttons.map((btn) => (
+          <a
+            href={btn.link}
+            class={`${btn.primary ? "btn-accent" : "btn-white"} w-full md:w-auto`}
+          >
+            {btn.name}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  <div
+    class={`order-first lg:order-none w-full lg:w-2/5 relative overflow-hidden lg:rounded-lg py-6`}
+  >
+    <ImageComp
+      imagePath={content.imagePath}
+      imageAlt={content.imageAlt}
+      styles="object-contain mx-auto hover:scale-105 drop-shadow-sm duration-300"
+      quality={100}
+    />
+  </div>
+</section>
