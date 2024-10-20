@@ -28,10 +28,12 @@ const {
 >
   <div class="h-20 lg:h-28 w-full bg-primary-950/80"></div>
 
-  <section class="flex justify-center pt-2 pb-20">
+  <section
+    class="flex justify-center pt-2 bg-gradient-to-b from-primary-50 to-primary-100"
+  >
     <article class="mx-auto max-w-4xl">
       <div
-        class="mb-12 lg:mb-0 aspect-square lg:rounded-md shadow-md overflow-hidden"
+        class="mb-12 lg:mb-0 aspect-square lg:rounded-t-md shadow-md overflow-hidden"
       >
         {
           heroImage && (
@@ -43,7 +45,7 @@ const {
           )
         }
       </div>
-      <div class="mx-auto max-w-4xl bg-white prose font-sans py-12 px-5">
+      <div class="mx-auto max-w-4xl bg-white prose font-sans pt-12 pb-32 px-5">
         <div class="title">
           <div class="date">
             <FormattedDate date={pubDate} />
