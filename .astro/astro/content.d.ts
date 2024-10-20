@@ -150,23 +150,36 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"articles": {
-"Choosing-the-Right-Flight-School-six-Factors-to-Consider.md": {
-	id: "Choosing-the-Right-Flight-School-six-Factors-to-Consider.md";
-  slug: "choosing-the-right-flight-school-six-factors-to-consider";
-  body: string;
-  collection: "articles";
-  data: any
-} & { render(): Render[".md"] };
-};
-"blog": Record<string, {
-  id: string;
-  slug: string;
+		"blog": {
+"announcing-sun-city-aviation-s-girls-in-aviation-day-and-pilot-provisions-shop-opening.md": {
+	id: "announcing-sun-city-aviation-s-girls-in-aviation-day-and-pilot-provisions-shop-opening.md";
+  slug: "announcing-sun-city-aviation-s-girls-in-aviation-day-and-pilot-provisions-shop-opening";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">;
-  render(): Render[".md"];
-}>;
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sun-city-aviation-brings-surf-s-up-fun-to-mayor-s-kid-s-day-2024.md": {
+	id: "sun-city-aviation-brings-surf-s-up-fun-to-mayor-s-kid-s-day-2024.md";
+  slug: "sun-city-aviation-brings-surf-s-up-fun-to-mayor-s-kid-s-day-2024";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"the-return-of-sea-plane-training-at-sun-city-aviation-academy.md": {
+	id: "the-return-of-sea-plane-training-at-sun-city-aviation-academy.md";
+  slug: "the-return-of-sea-plane-training-at-sun-city-aviation-academy";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"what-is-a-tfr-election-season-s-unique-flight-regulations.md": {
+	id: "what-is-a-tfr-election-season-s-unique-flight-regulations.md";
+  slug: "what-is-a-tfr-election-season-s-unique-flight-regulations";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+};
 
 	};
 
