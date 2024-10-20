@@ -6,6 +6,7 @@ import CTAColor from "../components/CTAColor.astro";
 import ContentCTA from "../components/ContentCTA.astro";
 import pilotTrainingGuide from "../data/pilot-training-guide";
 import BentoDark from "../components/BentoDark.astro";
+import programsSwiper from "../data/programSwiper";
 
 const { data } = pilotTrainingGuide;
 ---
@@ -20,7 +21,7 @@ const { data } = pilotTrainingGuide;
 
   <BentoDark content={data.careerBento} />
   <ContentCTA content={data.quizCTA} />
-  <ProgramSwiper content={data.programs} />
+  <ProgramSwiper content={programsSwiper} />
   <CTAColor content={data.flyWithUsCTA} />
   <script src="../scripts/creativeSwiper.js"></script>
 </BaseLayout>

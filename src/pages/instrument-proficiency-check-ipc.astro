@@ -7,6 +7,7 @@ import PageSummary from "../components/PageSummary.astro";
 import BookCTA from "../components/BookCTA.astro";
 import Content from "../components/Content.astro";
 import instrumentProficiency from "../data/instrument-proficiency-check-ipc";
+import programsSwiper from "../data/programSwiper";
 
 const { data } = instrumentProficiency;
 ---
@@ -21,7 +22,7 @@ const { data } = instrumentProficiency;
   <PageSummary content={data.pageSummary} />
   <Content data={data.expectBFR} />
   <BookCTA content={data.bookCTA} />
-  <ProgramSwiper content={data.programs} />
+  <ProgramSwiper content={programsSwiper} />
   <CTAColor content={data.flyWithUsCTA} />
   <script src="../scripts/creativeSwiper.js"></script>
 </BaseLayout>

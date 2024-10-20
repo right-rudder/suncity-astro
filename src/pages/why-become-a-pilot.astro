@@ -4,9 +4,9 @@ import HeaderScreen from "../components/HeaderScreen.astro";
 import ProgramSwiper from "../components/ProgramSwiper.astro";
 import CTAColor from "../components/CTAColor.astro";
 import ContentCTA from "../components/ContentCTA.astro";
-import BentoDark from "../components/BentoDark.astro";
 import whyBecomePilot from "../data/why-become-a-pilot";
 import Content from "../components/Content.astro";
+import programsSwiper from "../data/programSwiper";
 
 const { data } = whyBecomePilot;
 ---
@@ -20,7 +20,7 @@ const { data } = whyBecomePilot;
   <HeaderScreen content={data.header} />
 
   <Content data={data.shouldBePilot} />
-  <ProgramSwiper content={data.programs} />
+  <ProgramSwiper content={programsSwiper} />
   <ContentCTA content={data.quizCTA} />
   <CTAColor content={data.flyWithUsCTA} />
   <script src="../scripts/creativeSwiper.js"></script>

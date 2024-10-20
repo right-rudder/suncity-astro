@@ -5,6 +5,7 @@ import CTAColor from "../components/CTAColor.astro";
 import ContentCTA from "../components/ContentCTA.astro";
 import GridPrograms from "../components/GridPrograms.astro";
 import flightTrainingPrograms from "../data/flight-training-pilot-programs";
+import programsSwiper from "../data/programSwiper";
 
 const { data } = flightTrainingPrograms;
 ---
@@ -17,7 +18,7 @@ const { data } = flightTrainingPrograms;
   <!-- HEADER -->
   <HeaderScreen content={data.header} />
 
-  <GridPrograms content={data.programs} />
+  <GridPrograms content={programsSwiper} />
 
   <ContentCTA content={data.quizCTA} />
   <CTAColor content={data.flyWithUsCTA} />

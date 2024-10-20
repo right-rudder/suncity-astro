@@ -7,6 +7,7 @@ import PageSummary from "../components/PageSummary.astro";
 import BookCTA from "../components/BookCTA.astro";
 import TrainingRoadmap from "../components/TrainingRoadmap.astro";
 import privatePilotTraining from "../data/private-pilot-training";
+import programsSwiper from "../data/programSwiper";
 
 const { data } = privatePilotTraining;
 ---
@@ -23,7 +24,7 @@ const { data } = privatePilotTraining;
   <TrainingRoadmap content={data.privateRoadmap} />
 
   <BookCTA content={data.bookCTA} />
-  <ProgramSwiper content={data.programs} />
+  <ProgramSwiper content={programsSwiper} />
   <CTAColor content={data.flyWithUsCTA} />
   <script src="../scripts/creativeSwiper.js"></script>
 </BaseLayout>
