@@ -158,9 +158,44 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"breaking-down-an-instrument-panel.md": {
+	id: "breaking-down-an-instrument-panel.md";
+  slug: "breaking-down-an-instrument-panel";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"choosing-your-aircraft-exploring-different-training-planes.md": {
+	id: "choosing-your-aircraft-exploring-different-training-planes.md";
+  slug: "choosing-your-aircraft-exploring-different-training-planes";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"preparing-for-the-faa-private-pilot-written-test.md": {
+	id: "preparing-for-the-faa-private-pilot-written-test.md";
+  slug: "preparing-for-the-faa-private-pilot-written-test";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "sun-city-aviation-brings-surf-s-up-fun-to-mayor-s-kid-s-day-2024.md": {
 	id: "sun-city-aviation-brings-surf-s-up-fun-to-mayor-s-kid-s-day-2024.md";
   slug: "sun-city-aviation-brings-surf-s-up-fun-to-mayor-s-kid-s-day-2024";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sun-city-aviation-hosts-aopa-s-2024-rusty-pilots-seminar.md": {
+	id: "sun-city-aviation-hosts-aopa-s-2024-rusty-pilots-seminar.md";
+  slug: "sun-city-aviation-hosts-aopa-s-2024-rusty-pilots-seminar";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"the-importance-of-flight-simulators-in-pilot-training.md": {
+	id: "the-importance-of-flight-simulators-in-pilot-training.md";
+  slug: "the-importance-of-flight-simulators-in-pilot-training";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
