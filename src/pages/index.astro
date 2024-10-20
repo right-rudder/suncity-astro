@@ -9,6 +9,7 @@ import Testimonials from "../components/Testimonials.astro";
 import ContentCTA from "../components/ContentCTA.astro";
 import homePage from "../data/homePage";
 import programsSwiper from "../data/programSwiper";
+import BlogFeed from "../components/BlogFeed.astro";
 
 const { data } = homePage;
 ---
@@ -46,6 +47,7 @@ const { data } = homePage;
   <ContentSplit content={data.whySuncity} />
   <ContentCTA content={data.quizCTA} />
   <Testimonials content={data.testimonials} />
+  <BlogFeed data={data.blogfeed} />
   <CTAColor content={data.flyWithUsCTA} />
   <script src="../scripts/creativeSwiper.js"></script>
 </BaseLayout>

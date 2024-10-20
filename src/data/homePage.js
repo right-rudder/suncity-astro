@@ -95,6 +95,13 @@ const homePage = {
       ],
     },
 
+    blogfeed: {
+      upperHeading: "Our Blog",
+      heading: "Sun City Aviation Academy News",
+      description:
+        "Stay up to date with the latest news, pilot resources and updates from Sun City Aviation Academy.",
+    },
+
     flyWithUsCTA: {
       imagePath: "/src/assets/avel-chuklanov-QbTBCUJLqKY-unsplash(1).jpg",
       imageAlt: "Right Rudder Marketing team on the runway",
