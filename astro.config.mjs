@@ -8,7 +8,7 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://altoflight.com/",
+  site: "https://suncityaviation.com",
   integrations: [mdx(), sitemap(), tailwind(), react(), partytown()],
   redirects: {
     "/posts/[...slug]": "/blog/[...slug]",

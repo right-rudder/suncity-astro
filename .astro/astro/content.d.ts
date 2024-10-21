@@ -151,6 +151,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"a-century-soaring-the-history-of-flight-training.md": {
+	id: "a-century-soaring-the-history-of-flight-training.md";
+  slug: "a-century-soaring-the-history-of-flight-training";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "announcing-sun-city-aviation-s-girls-in-aviation-day-and-pilot-provisions-shop-opening.md": {
 	id: "announcing-sun-city-aviation-s-girls-in-aviation-day-and-pilot-provisions-shop-opening.md";
   slug: "announcing-sun-city-aviation-s-girls-in-aviation-day-and-pilot-provisions-shop-opening";
@@ -172,9 +179,58 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"how-to-choose-the-right-flight-school-for-you.md": {
+	id: "how-to-choose-the-right-flight-school-for-you.md";
+  slug: "how-to-choose-the-right-flight-school-for-you";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"may-2023-checkride-passes.md": {
+	id: "may-2023-checkride-passes.md";
+  slug: "may-2023-checkride-passes";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"october-2023-sun-city-student-s-receive-their-pilot-certificates-and-ratings.md": {
+	id: "october-2023-sun-city-student-s-receive-their-pilot-certificates-and-ratings.md";
+  slug: "october-2023-sun-city-student-s-receive-their-pilot-certificates-and-ratings";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"our-newest-multi-engine-instructor.md": {
+	id: "our-newest-multi-engine-instructor.md";
+  slug: "our-newest-multi-engine-instructor";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "preparing-for-the-faa-private-pilot-written-test.md": {
 	id: "preparing-for-the-faa-private-pilot-written-test.md";
   slug: "preparing-for-the-faa-private-pilot-written-test";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"student-appreciation-lunch.md": {
+	id: "student-appreciation-lunch.md";
+  slug: "student-appreciation-lunch";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"students-at-sun-city-receiving-their-private-pilot-certification.md": {
+	id: "students-at-sun-city-receiving-their-private-pilot-certification.md";
+  slug: "students-at-sun-city-receiving-their-private-pilot-certification";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sun-city-aviation-academy-partners-with-civil-air-patrol-to-host-their-weekly-meetings-and-events.md": {
+	id: "sun-city-aviation-academy-partners-with-civil-air-patrol-to-host-their-weekly-meetings-and-events.md";
+  slug: "sun-city-aviation-academy-partners-with-civil-air-patrol-to-host-their-weekly-meetings-and-events";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -193,6 +249,27 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"sun-city-aviation-welcomes-a-new-beechcraft-duchess-to-its-fleet.md": {
+	id: "sun-city-aviation-welcomes-a-new-beechcraft-duchess-to-its-fleet.md";
+  slug: "sun-city-aviation-welcomes-a-new-beechcraft-duchess-to-its-fleet";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sun-city-grand-opening.md": {
+	id: "sun-city-grand-opening.md";
+  slug: "sun-city-grand-opening";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sun-city-visits-the-atc-control-tower-at-khwo.md": {
+	id: "sun-city-visits-the-atc-control-tower-at-khwo.md";
+  slug: "sun-city-visits-the-atc-control-tower-at-khwo";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "the-importance-of-flight-simulators-in-pilot-training.md": {
 	id: "the-importance-of-flight-simulators-in-pilot-training.md";
   slug: "the-importance-of-flight-simulators-in-pilot-training";
@@ -207,9 +284,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"today-we-celebrated-our-grand-opening.md": {
+	id: "today-we-celebrated-our-grand-opening.md";
+  slug: "today-we-celebrated-our-grand-opening";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "what-is-a-tfr-election-season-s-unique-flight-regulations.md": {
 	id: "what-is-a-tfr-election-season-s-unique-flight-regulations.md";
   slug: "what-is-a-tfr-election-season-s-unique-flight-regulations";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"what-to-expect-in-your-flight-training.md": {
+	id: "what-to-expect-in-your-flight-training.md";
+  slug: "what-to-expect-in-your-flight-training";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
