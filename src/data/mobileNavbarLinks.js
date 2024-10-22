@@ -79,21 +79,16 @@ export const mobileNavbarLinks = [
       },
     ],
   },
-
   {
     name: "About",
     submenu: [
       {
-        name: "Our Story",
-        link: "/about/our-story",
-      },
-      {
         name: "Our Team",
-        link: "/about/our-team",
+        link: "/our-team",
       },
       {
         name: "Our Fleet",
-        link: "/about/our-fleet",
+        link: "/our-fleet",
       },
       {
         name: "Financing",
