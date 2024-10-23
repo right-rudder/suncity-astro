@@ -28,11 +28,25 @@ const { data } = Astro.props;
           {data.features.title}
         </h3>
         <p class="mt-4">{data.features.firstParagraph}</p>
-        <ul class="mt-4 list-disc list-inside">
-          {data.features.list.map((item) => <li>{item}</li>)}
-        </ul>
-        <p class="mt-4">{data.features.secondParagraph}</p>
-        <p class="mt-4">{data.features.finalParagraph}</p>
+        {
+          data.features.list && (
+            <ul class="mt-4 list-disc list-inside">
+              {data.features.list.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          )
+        }
+        {
+          data.features.secondParagraph && (
+            <p class="mt-4">{data.features.secondParagraph}</p>
+          )
+        }
+        {
+          data.features.finalParagraph && (
+            <p class="mt-4">{data.features.finalParagraph}</p>
+          )
+        }
       </div>
       <div
         class="mt-6 flex flex-wrap justify-center lg:justify-start w-full align-middle items-center gap-6 z-10"
