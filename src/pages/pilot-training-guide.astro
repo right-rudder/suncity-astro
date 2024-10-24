@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeaderScreen from "../components/HeaderScreen.astro";
+import ProgramSwiper from "../components/ProgramSwiper.astro";
+import CTAColor from "../components/CTAColor.astro";
+import ContentCTA from "../components/ContentCTA.astro";
+import pilotTrainingGuide from "../data/pilot-training-guide";
+import BentoDark from "../components/BentoDark.astro";
+import programsSwiper from "../data/programSwiper";
+
+const { data } = pilotTrainingGuide;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+
+  <BentoDark content={data.careerBento} />
+  <ContentCTA content={data.quizCTA} />
+  <ProgramSwiper content={programsSwiper} />
+  <CTAColor content={data.flyWithUsCTA} />
+  <script src="../scripts/creativeSwiper.js"></script>
+</BaseLayout>

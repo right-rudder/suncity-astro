@@ -1,0 +1,334 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import contact from "../data/contact";
+import {
+  EMAIL_ADDRESS,
+  PHONE_NUMBER,
+  ADDRESS_LINE_1,
+  ADDRESS_LINE_2,
+  FACEBOOK_URL,
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+  YOUTUBE_URL,
+  SITE_DESCRIPTION,
+  LOCATIONS,
+} from "../consts";
+
+const GHL_CONTACT_FORM_WEBHOOK_URL =
+  "https://services.leadconnectorhq.com/hooks/Tg7heLI3UCqo8uRITWhZ/webhook-trigger/b1071ba8-b834-4c1d-a84d-cc280f819c15";
+
+const { data } = contact;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <div class="h-20 lg:h-28 w-full bg-primary-900 brightness-75"></div>
+
+  <section class="relative isolate bg-white">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+      <div
+        class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48"
+      >
+        <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+          <div
+            class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2"
+          >
+            <svg
+              class="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+              aria-hidden="true"
+            >
+              <defs>
+                <pattern
+                  id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
+                  width="200"
+                  height="200"
+                  x="100%"
+                  y="-1"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path d="M130 200V.5M.5 .5H200" fill="none"></path>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" stroke-width="0" fill="white"
+              ></rect>
+              <svg x="100%" y="-1" class="overflow-visible fill-gray-50">
+                <path d="M-470.5 0h201v201h-201Z" stroke-width="0"></path>
+              </svg>
+              <rect
+                width="100%"
+                height="100%"
+                stroke-width="0"
+                fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"></rect>
+            </svg>
+          </div>
+          <h2 class="text-5xl font-bold tracking-tight text-gray-900">
+            Get in touch
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-gray-600">
+            {SITE_DESCRIPTION}
+          </p>
+          <p class="mt-2 text-lg leading-8 text-gray-600">
+            We would love to hear from you. Please fill out the form and we will
+            get back to you as soon as possible.
+          </p>
+          <dl class="mt-10 space-y-4 text-base leading-7 text-gray-600">
+            <div class="flex gap-x-4">
+              <dt class="flex-none">
+                <span class="sr-only">Address</span>
+                <svg
+                  class="h-7 w-6 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"
+                  ></path>
+                </svg>
+              </dt>
+              <dd>{ADDRESS_LINE_1}<br />{ADDRESS_LINE_2}</dd>
+            </div>
+            <div class="flex gap-x-4">
+              <dt class="flex-none">
+                <span class="sr-only">Telephone</span>
+                <svg
+                  class="h-7 w-6 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                  ></path>
+                </svg>
+              </dt>
+              <dd>
+                <a class="hover:text-gray-900" href={`tel:${PHONE_NUMBER}`}
+                  >{PHONE_NUMBER}</a
+                >
+              </dd>
+            </div>
+            <div class="flex gap-x-4">
+              <dt class="flex-none">
+                <span class="sr-only">Email</span>
+                <svg
+                  class="h-7 w-6 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                  ></path>
+                </svg>
+              </dt>
+              <dd>
+                <a class="hover:text-gray-900" href={`mailto:${EMAIL_ADDRESS}`}
+                  >{EMAIL_ADDRESS}</a
+                >
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <div
+        class="bg-primary-500/20 w-full h-full flex justify-center align-middle items-center max-w-xl p-6 lg:p-12"
+      >
+        <form id="contact-form" class="w-full">
+          <div class="">
+            <div class="mb-4">
+              <label for="first-name" class="block mb-0 font-semibold">
+                First Name
+              </label>
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                autocomplete="given-name"
+                class="w-full h-9 p-2 border bg-gray-100 border-gray-400 rounded-sm focus:outline focus:outline-primary-600/50 focus:ring focus:ring-primary-600/50 focus:border-primary-600/50"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label for="last-name" class="block mb-0 font-semibold">
+                Last Name
+              </label>
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                autocomplete="family-name"
+                class="w-full h-9 p-2 border bg-gray-100 border-gray-400 rounded-sm focus:outline focus:outline-primary-600/50 focus:ring focus:ring-primary-600/50 focus:border-primary-600/50"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label for="phone" class="block mb-0 font-semibold">
+                Phone
+              </label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                class="w-full h-9 p-2 border bg-gray-100 border-gray-400 rounded-sm focus:outline focus:outline-primary-600/50 focus:ring focus:ring-primary-600/50 focus:border-primary-600/50"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block mb-0 font-semibold">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                class="w-full h-9 p-2 border bg-gray-100 border-gray-400 rounded-sm focus:outline focus:outline-primary-600/50 focus:ring focus:ring-primary-600/50 focus:border-primary-600/50"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block mb-0 font-semibold">
+                How can we help you?
+              </label>
+              <textarea
+                required
+                name="message"
+                id="message"
+                rows="4"
+                class="w-full p-2 border bg-gray-100 border-gray-400 rounded-sm focus:outline focus:outline-primary-600/50 focus:ring focus:ring-primary-600/50 focus:border-primary-600/50"
+              ></textarea>
+            </div>
+
+            <p class="hidden">
+              <label>
+                Don't fill this out if you're human:
+                <input name="confirm-email" />
+              </label>
+            </p>
+          </div>
+          <div class="">
+            <input
+              type="checkbox"
+              name="agree-data-collection"
+              id="agree-data-collection"
+              class="mr-2 size-6 lg:size-5"
+            />
+
+            <label
+              for="agree-data-collection"
+              class="text-gray-800 text-sm lg:text-base"
+              set:html={data.checkboxText}
+            />
+          </div>
+          <button
+            id="submit-button"
+            form="contact-form"
+            disabled
+            type="submit"
+            class="mx-auto mt-8 btn-primary cursor-not-allowed bg-gray-400 hover:bg-gray-400 hover:text-white"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script define:vars={{ GHL_CONTACT_FORM_WEBHOOK_URL }}>
+    const checkbox = document.getElementById("agree-data-collection");
+    const submitButton = document.getElementById("submit-button");
+
+    checkbox.addEventListener("change", function () {
+      if (checkbox.checked) {
+        submitButton.disabled = false;
+        submitButton.classList.remove(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-400"
+        );
+      } else {
+        submitButton.disabled = true;
+        submitButton.classList.add(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-400"
+        );
+      }
+    });
+
+    // Wait for the DOM content to be fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get the contactUs form element
+      const contactForm = document.getElementById("contact-form");
+
+      // Check if the contactUs form element exists
+      if (contactForm !== null) {
+        // Add submit event listener to the contactUs form
+        contactForm.addEventListener("submit", function (event) {
+          // Prevent the default form submission
+          event.preventDefault();
+
+          // Serialize the form data
+          const formData = new FormData(contactForm);
+
+          // Check the value of the honeypot field
+          const confirmEmailValue = formData.get("confirm-email");
+          if (confirmEmailValue === "" || confirmEmailValue === null) {
+            // If the honeypot field is empty, it's a human
+            // Set the form action to the URL for processing the form and redirecting to thank you
+            contactForm.action = GHL_CONTACT_FORM_WEBHOOK_URL;
+          }
+
+          // Convert FormData to URLSearchParams
+          const urlSearchParams = new URLSearchParams();
+          for (const pair of formData.entries()) {
+            urlSearchParams.append(pair[0], pair[1]);
+          }
+
+          // Send an AJAX request to submit the form
+          const xhr = new XMLHttpRequest();
+          xhr.open("POST", contactForm.action);
+          xhr.setRequestHeader(
+            "Content-Type",
+            "application/x-www-form-urlencoded"
+          );
+          xhr.onload = function () {
+            // Check if the request was successful (status 200)
+            if (xhr.status === 200) {
+              // Redirect the user after a successful form submission
+              window.location.href = "/contact-confirmation";
+            } else {
+              // Handle errors if any
+              console.error("Form submission failed:", xhr.statusText);
+            }
+          };
+          xhr.onerror = function () {
+            // Handle network errors
+            console.error("Network error occurred while submitting the form.");
+          };
+          xhr.send(urlSearchParams);
+        });
+      } else {
+        console.error("Contact us form element not found.");
+      }
+    });
+  </script>
+
+  <script src="../scripts/emailValidation.js"></script>
+</BaseLayout>

@@ -30,6 +30,10 @@ export const footerLinks = [
         name: "Financing",
         link: "/stratus-finance",
       },
+      {
+        name: "Contact",
+        link: "/contact",
+      },
     ],
   },
   {

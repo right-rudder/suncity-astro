@@ -11,18 +11,6 @@ export const navbarLinks = [
         name: "Discovery Flight",
         link: "/discovery-flight",
       },
-      {
-        name: "Flight Training",
-        link: "/flight-training-pilot-programs",
-      },
-      {
-        name: "Become a Professional Pilot",
-        link: "/professional-pilot-course",
-      },
-      {
-        name: "Financing",
-        link: "/stratus-finance",
-      },
     ],
   },
   {
@@ -97,19 +85,19 @@ export const navbarLinks = [
 
   {
     name: "About",
-    link: "/about",
+    link: "/our-team",
     submenu: [
       {
-        name: "Our Story",
-        link: "/about/our-story",
-      },
-      {
         name: "Our Team",
-        link: "/about/our-team",
+        link: "/our-team",
       },
       {
         name: "Our Fleet",
-        link: "/about/our-fleet",
+        link: "/our-fleet",
+      },
+      {
+        name: "Financing",
+        link: "/stratus-finance",
       },
       {
         name: "Blog",

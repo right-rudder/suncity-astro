@@ -1,0 +1,66 @@
+---
+import ImageComp from "./ImageComp.astro";
+
+const { data } = Astro.props;
+---
+
+<section
+  class="pt-12 lg:pt-24 pb-12 flex flex-col justify-center items-center align-middle bg-gradient-to-b from-white to-accent-100"
+>
+  <div class="max-w-4xl text-center">
+    <p class="text-base font-semibold leading-7 text-accent-300 uppercase">
+      {data.upperHeading}
+    </p>
+    <h1
+      class="mt-0 text-3xl font-bold tracking-tight text-muted-700 sm:text-4xl"
+    >
+      {data.heading}
+    </h1>
+    <p
+      class="mt-6 text-xl leading-8 text-muted-700"
+      set:html={data.description}
+    />
+  </div>
+  <div class="mx-auto mt-16 max-w-9xl px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl">
+      <ul role="list" class="grid grid-cols-1 gap-9 max-w-4xl">
+        {
+          data.aircraft.map((plane) => (
+            <li class="flex flex-col bg-white group relative overflow-hidden rounded-sm">
+              <div class="w-full h-[27rem] overflow-hidden flex flex-col justify-center items-center align-middle">
+                <p
+                  class="z-10 w-full px-6 text-5xl font-bold lg:translate-y-12 drop-shadow-md text-center leading-7 text-accent-200 lg:text-accent-100 group-hover:text-accent-200 group-hover:-translate-y-3 duration-300 ease-in-out"
+                  set:html={plane.title}
+                />
+                {plane.description && (
+                  <p
+                    class="z-10 mt-6 lg:mt-0 px-8 w-full lg:leading-3 lg:translate-y-16 font-sans2 font-normal text-lg lg:opacity-0 text-center leading-tight text-muted-100 group-hover:opacity-95 group-hover:-translate-y-0 group-hover:leading-tight duration-500 ease-out"
+                    set:html={plane.description}
+                  />
+                )}
+                <ImageComp
+                  imagePath={plane.imagePath}
+                  imageAlt={plane.imageAlt}
+                  styles="absolute -z-0 h-full w-full object-cover object-center group-hover:blur-sm group-hover:-translate-y-3 group-hover:scale-105 duration-100 ease-out"
+                  quality={60}
+                />
+                <div class="absolute z-0 w-full h-full bg-black/70 lg:bg-black/40 group-hover:bg-black/80 duration-500" />
+              </div>
+              <a
+                href={plane.link}
+                target="_self"
+                class="absolute btn-animate bottom-0 w-full h-16 bg-accent-400 lg:opacity-50 lg:translate-y-[101%] group-hover:brightness-125 group-hover:opacity-100 group-hover:translate-y-0 duration-300 text-primary-950 hover:text-primary-50"
+              >
+                <div class="flex h-full w-full justify-center align-middle items-center">
+                  <p class="relative block z-10 text-center text-lg tracking-wide font-bold leading-loose uppercase drop-shadow-sm">
+                    {plane.linkText}
+                  </p>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,34 +1,59 @@
 ---
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
+
 const { data } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif,webp}"
+  "/src/assets/*.{jpeg,jpg,png,gif}"
 );
-if (!images[data.headerImage]) {
+if (!images[data.imagePath])
   throw new Error(
-    `"${data.headerImage}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`
+    `"${data.imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
   );
-}
 ---
 
 <header
-  class="relative isolate pt-14 overflow-hidden h-[40vh] lg:h-[65vh] text-white flex
-    items-center"
+  class="relative isolate overflow-hidden min-h-[75vh] md:min-h-screen-5/6 text-white flex items-center justify-center"
 >
   <Image
-    src={images[data.headerImage]()}
-    alt={data.headerAlt}
-    class="absolute top-0 w-full h-full object-cover -z-50"
+    src={images[data.imagePath]()}
+    alt={data.imageAlt}
+    class="absolute top-0 w-full h-full object-cover -z-10 animate-slow-zoom"
     quality={100}
   />
 
-  <div class="absolute inset-0 bg-primary-600/30 -z-40"></div>
   <div
-    class="flex w-full max-w-7xl mx-auto px-5 font-medium flex-col gap-4 lg:gap-8"
+    class="absolute bg-gradient-to-b from-primary-950/60 to-primary-950/50 w-full h-full z-0"
   >
-    <h1 class="text-4xl max-w-xl lg:text-6xl font-extrabold lg:max-w-4xl">
-      {data.title}
-    </h1>
   </div>
+  {
+    (data.headerH1 || data.headerH2) && (
+      <div class="text-muted-100 text-center lg:text-left z-10 flex flex-col items-center gap-4 px-5 h-full lg:pt-16 justify-center">
+        {data.headerH1 && (
+          <h1
+            class="text-2xl px-6 lg:px-24 md:text-5xl lg:text-6xl drop-shadow-lg xl:text-7xl text-center font-black tracking-normal"
+            set:html={data.headerH1}
+          />
+        )}
+        {data.paragraph && (
+          <p
+            class="text-base lg:text-xl mt-3 font-semibold text-muted-200 tracking-wide text-center max-w-3xl"
+            set:html={data.paragraph}
+          />
+        )}
+        {data.buttons && (
+          <div class="mt-6 flex flex-wrap justify-center align-middle items-center gap-6 z-10">
+            {data.buttons.map((btn) => (
+              <a
+                href={btn.link}
+                class={`${btn.primary ? "btn-primary" : "btn-white"} w-full md:w-auto`}
+              >
+                {btn.name}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    )
+  }
 </header>
