@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeaderScreen from "../components/HeaderScreen.astro";
+import ProgramSwiper from "../components/ProgramSwiper.astro";
+import CTAColor from "../components/CTAColor.astro";
+import PageSummary from "../components/PageSummary.astro";
+import professionalPilotCourse from "../data/professional-pilot-course";
+import Zero2Hero from "../components/Zero2Hero";
+import BookCTA from "../components/BookCTA.astro";
+import programsSwiper from "../data/programSwiper";
+
+const { data } = professionalPilotCourse;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+  <PageSummary content={data.pageSummary} />
+
+  <section
+    id="hero-to-zero-program"
+    class="pt-12 lg:pt-24 pb-12 bg-gradient-to-b from-white to-accent-100"
+  >
+    <div class="">
+      {
+        data.zero2hero.upperHeading && (
+          <h3 class="mx-auto mt-12 uppercase text-lg lg:text-xl lg:max-w-3xl font-sans text-center font-bold tracking-tight text-accent-300">
+            {data.zero2hero.upperHeading}
+          </h3>
+        )
+      }
+      {
+        data.zero2hero.heading && (
+          <h2
+            class="mx-auto mb-4 text-4xl lg:text-6xl lg:max-w-3xl font-sans text-center font-bold tracking-tight text-primary-800"
+            set:html={data.zero2hero.heading}
+          />
+        )
+      }
+      {
+        data.zero2hero.description && (
+          <p class="mx-auto px-4 lg:px-0 mb-12 text-lg max-w-3xl text-center tracking-loose text-muted-700">
+            {data.zero2hero.description}
+          </p>
+        )
+      }
+    </div>
+    <div
+      class="w-full md:max-w-3xl lg:max-w-4xl mt-12 py-4 lg:py-12 lg:px-8 rounded-none md:rounded-md lg:rounded-sm bg-gradient-to-b from-accent-300 to-yellow-500 flex flex-col items-center lg:flex-1 mx-auto"
+    >
+      <Zero2Hero client:visible />
+    </div>
+  </section>
+
+  <BookCTA content={data.bookCTA} />
+  <ProgramSwiper content={programsSwiper} />
+  <CTAColor content={data.flyWithUsCTA} />
+  <script src="../scripts/creativeSwiper.js"></script>
+</BaseLayout>

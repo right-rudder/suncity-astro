@@ -14,7 +14,7 @@ if (!images[content.imagePath]) {
 ---
 
 <header
-  class="relative lg:mt-0 h-screen bg-gray-800 text-white flex flex-col items-center justify-center overflow-hidden"
+  class="relative lg:mt-0 min-h-screen h-fit bg-gray-800 text-white flex flex-col items-center justify-center overflow-hidden"
 >
   <Image
     src={images[content.imagePath]()}
@@ -32,7 +32,7 @@ if (!images[content.imagePath]) {
     class="text-white mt-20 lg:mt-0 text-center lg:text-left z-10 flex flex-col items-center gap-4 px-5 h-full lg:pt-28 justify-center"
   >
     <h1
-      class="text-4xl md:text-5xl lg:text-6xl drop-shadow-lg xl:text-7xl text-center font-black tracking-normal text-gray-100"
+      class="text-5xl md:text-6xl lg:text-7xl drop-shadow-lg xl:text-8xl text-center font-black tracking-wide text-gray-100"
       set:html={content.headerH1}
     />
     <h2
@@ -48,7 +48,7 @@ if (!images[content.imagePath]) {
             href={btn.link}
             class={`${btn.primary ? "btn-primary" : "btn-white"} w-full md:w-auto`}
           >
-            {btn.name}
+            <span class="drop-shadow-sm">{btn.name}</span>
           </a>
         ))
       }

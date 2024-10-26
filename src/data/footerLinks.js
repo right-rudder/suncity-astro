@@ -27,8 +27,8 @@ export const footerLinks = [
         link: "/youth-aviation-class",
       },
       {
-        name: "Financing",
-        link: "/stratus-finance",
+        name: "Contact",
+        link: "/contact",
       },
     ],
   },
@@ -79,6 +79,10 @@ export const footerLinks = [
       {
         name: "Our Fleet",
         link: "/about/our-fleet",
+      },
+      {
+        name: "Financing",
+        link: "/stratus-finance",
       },
       {
         name: "Blog",

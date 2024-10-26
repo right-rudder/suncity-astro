@@ -19,6 +19,7 @@ import {
 import { footerLinks } from "../data/footerLinks";
 import logo from "../assets/sun-city-white-text-logo.webp";
 import { Image } from "astro:assets";
+import ImageComp from "./ImageComp.astro";
 
 const { pathname } = Astro.url;
 ---
@@ -88,37 +89,24 @@ const { pathname } = Astro.url;
             </div>
           ))
         }
-        <div class="grid grid-cols-1 gap-y-4 lg:col-span-3">
-          {
-            LOCATIONS.map((location, index) => (
-              <div class="text-right lg:text-center bg-accent-100/20 rounded p-2 lg:pt-8 text-sm lg:text-lg">
-                <p
-                  class="font-bold tracking-wide text-base text-accent-200 leading-none"
-                  set:html={location.title}
-                />
-                <a
-                  href={location.gMaps}
-                  target="_blank"
-                  class="mt-2 space-y-1 font-sans2 transition-colors text-xs lg:text-base duration-300 text-white hover:text-accent-100"
-                >
-                  <>
-                    <span class="">{location.address}</span>
-                    <br />
-                    <span class="">
-                      {location.city}, {location.state} {location.zip}
-                    </span>
-                  </>
-                </a>
-                <a
-                  href={`tel:${location.phone}`}
-                  class="mt-3 text-right justify-end lg:justify-center font-sans2 lg:text-center transition-colors duration-300 text-white hover:text-accent-100 flex items-center align-middle"
-                >
-                  <FaPhoneSquareAlt className="mr-2 text-lg" />
-                  {location.phone}
-                </a>
-              </div>
-            ))
-          }
+        <div class="col-span-2 lg:col-span-3">
+          <div class="flex flex-col items-center lg:mx-10 mx-5 lg:ml-32">
+            <!--WIDGET METAR-->
+            <a
+              href="https://metar-taf.com/KHWO"
+              target="blank"
+              id="metartaf-B8VkYadJ"
+              class="lg:w-96 w-72 bg-primary-800 p-4 rounded-md text-center"
+              style="font-size:18px; font-weight:600; color:#FFF; display:block"
+              >METAR North Perry Airport</a
+            >
+            <script
+              async
+              defer
+              crossorigin="anonymous"
+              src="https://metar-taf.com/embed-js/KHWO?bg_color=000000&layout=landscape&temp=f&visibility=mi&qnh=inHg&rh=rh&target=B8VkYadJ"
+            ></script>
+          </div>
         </div>
       </div>
     </div>
@@ -128,8 +116,24 @@ const { pathname } = Astro.url;
       class="mx-auto flex flex-col gap-2 lg:flex-row justify-between items-center align-middle max-w-7xl"
     >
       <p class="text-sm text-gray-100 text-center">
-        © Copyright 2024 Right Rudder Marketing LLC. All rights reserved.
+        © Copyright 2024 &#x2022; SunCity Aviation Academy &#x2022; All rights
+        reserved.
       </p>
+      <span class="text-white text-center flex gap-2">
+        Powered by
+        <a
+          href="https://rightruddermarketing.com/"
+          target="_blank"
+          class="text-bold group hover:underline hover:text-white/70 flex gap-2 duration-200"
+        >
+          <ImageComp
+            imagePath="/src/assets/RRM-R-symbol-474.webp"
+            imageAlt="Right Rudder Marketing Logo"
+            styles="h-6 w-auto group-hover:scale-105 group-hover:brightness-125 drop-shadow-md duration-300"
+          />
+          More Right Rudder</a
+        >
+      </span>
       <div
         class="flex items-center justify-center align-middle mt-4 space-x-4 sm:mt-0"
       >

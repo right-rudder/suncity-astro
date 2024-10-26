@@ -1,0 +1,176 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeaderScreen from "../components/HeaderScreen.astro";
+import ProgramSwiper from "../components/ProgramSwiper.astro";
+import CTAColor from "../components/CTAColor.astro";
+import BookCTA from "../components/BookCTA.astro";
+import programsSwiper from "../data/programSwiper";
+import stratusInfo from "../data/stratus-finance";
+import ImageComp from "../components/ImageComp.astro";
+
+const stratusFinance = {
+  upperHeading: "Stratus Financial",
+  heading: "The Future of Finance",
+  description:
+    "Stratus Finance is a program that will help you understand the future of finance and how to navigate the ever-changing landscape of the financial world.",
+  imagePath: "/src/assets/stratus_logo.webp",
+  imageAlt: "Stratus Finance Logo",
+  paragraph1:
+    "Stratus Financial was founded by FAA Certificated Flight and Ground Instructors passionate about helping others achieve their aviation dreams. We know it's not just about achieving your dreams (because we looked up in the sky every time, we heard an airplane too!), but funding your family's dreams as well. That's why Stratus was created, because with Stratus, the sky is no longer the limit.",
+  subTitle1: "Your Aviation Dreams Start Here",
+  paragraph2:
+    "You're not just a number, and it shows with Stratus. We look beyond the typical FICO scores and look at you as a whole aviator. We want to set you up for success before you even apply with us!. We offer exceptional lending packages, including:",
+  list: [
+    "The best rate you'll get anywhere to go from zero to hero!",
+    "Full financing for your entire flight training",
+    "Affordable payment options, including deferment for 12 months while you complete your training AND find a job",
+    "Pay your loan off any time you want with no consequences or penalties whatsoever.",
+  ],
+  subTitle2: "Stratus Has You Covered For Resources For Your Aviation Career",
+  list2: [
+    "Counseling with our team of flight instructors and ground instructors to support you through flight training, check rides and interviews with airlines.",
+    "Resume reviewing, editing, and building",
+    "AMA Phone Calls with Pilots in the 121 and 135 Industry - What It's like, How They Got Their Job, etc.",
+  ],
+  paragraph3:
+    "We look forward to helping you achieving your aviation dreams and seeing you in the sky!<br>If you are interested in getting started, please click here to apply now: ",
+  applyButton: {
+    name: "Apply Now",
+    link: "https://stratus.finance/apply/suncityaviation1161828/",
+    primary: true,
+  },
+  paragraph4:
+    "If you have limited credit or low income you may need a Co-Borrower; if so, please have your co-borrower complete their application here:",
+  subTitle3: "Need More Information?",
+  paragraph5:
+    "We've prepared a free informational booklet to help you understand how financing with Stratus Financial works. Click below to find out more and download the booklet or check out the Stratus Financial website.",
+  buttons: [
+    {
+      name: "Visit Stratus Financial",
+      link: "https://stratus.finance/",
+      primary: true,
+    },
+    {
+      name: "Download Booklet",
+      link: "https://drive.google.com/file/d/13wszvROm6r1hL2HEH-8CGQvgsqguPRp6/view?usp=share_link",
+      primary: true,
+    },
+  ],
+};
+
+const { data } = stratusInfo;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+
+  <section
+    class="bg-gradient-to-b from-white to-90% to-muted-100 px-6 py-24 sm:py-32 lg:px-0"
+  >
+    <div class="flex flex-col justify-center align-middle items-center">
+      <div class="text-center">
+        <div class="max-w-4xl">
+          <p
+            class="text-base font-semibold leading-7 text-accent-300 uppercase"
+          >
+            {stratusFinance.upperHeading}
+          </p>
+          <h1 class="mt-0 text-4xl font-bold tracking-tight text-muted-700">
+            {stratusFinance.heading}
+          </h1>
+          <p
+            class="mt-6 text-xl leading-8 text-muted-700"
+            set:html={stratusFinance.description}
+          />
+        </div>
+      </div>
+      <div class="max-w-xl mt-12">
+        <ImageComp
+          imagePath={stratusFinance.imagePath}
+          imageAlt={stratusFinance.imageAlt}
+          styles="object-contain w-full"
+          quality={99}
+        />
+      </div>
+      <div class="max-w-5xl mt-8">
+        <p class="font-sans2 text-xl" set:html={stratusFinance.paragraph1} />
+        <h4
+          class="font-semibold text-3xl mt-12"
+          set:html={stratusFinance.subTitle1}
+        />
+        <p class="mt-4 font-sans2" set:html={stratusFinance.paragraph2} />
+        <ul role="list" class="max-w-2xl mt-6 list-disc font-sans2">
+          {
+            stratusFinance.list.map((item) => (
+              <li class="mt-2 font-medium" set:html={item} />
+            ))
+          }
+        </ul>
+        <h4
+          class="font-semibold text-3xl mt-12"
+          set:html={stratusFinance.subTitle2}
+        />
+        <ul role="list" class="max-w-2xl mt-6 list-disc font-sans2">
+          {
+            stratusFinance.list2.map((item) => (
+              <li class="mt-2 font-medium" set:html={item} />
+            ))
+          }
+        </ul>
+        <p
+          class="font-sans2 mt-12 mb-6 text-xl"
+          set:html={stratusFinance.paragraph3}
+        />
+        <div class="flex">
+          <a
+            target="_blank"
+            href={stratusFinance.applyButton.link}
+            class={`${stratusFinance.applyButton.primary ? "btn-accent" : "btn-white"} w-full md:w-auto`}
+          >
+            {stratusFinance.applyButton.name}
+          </a>
+        </div>
+        <p
+          class="font-sans2 mt-12 mb-6 text-xl"
+          set:html={stratusFinance.paragraph4}
+        />
+        <div class="flex">
+          <a
+            target="_blank"
+            href={stratusFinance.applyButton.link}
+            class={`${stratusFinance.applyButton.primary ? "btn-accent" : "btn-white"} w-full md:w-auto`}
+          >
+            {stratusFinance.applyButton.name}
+          </a>
+        </div>
+        <h4
+          class="font-semibold text-3xl mt-12"
+          set:html={stratusFinance.subTitle3}
+        />
+        <p class="mt-4 font-sans2 mb-6" set:html={stratusFinance.paragraph5} />
+        <div class="mt-6 flex flex-wrap align-middle items-center gap-6">
+          {
+            stratusFinance.buttons.map((btn) => (
+              <a
+                target="_blank"
+                href={btn.link}
+                class={`${btn.primary ? "btn-accent" : "btn-white"} w-full md:w-auto mt-6`}
+              >
+                {btn.name}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+  <BookCTA content={data.bookCTA} />
+  <ProgramSwiper content={programsSwiper} />
+  <CTAColor content={data.flyWithUsCTA} />
+  <script src="../scripts/creativeSwiper.js"></script>
+</BaseLayout>

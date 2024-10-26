@@ -78,7 +78,9 @@ const Navbar = ({ pathname }) => {
     <nav className="w-full h-0 sticky inset-0 z-20 font-sans tracking-wider">
       <div
         className={`${
-          navBar || openMobile ? "bg-primary-950/95" : "bg-transparent"
+          navBar || openMobile
+            ? "bg-primary-950/90 backdrop-blur-sm"
+            : "bg-transparent"
         } duration-500`}
       >
         <div className="px-5 max-w-7xl mx-auto top-0">
@@ -89,6 +91,7 @@ const Navbar = ({ pathname }) => {
             <div className="flex w-full items-center justify-between">
               <a
                 href="/"
+                title="SunCity Aviation Academy"
                 className="relative hover:brightness-110 duration-200 ease-in-out w-4/6 md:w-1/3 lg:w-2/12"
               >
                 <img
@@ -96,12 +99,12 @@ const Navbar = ({ pathname }) => {
                   alt="SunCity Aviation Academy Logo"
                   aria-label="SunCity Aviation Academy Logo"
                   title="SunCity Aviation Academy"
-                  loading="lazy"
-                  className={`${navBar || openMobile ? "h-20 lg:h-24 w-3/4" : "h-20 lg:h-28 w-full"} object-contain duration-500`}
+                  loading="eager"
+                  className={`${navBar || openMobile ? "h-16 lg:h-32 w-9/12 lg:w-10/12" : "h-20 lg:h-32 w-10/12 lg:w-full"} object-contain duration-500`}
                 />
               </a>
               <div className="hidden lg:flex justify-end w-full">
-                <ul className="flex justify-between align-middle w-11/12 items-center">
+                <ul className="flex justify-between align-middle w-10/12 items-center">
                   {navbarLinks.map((item, index) => (
                     <li
                       key={index}

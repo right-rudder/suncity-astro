@@ -10,18 +10,6 @@ export const mobileNavbarLinks = [
         name: "Discovery Flight",
         link: "/discovery-flight",
       },
-      {
-        name: "Flight Training",
-        link: "/flight-training-pilot-programs",
-      },
-      {
-        name: "Become a Professional Pilot",
-        link: "/professional-pilot-course",
-      },
-      {
-        name: "Financing",
-        link: "/stratus-finance",
-      },
     ],
   },
   {
@@ -87,25 +75,28 @@ export const mobileNavbarLinks = [
       },
       {
         name: "Aviation 101",
-        link: "/youth-aviation-class",
+        link: "/youth-aviation-classes",
       },
     ],
   },
-
   {
     name: "About",
     submenu: [
       {
-        name: "Our Story",
-        link: "/about/our-story",
-      },
-      {
         name: "Our Team",
-        link: "/about/our-team",
+        link: "/our-team",
       },
       {
         name: "Our Fleet",
-        link: "/about/our-fleet",
+        link: "/our-fleet",
+      },
+      {
+        name: "Financing",
+        link: "/stratus-finance",
+      },
+      {
+        name: "Contact",
+        link: "/contact",
       },
       {
         name: "Blog",

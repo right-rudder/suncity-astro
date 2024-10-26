@@ -1,9 +1,17 @@
 ---
-const { name, qualifications, imagePath, bio } = Astro.props;
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaSquareGithub } from "react-icons/fa6";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
+
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
+
+const { name, imagePath, imageAlt, rank, social } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif}"
+  "/src/assets/*.{jpeg,jpg,png,gif,webp}"
 );
 if (!images[imagePath])
   throw new Error(
@@ -11,32 +19,53 @@ if (!images[imagePath])
   );
 ---
 
-<div class="flex flex-col bg-white group relative overflow-hidden">
-  <div class="w-[90%] h-[30rem] overflow-hidden">
+<li class="group max-w-56">
+  <div
+    class="mx-auto rounded-full overflow-hidden h-56 w-56 ring-primary-100 group-hover:ring-2 group-hover:shadow-lg duration-200 ease-in-out"
+  >
     <Image
       src={images[imagePath]()}
-      alt={name}
-      class="h-full object-cover group-hover:scale-105 duration-700 ease-in-out"
-      quality={10}
+      alt={imageAlt}
+      class="w-full h-full object-cover object-top group-hover:scale-110 group-hover:shadow-lg group-hover:brightness-110 duration-300 ease-in-out"
+      quality={80}
     />
   </div>
-  <!-- <div
-    class="absolute w-full h-full bg-primary-600/80 backdrop-blur-sm -translate-x-[101%] group-hover:translate-x-0 duration-700"
+  <h3
+    class="mt-6 mb-0 text-center text-2xl group-hover:text-primary-dark group-hover:scale-110 font-bold tracking-tight text-gray-900 duration-300 ease-in-out"
   >
-    <p class="p-10 leading-loose text-white">{bio}</p>
-  </div> -->
-  <div class="p-10 z-10">
-    <h2
-      class="text-primary-600 text-3xl font-medium mb-3 group-hover:text-red-700 duration-700"
-    >
-      {name}
-    </h2>
-    {
-      qualifications.map((qualification) => (
-        <p class="uppercase tracking-widest text-xs font-bold group-hover:text-red-700 duration-700">
-          {qualification}
-        </p>
-      ))
-    }
-  </div>
-</div>
+    {name}
+  </h3>
+  <p
+    class="text-lg mt-0 text-center leading-6 font-sans text-primary-600 group-hover:text-accent-700 duration-200 delay-100 ease-in-out"
+    set:html={rank}
+  />
+  {
+    social && (
+      <div class="mt-2 flex justify-center align-middle gap-1">
+        {social.map((scl) => (
+          <a
+            href={scl.url}
+            class="text-primary-dark hover:scale-125 hover:text-primary-700 duration-75"
+            aria-label={scl.name}
+            target="_blank"
+          >
+            {scl.platform === "facebook" && (
+              <FaFacebookSquare className="size-5" />
+            )}
+            {scl.platform === "instagram" && (
+              <FaInstagramSquare className="size-5" />
+            )}
+            {scl.platform === "linkedin" && <FaLinkedin className="size-5" />}
+            {scl.platform === "twitter" && (
+              <FaSquareXTwitter className="size-5" />
+            )}
+            {scl.platform === "github" && <FaSquareGithub className="size-5" />}
+            {scl.platform === "website" && (
+              <FaExternalLinkSquareAlt className="size-5" />
+            )}
+          </a>
+        ))}
+      </div>
+    )
+  }
+</li>
