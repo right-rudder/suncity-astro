@@ -75,7 +75,7 @@ export const mobileNavbarLinks = [
       },
       {
         name: "Aviation 101",
-        link: "/youth-aviation-class",
+        link: "/youth-aviation-classes",
       },
     ],
   },

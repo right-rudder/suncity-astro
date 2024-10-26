@@ -69,8 +69,8 @@ export const navbarLinks = [
   },
 
   {
-    name: "Youth Program",
-    link: "/youth-aviation-programs",
+    name: "Youth Programs",
+    link: "/experience-aviation",
     submenu: [
       {
         name: "Experience Aviation",
@@ -78,7 +78,7 @@ export const navbarLinks = [
       },
       {
         name: "Aviation 101",
-        link: "/youth-aviation-class",
+        link: "/youth-aviation-classes",
       },
     ],
   },
