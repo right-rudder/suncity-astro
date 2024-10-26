@@ -16,8 +16,8 @@ import Header from "../components/Header.astro";
 import enrollInfo from "../data/enroll-now";
 import programsSwiper from "../data/programSwiper";
 
-const GHL_CONTACT_FORM_WEBHOOK_URL =
-  "https://services.leadconnectorhq.com/hooks/Tg7heLI3UCqo8uRITWhZ/webhook-trigger/b1071ba8-b834-4c1d-a84d-cc280f819c15";
+const GHL_ENROLL_FORM_WEBHOOK_URL =
+  "https://services.leadconnectorhq.com/hooks/SmZxqjL2v5KaWPxMSMbW/webhook-trigger/0mubV6oCeGRAtK8GQB4G";
 
 const { data } = enrollInfo;
 ---
@@ -256,7 +256,7 @@ const { data } = enrollInfo;
       </div>
     </div>
   </section>
-  <script define:vars={{ GHL_CONTACT_FORM_WEBHOOK_URL }}>
+  <script define:vars={{ GHL_ENROLL_FORM_WEBHOOK_URL }}>
     const checkbox = document.getElementById("agree-data-collection");
     const submitButton = document.getElementById("submit-button");
 
@@ -298,7 +298,7 @@ const { data } = enrollInfo;
           if (confirmEmailValue === "" || confirmEmailValue === null) {
             // If the honeypot field is empty, it's a human
             // Set the form action to the URL for processing the form and redirecting to thank you
-            contactForm.action = GHL_CONTACT_FORM_WEBHOOK_URL;
+            contactForm.action = GHL_ENROLL_FORM_WEBHOOK_URL;
           }
 
           // Convert FormData to URLSearchParams
@@ -318,7 +318,7 @@ const { data } = enrollInfo;
             // Check if the request was successful (status 200)
             if (xhr.status === 200) {
               // Redirect the user after a successful form submission
-              window.location.href = "/discovery-flight-confirmation";
+              window.location.href = "/enroll-confirmation";
             } else {
               // Handle errors if any
               console.error("Form submission failed:", xhr.statusText);
@@ -331,7 +331,7 @@ const { data } = enrollInfo;
           xhr.send(urlSearchParams);
         });
       } else {
-        console.error("Discovery Flight form element not found.");
+        console.error("Enroll form element not found.");
       }
     });
   </script>

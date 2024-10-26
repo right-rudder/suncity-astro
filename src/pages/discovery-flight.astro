@@ -15,8 +15,8 @@ import {
 import discoveryInfo from "../data/discovery-flight";
 import Header from "../components/Header.astro";
 
-const GHL_CONTACT_FORM_WEBHOOK_URL =
-  "https://services.leadconnectorhq.com/hooks/Tg7heLI3UCqo8uRITWhZ/webhook-trigger/b1071ba8-b834-4c1d-a84d-cc280f819c15";
+const GHL_DISCOVERY_FORM_WEBHOOK_URL =
+  "https://services.leadconnectorhq.com/hooks/SmZxqjL2v5KaWPxMSMbW/webhook-trigger/CTLkzZvkTEe4c1z2pwhl";
 
 const { data } = discoveryInfo;
 ---
@@ -255,7 +255,7 @@ const { data } = discoveryInfo;
       </div>
     </div>
   </section>
-  <script define:vars={{ GHL_CONTACT_FORM_WEBHOOK_URL }}>
+  <script define:vars={{ GHL_DISCOVERY_FORM_WEBHOOK_URL }}>
     const checkbox = document.getElementById("agree-data-collection");
     const submitButton = document.getElementById("submit-button");
 
@@ -297,7 +297,7 @@ const { data } = discoveryInfo;
           if (confirmEmailValue === "" || confirmEmailValue === null) {
             // If the honeypot field is empty, it's a human
             // Set the form action to the URL for processing the form and redirecting to thank you
-            contactForm.action = GHL_CONTACT_FORM_WEBHOOK_URL;
+            contactForm.action = GHL_DISCOVERY_FORM_WEBHOOK_URL;
           }
 
           // Convert FormData to URLSearchParams
