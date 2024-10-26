@@ -20,12 +20,12 @@ const multiEngineRating = {
       buttons: [
         {
           name: "Enroll Now",
-          link: "/marketing-system",
+          link: "/enroll-now",
           primary: false,
         },
         {
           name: "Book a Discovery Flight",
-          link: "/schedule-call",
+          link: "/discovery-flight",
           primary: false,
         },
       ],
