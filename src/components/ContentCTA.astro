@@ -1,5 +1,6 @@
 ---
 import ImageComp from "./ImageComp.astro";
+import QuizModalButton from "./QuizModalButton";
 
 const { content } = Astro.props;
 ---
@@ -92,6 +93,15 @@ const { content } = Astro.props;
               </a>
             ))}
           </div>
+        )
+      }
+      {
+        !content.buttons && content.quizModal && (
+          <QuizModalButton
+            btnStyle="btn-accent"
+            btnText="Take the Quiz"
+            client:only
+          />
         )
       }
     </div>

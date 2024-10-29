@@ -86,13 +86,7 @@ const homePage = {
       imagePath: "/src/assets/sun-city-private-pilot-pass-checkride.webp",
       imageAlt:
         "sun city aviation student and flight instructor celebrating after passing a checkride",
-      buttons: [
-        {
-          name: "Take the Quiz",
-          link: "/quiz",
-          primary: true,
-        },
-      ],
+      quizModal: true,
     },
 
     blogfeed: {
