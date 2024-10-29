@@ -79,26 +79,6 @@ const multiEngineRating = {
       imageAlt: "Right Rudder Marketing team on the runway",
     },
 
-    quizCTA: {
-      reverse: true,
-      upperHeading: "Take Our Quiz",
-      heading: "Do You Have What It Takes To Be A Pilot?",
-      descriptions: [
-        "Are you fascinated by the world of aviation? Have you dreamed of flying and exploring the skies? Do you often look upward at passing aircraft, wondering if you yourself could be in the cockpit?",
-        "Begin your journey in aviation with our brief quiz. Our quiz is designed to look at your aviation related knowledge and aptitude, alongside your unique personality traits and interests, to provide insights into whether a future in aviation aligns with your aspirations.",
-      ],
-      imagePath: "/src/assets/sun-city-aviation-academy-be-pilot-square.jpg",
-      imageAlt:
-        "sun city aviation academy student flying a plane over the city of miami",
-      buttons: [
-        {
-          name: "Take the Quiz",
-          link: "/quiz",
-          primary: true,
-        },
-      ],
-    },
-
     flyWithUsCTA: {
       imagePath: "/src/assets/avel-chuklanov-QbTBCUJLqKY-unsplash(1).jpg",
       imageAlt: "Right Rudder Marketing team on the runway",

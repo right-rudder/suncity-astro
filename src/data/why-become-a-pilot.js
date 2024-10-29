@@ -98,18 +98,7 @@ const whyBecomePilot = {
       imagePath: "/src/assets/sun-city-aviation-academy-checkride-selfie.jpeg",
       imageAlt:
         "sun city aviation academy student flying a plane over the city of miami",
-      buttons: [
-        {
-          name: "Take the Quiz",
-          link: "/quiz",
-          primary: true,
-        },
-        {
-          name: "Contact Us",
-          link: "/contact",
-          primary: false,
-        },
-      ],
+      quizModal: true,
     },
 
     flyWithUsCTA: {

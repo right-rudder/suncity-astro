@@ -100,13 +100,7 @@ const pilotTrainingGuide = {
       imagePath: "/src/assets/sun-city-aviation-academy-be-pilot-square.jpg",
       imageAlt:
         "sun city aviation academy student flying a plane over the city of miami",
-      buttons: [
-        {
-          name: "Take the Quiz",
-          link: "/quiz",
-          primary: true,
-        },
-      ],
+      quizModal: true,
     },
 
     flyWithUsCTA: {
