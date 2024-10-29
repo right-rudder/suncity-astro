@@ -8,6 +8,7 @@ import BookCTA from "../../components/BookCTA.astro";
 import programsSwiper from "../../data/programSwiper";
 import FleetGrid from "../../components/FleetGrid.astro";
 import ourFleet from "../../data/fleet";
+import ContentCTA from "../../components/ContentCTA.astro";
 
 const { data } = ourFleet;
 ---
@@ -21,6 +22,7 @@ const { data } = ourFleet;
   <HeaderScreen content={data.header} />
   <PageSummary content={data.pageSummary} />
   <FleetGrid data={data.fleetGrid} />
+  <ContentCTA content={data.quizCTA} />
   <ProgramSwiper content={programsSwiper} />
   <BookCTA content={data.bookCTA} />
   <CTAColor content={data.flyWithUsCTA} />

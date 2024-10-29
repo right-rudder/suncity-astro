@@ -1,5 +1,6 @@
 ---
 import BookCTA from "../components/BookCTA.astro";
+import ContentCTA from "../components/ContentCTA.astro";
 import CTAColor from "../components/CTAColor.astro";
 import GoogleMaps from "../components/GoogleMaps.astro";
 import ImageComp from "../components/ImageComp.astro";
@@ -100,7 +101,7 @@ const { data } = ourTeam;
   </section>
 
   <StaffGrid data={data.staffGrid} />
-
+  <ContentCTA content={data.quizCTA} />
   <TeamGrid data={data.teamGrid} />
 
   <Partners
