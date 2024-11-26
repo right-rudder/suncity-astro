@@ -10,32 +10,32 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@alpinejs/intersect": "^3.14.1",
-    "@astrojs/mdx": "^3.1.8",
+    "@alpinejs/intersect": "^3.14.3",
+    "@astrojs/mdx": "^3.1.9",
     "@astrojs/partytown": "^2.1.2",
-    "@astrojs/react": "^3.6.2",
+    "@astrojs/react": "^3.6.3",
     "@astrojs/rss": "^4.0.9",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.2",
     "@fontsource-variable/montserrat": "^5.1.0",
     "@fontsource-variable/quicksand": "^5.1.0",
     "@fontsource/merriweather": "^5.1.0",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.0",
-    "alpinejs": "^3.14.1",
-    "astro": "^4.16.5",
-    "astro-embed": "^0.7.4",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "alpinejs": "^3.14.3",
+    "astro": "^4.16.15",
+    "astro-embed": "^0.9.0",
     "react": "^18.3.1",
     "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
-    "swiper": "^11.1.14",
-    "tailwindcss": "^3.4.13"
+    "swiper": "^11.1.15",
+    "tailwindcss": "^3.4.15"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/typography": "^0.5.15",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.1",
     "prettier-plugin-astro": "^0.14.1"
   }
 }
