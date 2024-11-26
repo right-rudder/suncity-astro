@@ -30,7 +30,7 @@ const { content } = Astro.props;
       }
       {
         content.heading && (
-          <h2 class="mx-auto mb-3 text-3xl lg:text-5xl font-sans font-bold tracking-tight text-primary-800">
+          <h2 class="mx-auto mb-8 text-3xl lg:text-5xl font-sans font-bold tracking-tight text-primary-800">
             {content.heading}
           </h2>
         )
@@ -98,7 +98,7 @@ const { content } = Astro.props;
       {
         !content.buttons && content.quizModal && (
           <QuizModalButton
-            btnStyle="btn-accent"
+            btnStyle="btn-accent mt-8"
             btnText="Take the Quiz"
             client:only
           />

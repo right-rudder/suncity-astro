@@ -3,13 +3,12 @@ const pilotTrainingGuide = {
     //SEO Header Stuff
     pageTitle: "Pilot Training Guide | Sun City Aviation Academy",
     pageDescription:
-      "Grow and scale your aviation business. Right Rudder Marketing specializes in aviation marketing services, helping flight schools and aviation companies increase visibility and grow enrollment. We offer tailored digital marketing solutions, including SEO, web design, and lead generation to help you reach more aspiring pilots. With proven aviation marketing strategies, we can help your flight school stand out in the competitive market and boost student enrollment efficiently.",
+      "Sun City Aviation Academy offers a comprehensive pilot training program designed to help you achieve your dream of flying. Our experienced instructors and modern fleet of aircraft will provide you with the skills and knowledge you need to succeed.",
     pageKeywords:
-      "grow flight school, scale flight school, grow and scale flight school, aviation business, aviation training,Right Rudder Marketing, Aviation marketing, Flight school marketing, Aviation digital marketing, SEO for aviation, Digital marketing for flight schools, Aviation marketing agency, Lead generation for aviation companies, Increase flight school enrollment, Aviation advertising services, Content marketing for aviation businesses, Aviation marketing strategies, Aviation SEO services",
+      "pilot training, flight training, aviation school, learn to fly, private pilot license, instrument rating, commercial pilot license, flight instructor certificate, aircraft rental, ground school, simulator training, Sun City Aviation Academy, Fort Lauderdale, Hollywood, Miami, Florida",
 
     //top header
     header: {
-      stars: true,
       imagePath: "/src/assets/sun-city-pilot-training-guide.jpg",
       imageAlt:
         "sun city aviation academy airplane flying over the city of miami",
