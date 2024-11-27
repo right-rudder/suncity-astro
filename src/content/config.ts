@@ -18,6 +18,19 @@ const blogCollection = defineCollection({
   }),
 });
 
+const locationCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    city: z.string(),
+    stateShort: z.string(),
+    stateLong: z.string(),
+    description: z.string(),
+    keyPlace1: z.string(),
+    keyPlace2: z.string(),
+  }),
+});
+
 export const collections = {
   blog: blogCollection,
+  location: locationCollection,
 };

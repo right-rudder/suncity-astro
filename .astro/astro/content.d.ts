@@ -4,6 +4,7 @@ declare module 'astro:content' {
 			Content: import('astro').MarkdownInstance<{}>['Content'];
 			headings: import('astro').MarkdownHeading[];
 			remarkPluginFrontmatter: Record<string, any>;
+			components: import('astro').MDXInstance<{}>['components'];
 		}>;
 	}
 }
@@ -304,6 +305,106 @@ declare module 'astro:content' {
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+};
+"location": {
+"boca-raton-fl.md": {
+	id: "boca-raton-fl.md";
+  slug: "boca-raton-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"coconut-creek-fl.md": {
+	id: "coconut-creek-fl.md";
+  slug: "coconut-creek-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"coral-springs-fl.md": {
+	id: "coral-springs-fl.md";
+  slug: "coral-springs-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"davie-fl.md": {
+	id: "davie-fl.md";
+  slug: "davie-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"deerfield-beach-fl.md": {
+	id: "deerfield-beach-fl.md";
+  slug: "deerfield-beach-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"delray-beach-fl.md": {
+	id: "delray-beach-fl.md";
+  slug: "delray-beach-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"fort-lauderdale-fl.md": {
+	id: "fort-lauderdale-fl.md";
+  slug: "fort-lauderdale-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"hollywood-fl.md": {
+	id: "hollywood-fl.md";
+  slug: "hollywood-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"margate-fl.md": {
+	id: "margate-fl.md";
+  slug: "margate-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"miramar-fl.md": {
+	id: "miramar-fl.md";
+  slug: "miramar-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"pembroke-pines-fl.md": {
+	id: "pembroke-pines-fl.md";
+  slug: "pembroke-pines-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"plantation-fl.md": {
+	id: "plantation-fl.md";
+  slug: "plantation-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"pompano-beach-fl.md": {
+	id: "pompano-beach-fl.md";
+  slug: "pompano-beach-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"sunrise-fl.md": {
+	id: "sunrise-fl.md";
+  slug: "sunrise-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
 } & { render(): Render[".md"] };
 };
 
