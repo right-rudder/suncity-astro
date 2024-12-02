@@ -292,6 +292,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"understanding-the-difference-between-part-61-and-part-141-flight-schools.md": {
+	id: "understanding-the-difference-between-part-61-and-part-141-flight-schools.md";
+  slug: "understanding-the-difference-between-part-61-and-part-141-flight-schools";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "what-is-a-tfr-election-season-s-unique-flight-regulations.md": {
 	id: "what-is-a-tfr-election-season-s-unique-flight-regulations.md";
   slug: "what-is-a-tfr-election-season-s-unique-flight-regulations";
@@ -302,6 +309,13 @@ declare module 'astro:content' {
 "what-to-expect-in-your-flight-training.md": {
 	id: "what-to-expect-in-your-flight-training.md";
   slug: "what-to-expect-in-your-flight-training";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"your-first-flight-a-sky-high-adventure.md": {
+	id: "your-first-flight-a-sky-high-adventure.md";
+  slug: "your-first-flight-a-sky-high-adventure";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
