@@ -67,13 +67,15 @@ const {
               {category}
             </span>
             {
-              tags.map((tag, index) => (
-                <span
-                  class={`bg-teal-500 text-white inline-block px-3 py-1 rounded-md`}
-                >
-                  {tag}
-                </span>
-              ))
+              tags
+                .slice(0, 3)
+                .map((tag, index) => (
+                  <span
+                    class={`bg-teal-500 text-white inline-block px-3 py-1 rounded-md`}
+                  >
+                    {tag}
+                  </span>
+                ))
             }
           </div>
           <hr />
