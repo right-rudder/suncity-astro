@@ -10,7 +10,7 @@ const flightReview = {
     //top header
     header: {
       stars: true,
-      imagePath: "/src/assets/sun-city-aviation-academy-cool-pilot-2.jpg",
+      imagePath: "/src/assets/sun-citi-aviation-academy-chris.jpg",
       imageAlt:
         "sun city aviation academy cool pilot in front of a plane at the airport",
       headerH1: `Biennial</br><span class="text-accent-300">Flight Review</span>`,
@@ -41,7 +41,7 @@ const flightReview = {
     },
 
     expectBFR: {
-      imagePath: "/src/assets/sun-city-aviation-academy-cool-pilot.jpg",
+      imagePath: "/src/assets/sun-city-team-cris.webp",
       imageAlt:
         "Sun City Aviation Academy cool pilot in front of a plane at the airport",
       heading: "Flight Review",

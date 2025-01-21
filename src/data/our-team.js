@@ -160,11 +160,11 @@ const ourTeam = {
           rank: "Flight Instructor",
         },
         {
-          name: "Marko Pavlichenko",
+          name: "Mafer Caceres",
           imagePath: "/src/assets/sun-city-team-mafer.webp",
           imageAlt:
             "Sun City Aviation Academy Dispatch Administrator Mafer Caceres",
-          rank: "Dispatch Administrator<br>Social Media Specialist",
+          rank: "Office Manager Assistant",
         },
         {
           name: "Marko Pavlichenko",

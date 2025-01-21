@@ -40,7 +40,7 @@ const multiEngineRating = {
     },
 
     multiEngine: {
-      imagePath: "/src/assets/sun-city-aviation-academy-team-multi-engine.jpg",
+      imagePath: "/src/assets/sun-city-aviation-academy-multi-engine.jpg",
       imageAlt:
         "Sun City Aviation Academy student student pilot and instructor shaking hands",
       heading: "Multi-Engine Rating",

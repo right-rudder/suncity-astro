@@ -11,7 +11,7 @@ const redbirdInfo = {
     //top header
     header: {
       stars: true,
-      imagePath: "/src/assets/sun-city-wingman.jpg",
+      imagePath: "/src/assets/sun-city-aviation-academy-simulator-class.jpeg",
       imageAlt:
         "sun city aviation academy trains professional pilots in south florida",
       headerH1: `Redbird</br><span class="text-accent-300">Flight Simulator</span>`,
@@ -48,12 +48,12 @@ const redbirdInfo = {
           imageAlt: "Sun City Aviation Academy Redbird Flight Simulator",
         },
         {
-          imagePath:
-            "/src/assets/sun-citi-aviation-academy-redbird-simulator-aerocamp.jpg",
+          imagePath: "/src/assets/sun-city-aviation-academy-redbird-sim.jpeg",
           imageAlt: "Sun City Aviation Academy Redbird Flight Simulator",
         },
         {
-          imagePath: "/src/assets/sun-city-wingman.jpg",
+          imagePath:
+            "/src/assets/sun-city-aviation-academy-simulator-class.jpeg",
           imageAlt: "Sun City Aviation Academy Redbird Flight Simulator",
         },
       ],

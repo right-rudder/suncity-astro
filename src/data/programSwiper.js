@@ -23,13 +23,13 @@ const programsSwiper = {
       link: "/private-pilot-training",
     },
     {
-      title: "Group Ground School",
-      imagePath: "/src/assets/sun-city-studying.webp",
+      title: "Youth Programs",
+      imagePath: "/src/assets/AeroCamp156.jpg",
       imageAlt:
-        "sun city aviation group ground school students studying in a classroom",
+        "sun city aviation youth program students in front of a cessna airplane",
       description:
-        "Learn the fundamentals of aviation in a group setting and pass your pilot written exam.",
-      link: "/group-ground-school",
+        "Inspire the next generation of aviators with our youth programs. The sky is the limit!",
+      link: "/experience-aviation",
     },
     {
       title: "Instrument Rating",
@@ -78,7 +78,7 @@ const programsSwiper = {
     },
     {
       title: "Flight Review",
-      imagePath: "/src/assets/sun-city-aviation-academy-cool-pilot-2.jpg",
+      imagePath: "/src/assets/sun-city-aviation-academy-cool-pilot-3.jpg",
       imageAlt: "sun city aviation cessna airplane on a runway",
       description:
         "Recurrent training requirement for pilots to ensure they maintain proficiency and safety standards.",
@@ -94,7 +94,7 @@ const programsSwiper = {
     },
     {
       title: "Wingman Course",
-      imagePath: "/src/assets/sun-city-wingman.jpg",
+      imagePath: "/src/assets/sun-citi-aviation-academy-redbird-simulator.jpg",
       imageAlt: "sun city aviation pilot's family in the flight simulator",
       description:
         "Equip your loved ones with essential aviation safety skills through our Wingman Course.",
