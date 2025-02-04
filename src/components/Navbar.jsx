@@ -91,14 +91,14 @@ const Navbar = ({ pathname }) => {
             <div className="flex w-full items-center justify-between">
               <a
                 href="/"
-                title="SunCity Aviation Academy"
+                title="Sun City Aviation Academy"
                 className="relative hover:brightness-110 duration-200 ease-in-out w-4/6 md:w-1/3 lg:w-2/12"
               >
                 <img
                   src="/sun-city-white-text-logo.webp"
-                  alt="SunCity Aviation Academy Logo"
-                  aria-label="SunCity Aviation Academy Logo"
-                  title="SunCity Aviation Academy"
+                  alt="Sun City Aviation Academy Logo"
+                  aria-label="Sun City Aviation Academy Logo"
+                  title="Sun City Aviation Academy"
                   loading="eager"
                   className={`${navBar || openMobile ? "h-16 lg:h-32 w-9/12 lg:w-10/12" : "h-20 lg:h-32 w-10/12 lg:w-full"} object-contain duration-500`}
                 />
@@ -264,9 +264,9 @@ const Navbar = ({ pathname }) => {
         >
           <img
             src="/sun-city-white-text-logo.webp"
-            alt="SunCity Aviation Academy Logo"
-            aria-label="SunCity Aviation Academy Logo"
-            title="SunCity Aviation Academy"
+            alt="Sun City Aviation Academy Logo"
+            aria-label="Sun City Aviation Academy Logo"
+            title="Sun City Aviation Academy"
             className="object-contain h-24 w-auto drop-shadow-sm"
           />
         </a>

@@ -3,7 +3,7 @@ const ourFleet = {
     //SEO Header Stuff
     pageTitle: "Our Fleet | Sun City Aviation Academy",
     pageDescription:
-      "We have a fleet of modern aircraft for your training needs. Our fleet includes Cessna 172s, Beechcraft Duchess and Redbird Simulator.",
+      "We have a fleet of modern aircraft for your training needs. Our fleet includes Cessna 172s, Beechcraft Duchess, Cessna 182 Skylane Seaplane and Redbird Simulator.",
     pageKeywords:
       "aircraft, fleet, training, Cessna 172, Beechcraft Duchess, Redbird Simulator, Sun City Aviation Academy fleet, flight training, pilot training, aviation training",
 
@@ -15,7 +15,7 @@ const ourFleet = {
         "sun city aviation academy trains professional pilots in south florida",
       headerH1: `Our</br><span class="text-accent-300">Fleet</span>`,
       paragraph:
-        "We have a fleet of modern aircraft for your training needs. Our fleet includes Cessna 172s, Beechcraft Duchess and Redbird Simulator.",
+        "We have a fleet of modern aircraft for your training needs. Our fleet includes Cessna 172s, Beechcraft Duchess, Cessna 182 Skylane Seaplane and Redbird Simulator.",
       buttons: [
         {
           name: "Enroll Now",
@@ -34,7 +34,7 @@ const ourFleet = {
       title: `Fly With Confidence`,
       paragraphs: [
         "At Sun City Aviation Academy, we take pride in our exceptional fleet of aircraft and our simulator, designed to provide you with the highest quality flight training experience. Whether you're just beginning your aviation journey or advancing your skills, our versatile aircraft and training tools are here to support your goals.",
-        "We offer a variety of aircraft for training, including the Cessna 172 and Beechcraft Duchess, as well as a Redbird Simulator. Our fleet is maintained to the highest standards, ensuring that you can train with confidence and peace of mind.",
+        "We offer a variety of aircraft for training, including the Cessna 172 and Beechcraft Duchess, as well as a Redbird Simulator and our Cessna 182 Skylane Seaplane. Our fleet is maintained to the highest standards, ensuring that you can train with confidence and peace of mind.",
       ],
     },
 
@@ -66,7 +66,8 @@ const ourFleet = {
         },
         {
           title: "Redbird Flight Simulator",
-          imagePath: "/src/assets/sun-city-wingman.jpg",
+          imagePath:
+            "/src/assets/sun-city-aviation-academy-simulator-class.jpeg",
           imageAlt: "Sun City Aviation Academy Redbird Simulator",
           description:
             "Using a simulator allows you to practice maneuvers, refine techniques, and master emergency procedures. You can pause mid flight and replay different scenarios and conditions which help solidify your training and make you a better and safer pilot.",

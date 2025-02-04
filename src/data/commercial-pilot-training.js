@@ -89,7 +89,8 @@ const commercialPilotTraining = {
             "As you confidently take to the skies with the examiner by your side, you'll embark on a journey that showcases the culmination of your training and the expertise you've gained throughout your time with Sun City Aviation Academy.",
             "This check ride isn't just a test - it's an opportunity to demonstrate your proficiency, aeronautical decision making skills, and your ability to handle real world scenarios with confidence and composure. It's the moment where you transform from a diligent trainee into a skilled and certified commercial pilot, fully prepared to embrace the challenges and opportunities of a rewarding aviation career.",
           ],
-          imagePath: "/src/assets/sun-city-private-pilot-pass-checkride.webp",
+          imagePath:
+            "/src/assets/sun-city-private-pilot-pass-checkride-Hans 2.jpeg",
           imageAlt:
             "sun city aviation students celebrating after passing their checkride",
         },

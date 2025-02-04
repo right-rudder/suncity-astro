@@ -39,7 +39,7 @@ const aviation101Info = {
     },
 
     expectAviation101: {
-      imagePath: "/src/assets/AeroCamp125-eyes.jpg",
+      imagePath: "/src/assets/AeroCamp76.jpg",
       imageAlt: "Sun City Aviation Academy youth program students",
       heading: "Training Future Pilots",
       upperHeading: "Aviation 101",

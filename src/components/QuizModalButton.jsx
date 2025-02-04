@@ -531,8 +531,8 @@ const QuizModalButton = ({ btnStyle, btnText }) => {
                   <div className="mb-4">
                     <fieldset>
                       <legend className="mb-1 text-primary-900 font-semibold">
-                        Would you be interested in scheduling a visit to SunCity
-                        Aviation Academy?
+                        Would you be interested in scheduling a visit to Sun
+                        City Aviation Academy?
                       </legend>
 
                       <div>

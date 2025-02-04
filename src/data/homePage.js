@@ -32,7 +32,7 @@ const homePage = {
     },
 
     whySuncity: {
-      upperHeading: "Why SunCity",
+      upperHeading: "Why Sun City",
       heading: "Our Commitment",
       descriptions: [
         "We offer a diverse range of programs designed to elevate you to new heights in the world of aviation. Our experienced instructors and state-of-the-art fleet ensure you receive the best training possible.",
@@ -112,15 +112,15 @@ const homePage = {
     },
 
     testimonials: {
-      upperHeading: "The SunCity Family",
+      upperHeading: "The Sun City Family",
       heading: "Our Students Love Us",
       headingText: [
-        "While our main goal is to train future pilots safely and effectively, it’s important to us at SunCity Aviation Academy our students have a fun and comfortable environment to practice in.",
-        "Check out what our students and guests have to say about their experiences at SunCity.",
+        "While our main goal is to train future pilots safely and effectively, it’s important to us at Sun City Aviation Academy our students have a fun and comfortable environment to practice in.",
+        "Check out what our students and guests have to say about their experiences at Sun City.",
       ],
       buttonText: "Leave Us a Review",
       buttonLink:
-        "https://www.google.com/search?client=firefox-b-d&q=sun+city+aviation+academy#",
+        "https://search.google.com/local/writereview?placeid=ChIJu5ZskWyp2YgR6CAUxEAZ5H8",
       reviews: [
         {
           body: "This flight school provides premium service, wonderful atmosphere and excellent safety. I am very pleased with Sun City Aviation. I am working on getting my instrument rating and the Sun City team has been wonderful. My Flight Instructor Jean is great. I feel like I’m becoming a better pilot after each lesson. The planes are in great shape and I feel safe flying them (especially flying XC). Overall 5 Stars!",

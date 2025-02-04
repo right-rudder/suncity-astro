@@ -43,8 +43,7 @@ const duchessInfo = {
       title: `Beechcraft<br><span class="text-accent-400">Duchess</span>`,
       images: [
         {
-          imagePath:
-            "/src/assets/sun-city-aviation-academy-team-multi-engine.jpg",
+          imagePath: "/src/assets/sun-city-aviation-academy-multi-engine.jpg",
           imageAlt:
             "Sun City Aviation Academy Beechcraft Duchess parked at the airport",
         },

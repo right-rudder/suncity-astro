@@ -13,6 +13,8 @@ export const SITE_DESCRIPTION =
 export const KEYWORDS =
   "Sun City Aviation Academy, located at KHWO - North Perry Airport in Hollywood, Florida, is your gateway to flight training excellence in the vibrant Miami-Fort Lauderdale metropolitan area. Our flight school serves aspiring pilots from Hollywood, Fort Lauderdale, Miami, and neighboring communities across Broward County. With our team of experienced instructors and a comprehensive range of aviation programs, we're committed to helping you achieve your aviation dreams right here in the heart of South Florida. Join us at Sun City Aviation Academy and embark on your journey to becoming a skilled pilot in one of the nation's most exciting aviation hubs.";
 
+export const OG_IMAGE = "/SunCity-OG-image.png";
+
 export const LOCATIONS = [
   {
     title: `North Perry Airport<br><small class="text-xs -mt-3">KHWO</small>`,
