@@ -9,6 +9,9 @@ const ourTeam = {
 
     //top header
     header: {
+      imagePath: "/src/assets/SunCIty-team-pic.jpg",
+      imageAlt:
+        "sun city aviation academy team of pilots and instructors at the airport",
       headerH1: `Come See</br><span class="text-accent-300">What Everyone's Talking About</span>`,
       paragraph:
         "Our team of experienced pilots and instructors are dedicated to providing the highest quality flight training in South Florida. Learn more about our team and how they can help you achieve your aviation goals.",
@@ -188,16 +191,23 @@ const ourTeam = {
           rank: "Flight Instructor",
         },
         {
-          name: "Cara Ming",
-          imagePath: "/src/assets/woman-silhouette.webp",
-          imageAlt: "Sun City Aviation Certified Flight Instructor Cara Ming",
+          name: "Jacqueline Wicker-McAllister",
+          imagePath: "/src/assets/Sun-City-JAckie.jpg",
+          imageAlt:
+            "Sun City Aviation Certified Flight Instructor Jacqueline Wicker-McAllister",
           rank: "Flight Instructor",
         },
         {
-          name: "Jacqueline Wicker-McAllister",
-          imagePath: "/src/assets/woman-silhouette.webp",
+          name: "Angel Christophe",
+          imagePath: "/src/assets/Sun-City-Angel.jpeg",
           imageAlt:
-            "Sun City Aviation Certified Flight Instructor Jacqueline Wicker-McAllister",
+            "Sun City Aviation Certified Flight Instructor Angel Christophe",
+          rank: "Office Manager",
+        },
+        {
+          name: "Cara Ming",
+          imagePath: "/src/assets/woman-silhouette.webp",
+          imageAlt: "Sun City Aviation Certified Flight Instructor Cara Ming",
           rank: "Flight Instructor",
         },
         {
@@ -206,13 +216,6 @@ const ourTeam = {
           imageAlt:
             "Sun City Aviation Certified Flight Instructor Andrew Graeler",
           rank: "Flight Instructor",
-        },
-        {
-          name: "Angel Christophe",
-          imagePath: "/src/assets/man-silhouette.webp",
-          imageAlt:
-            "Sun City Aviation Certified Flight Instructor Angel Christophe",
-          rank: "Office Manager",
         },
         {
           name: "Zaccur Christophe",
