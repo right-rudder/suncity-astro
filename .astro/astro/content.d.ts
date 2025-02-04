@@ -187,6 +187,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"how-to-stay-motivated-during-your-pilot-training-journey.md": {
+	id: "how-to-stay-motivated-during-your-pilot-training-journey.md";
+  slug: "how-to-stay-motivated-during-your-pilot-training-journey";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "may-2023-checkride-passes.md": {
 	id: "may-2023-checkride-passes.md";
   slug: "may-2023-checkride-passes";
@@ -211,6 +218,13 @@ declare module 'astro:content' {
 "preparing-for-the-faa-private-pilot-written-test.md": {
 	id: "preparing-for-the-faa-private-pilot-written-test.md";
   slug: "preparing-for-the-faa-private-pilot-written-test";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"preparing-for-your-faa-written-exam-study-tips-and-tricks.md": {
+	id: "preparing-for-your-faa-written-exam-study-tips-and-tricks.md";
+  slug: "preparing-for-your-faa-written-exam-study-tips-and-tricks";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
