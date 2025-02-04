@@ -6,16 +6,10 @@ import {
   PHONE_NUMBER,
   ADDRESS_LINE_1,
   ADDRESS_LINE_2,
-  FACEBOOK_URL,
-  INSTAGRAM_URL,
-  LINKEDIN_URL,
-  YOUTUBE_URL,
   SITE_DESCRIPTION,
-  LOCATIONS,
 } from "../consts";
 
-const GHL_CONTACT_FORM_WEBHOOK_URL =
-  "https://services.leadconnectorhq.com/hooks/SmZxqjL2v5KaWPxMSMbW/webhook-trigger/Nmwmb08DBVCH2sLtb1kh";
+const GHL_CONTACT_FORM_WEBHOOK_URL = import.meta.env.GHL_CONTACT_FORM_WEBHOOK_URL;
 
 const { data } = contact;
 ---
@@ -272,61 +266,44 @@ const { data } = contact;
       }
     });
 
-    // Wait for the DOM content to be fully loaded
     document.addEventListener("DOMContentLoaded", function () {
-      // Get the contactUs form element
-      const contactForm = document.getElementById("contact-form");
+      const form = document.getElementById("contact-form");
 
-      // Check if the contactUs form element exists
-      if (contactForm !== null) {
-        // Add submit event listener to the contactUs form
-        contactForm.addEventListener("submit", function (event) {
-          // Prevent the default form submission
-          event.preventDefault();
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
 
-          // Serialize the form data
-          const formData = new FormData(contactForm);
+        const formData = new FormData(form);
 
-          // Check the value of the honeypot field
-          const confirmEmailValue = formData.get("confirm-email");
-          if (confirmEmailValue === "" || confirmEmailValue === null) {
-            // If the honeypot field is empty, it's a human
-            // Set the form action to the URL for processing the form and redirecting to thank you
-            contactForm.action = GHL_CONTACT_FORM_WEBHOOK_URL;
+        const data = {
+          firstName: formData.get("first-name"),
+          lastName: formData.get("last-name"),
+          phone: formData.get("phone"),
+          email: formData.get("email"),
+          message: formData.get("message"),
+        };
+
+        try {
+          const response = await fetch("/api/monday", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          });
+
+          const result = await response.json();
+          if (response.ok) {
+            alert("Form submitted successfully!");
+            form.reset();
+            window.location.href = "/contact-confirmation";
+          } else {
+            alert("Error: " + result.message);
           }
-
-          // Convert FormData to URLSearchParams
-          const urlSearchParams = new URLSearchParams();
-          for (const pair of formData.entries()) {
-            urlSearchParams.append(pair[0], pair[1]);
-          }
-
-          // Send an AJAX request to submit the form
-          const xhr = new XMLHttpRequest();
-          xhr.open("POST", contactForm.action);
-          xhr.setRequestHeader(
-            "Content-Type",
-            "application/x-www-form-urlencoded"
-          );
-          xhr.onload = function () {
-            // Check if the request was successful (status 200)
-            if (xhr.status === 200) {
-              // Redirect the user after a successful form submission
-              window.location.href = "/contact-confirmation";
-            } else {
-              // Handle errors if any
-              console.error("Form submission failed:", xhr.statusText);
-            }
-          };
-          xhr.onerror = function () {
-            // Handle network errors
-            console.error("Network error occurred while submitting the form.");
-          };
-          xhr.send(urlSearchParams);
-        });
-      } else {
-        console.error("Contact us form element not found.");
-      }
+        } catch (error) {
+          console.error("Error submitting form:", error);
+          alert("Failed to submit form.");
+        }
+      });
     });
   </script>
 
