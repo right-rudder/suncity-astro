@@ -3,10 +3,6 @@ export const footerLinks = [
     title: "Quick Links",
     links: [
       {
-        name: "Home",
-        link: "/",
-      },
-      {
         name: "Why Become a Pilot?",
         link: "/why-become-a-pilot",
       },
@@ -23,16 +19,12 @@ export const footerLinks = [
         link: "/experience-aviation",
       },
       {
-        name: "Aviation 101",
-        link: "/youth-aviation-class",
-      },
-      {
         name: "Contact",
         link: "/contact",
       },
     ],
   },
-  {
+  /*  {
     title: "Programs",
     links: [
       {
@@ -64,21 +56,17 @@ export const footerLinks = [
         link: "/airline-transport-pilot-atp",
       },
     ],
-  },
+  }, */
   {
     title: "About",
     links: [
       {
-        name: "Our Story",
-        link: "/about/our-story",
-      },
-      {
         name: "Our Team",
-        link: "/about/our-team",
+        link: "/our-team",
       },
       {
         name: "Our Fleet",
-        link: "/about/our-fleet",
+        link: "/our-fleet",
       },
       {
         name: "Financing",
