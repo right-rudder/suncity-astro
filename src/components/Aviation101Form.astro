@@ -1,6 +1,11 @@
 ---
-const GHL_CONTACT_FORM_WEBHOOK_URL =
-  "https://services.leadconnectorhq.com/hooks/Tg7heLI3UCqo8uRITWhZ/webhook-trigger/b1071ba8-b834-4c1d-a84d-cc280f819c15";
+const GHL_AVIATION101_FORM_WEBHOOK_URL =
+  "https://services.leadconnectorhq.com/hooks/SmZxqjL2v5KaWPxMSMbW/webhook-trigger/k6TPQBnLnDsWgI7szFcN";
+
+const MONDAY_API_KEY =
+  "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjI4NTk3MTAxNCwiYWFpIjoxMSwidWlkIjozNjU3NTA5NiwiaWFkIjoiMjAyMy0xMC0wM1QwOToxNjozNC4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MTQxNTUyMTQsInJnbiI6InVzZTEifQ.gXbleOZaGl3TvCNq--xqEyn3LzR4Y5HvWZ9yefXbis8";
+
+const MONDAY_BOARD_ID = 3536260889;
 
 const { data } = Astro.props;
 ---
@@ -24,7 +29,10 @@ const { data } = Astro.props;
         set:html={data.description}
       />
     </div>
-    <form class="w-full flex flex-col justify-center mx-auto mt-12 max-w-2xl">
+    <form
+      id="contact-form"
+      class="w-full flex flex-col justify-center mx-auto mt-12 max-w-2xl"
+    >
       <div class="bg-muted-300 rounded-md p-6">
         <h4 class="text-center font-semibold text-2xl mb-6">
           Attendee Information
@@ -169,7 +177,13 @@ const { data } = Astro.props;
     </form>
   </div>
 </section>
-<script define:vars={{ GHL_CONTACT_FORM_WEBHOOK_URL }}>
+<script
+  define:vars={{
+    GHL_AVIATION101_FORM_WEBHOOK_URL,
+    MONDAY_API_KEY,
+    MONDAY_BOARD_ID,
+  }}
+>
   const checkbox = document.getElementById("agree-data-collection");
   const submitButton = document.getElementById("submit-button");
 
@@ -211,7 +225,7 @@ const { data } = Astro.props;
         if (confirmEmailValue === "" || confirmEmailValue === null) {
           // If the honeypot field is empty, it's a human
           // Set the form action to the URL for processing the form and redirecting to thank you
-          contactForm.action = GHL_CONTACT_FORM_WEBHOOK_URL;
+          contactForm.action = GHL_AVIATION101_FORM_WEBHOOK_URL;
         }
 
         // Convert FormData to URLSearchParams
@@ -219,6 +233,31 @@ const { data } = Astro.props;
         for (const pair of formData.entries()) {
           urlSearchParams.append(pair[0], pair[1]);
         }
+
+        // Monday.com query
+        const mondayQuery = `mutation{
+            create_item (board_id: ${MONDAY_BOARD_ID},
+            item_name: "${formData.get("first-name") + " " + formData.get("last-name")}",
+            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Comments: ${formData.get("message")}, Child Name: ${formData.get("attendee-first-name") + " " + formData.get("attendee-last-name")}, Child Age: ${formData.get("attendee-age")}\\"}"
+          ){
+            id
+            name
+            }
+          }`;
+
+        fetch("https://api.monday.com/v2", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: MONDAY_API_KEY,
+          },
+          body: JSON.stringify({
+            query: mondayQuery,
+          }),
+        })
+          .then((res) => res.json())
+          .then((data) => console.log("Monday response:", data))
+          .catch((err) => console.error("Error:", err));
 
         // Send an AJAX request to submit the form
         const xhr = new XMLHttpRequest();
@@ -231,7 +270,9 @@ const { data } = Astro.props;
           // Check if the request was successful (status 200)
           if (xhr.status === 200) {
             // Redirect the user after a successful form submission
-            window.location.href = "/contact-confirmation";
+            setTimeout(() => {
+              window.location.href = "/contact-confirmation";
+            }, 1000);
           } else {
             // Handle errors if any
             console.error("Form submission failed:", xhr.statusText);

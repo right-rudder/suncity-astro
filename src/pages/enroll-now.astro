@@ -5,12 +5,6 @@ import {
   PHONE_NUMBER,
   ADDRESS_LINE_1,
   ADDRESS_LINE_2,
-  FACEBOOK_URL,
-  INSTAGRAM_URL,
-  LINKEDIN_URL,
-  YOUTUBE_URL,
-  SITE_DESCRIPTION,
-  LOCATIONS,
 } from "../consts";
 import Header from "../components/Header.astro";
 import enrollInfo from "../data/enroll-now";
@@ -18,6 +12,11 @@ import programsSwiper from "../data/programSwiper";
 
 const GHL_ENROLL_FORM_WEBHOOK_URL =
   "https://services.leadconnectorhq.com/hooks/SmZxqjL2v5KaWPxMSMbW/webhook-trigger/0mubV6oCeGRAtK8GQB4G";
+
+const MONDAY_API_KEY =
+  "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjI4NTk3MTAxNCwiYWFpIjoxMSwidWlkIjozNjU3NTA5NiwiaWFkIjoiMjAyMy0xMC0wM1QwOToxNjozNC4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MTQxNTUyMTQsInJnbiI6InVzZTEifQ.gXbleOZaGl3TvCNq--xqEyn3LzR4Y5HvWZ9yefXbis8";
+
+const MONDAY_BOARD_ID = 3536260889;
 
 const { data } = enrollInfo;
 ---
@@ -256,7 +255,13 @@ const { data } = enrollInfo;
       </div>
     </div>
   </section>
-  <script define:vars={{ GHL_ENROLL_FORM_WEBHOOK_URL }}>
+  <script
+    define:vars={{
+      GHL_ENROLL_FORM_WEBHOOK_URL,
+      MONDAY_API_KEY,
+      MONDAY_BOARD_ID,
+    }}
+  >
     const checkbox = document.getElementById("agree-data-collection");
     const submitButton = document.getElementById("submit-button");
 
@@ -307,6 +312,31 @@ const { data } = enrollInfo;
             urlSearchParams.append(pair[0], pair[1]);
           }
 
+          // Monday.com query
+          const mondayQuery = `mutation{
+            create_item (board_id: ${MONDAY_BOARD_ID},
+            item_name: "${formData.get("first-name") + " " + formData.get("last-name")}",
+            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Program of Interest: ${formData.get("interes-program")}\\"}"
+          ){
+            id
+            name
+            }
+          }`;
+
+          fetch("https://api.monday.com/v2", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: MONDAY_API_KEY,
+            },
+            body: JSON.stringify({
+              query: mondayQuery,
+            }),
+          })
+            .then((res) => res.json())
+            .then((data) => console.log("Monday response:", data))
+            .catch((err) => console.error("Error:", err));
+
           // Send an AJAX request to submit the form
           const xhr = new XMLHttpRequest();
           xhr.open("POST", contactForm.action);
@@ -318,7 +348,9 @@ const { data } = enrollInfo;
             // Check if the request was successful (status 200)
             if (xhr.status === 200) {
               // Redirect the user after a successful form submission
-              window.location.href = "/enroll-confirmation";
+              setTimeout(() => {
+                window.location.href = "/enroll-confirmation";
+              }, 1000);
             } else {
               // Handle errors if any
               console.error("Form submission failed:", xhr.statusText);

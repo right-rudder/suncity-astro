@@ -1,20 +1,12 @@
 ---
 const today = new Date();
-import { FaPhoneSquareAlt } from "react-icons/fa";
-import { IoLocationSharp } from "react-icons/io5";
-import { MdEmail } from "react-icons/md";
 import {
-  EMAIL_ADDRESS,
-  PHONE_NUMBER,
-  ADDRESS_LINE_1,
-  ADDRESS_LINE_2,
   FACEBOOK_URL,
   INSTAGRAM_URL,
   LINKEDIN_URL,
   TWITTER_URL,
   YOUTUBE_URL,
   SITE_DESCRIPTION,
-  LOCATIONS,
 } from "../consts";
 import { footerLinks } from "../data/footerLinks";
 import logo from "../assets/sun-city-white-text-logo.webp";
@@ -65,11 +57,11 @@ const { pathname } = Astro.url;
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-2 mt-8 gap-9 lg:col-span-4 lg:grid-cols-9">
+      <div class="grid grid-cols-2 mt-8 lg:col-span-4 lg:grid-cols-9">
         {
           footerLinks.map((column, index) => (
             <div
-              class={`${index % 2 === 0 ? "text-left" : "text-right lg:text-left"} lg:col-span-2`}
+              class={`${index % 2 === 0 ? "text-left" : "text-right lg:text-left"} lg:col-span-2 lg:mt-20`}
             >
               <p class="font-bold text-xl font-sans lg:text-md tracking-wide text-accent-200">
                 {column.title}
