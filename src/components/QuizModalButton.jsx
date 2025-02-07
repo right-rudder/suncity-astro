@@ -40,7 +40,7 @@ const QuizModalButton = ({ btnStyle, btnText }) => {
     const mondayQuery = `mutation{
             create_item (board_id: ${MONDAY_BOARD_ID},
             item_name: "${formData.get("firstName") + " " + formData.get("lastName")}",
-            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Inspirations: ${formData.get("Inspirations")}, Goals: ${formData.get("goals")}, Experience: ${formData.get("experience")}, Learning Style: ${formData.get("learnstyle")}, Learning Approach: ${formData.get("approach")}, Guidance: ${formData.get("Guidance")}, Comments: ${formData.get("anything-else")}, Visit: ${formData.get("visit-us")}\\"}"
+            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"QUIZ FORM. Inspirations: ${formData.get("Inspirations")}, Goals: ${formData.get("goals")}, Experience: ${formData.get("experience")}, Learning Style: ${formData.get("learnstyle")}, Learning Approach: ${formData.get("approach")}, Guidance: ${formData.get("Guidance")}, Comments: ${formData.get("anything-else")}, Visit: ${formData.get("visit-us")}\\"}"
           ){
             id
             name

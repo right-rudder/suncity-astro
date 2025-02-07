@@ -149,12 +149,12 @@ const { data } = quizForm;
       >
         <form id="contact-form" class="w-full max-w-xl">
           <div class="mb-4">
-            <label for="firstName" class="mb-1 text-primary-900 font-semibold">
+            <label for="first-name" class="mb-1 text-primary-900 font-semibold">
               First Name
               <input
                 type="text"
-                id="firstName"
-                name="firstName"
+                id="first-name"
+                name="first-name"
                 autocomplete="given-name"
                 class="w-full p-2 border text-black bg-accent-50 border-muted-500 rounded-sm"
                 required
@@ -162,12 +162,12 @@ const { data } = quizForm;
             </label>
           </div>
           <div class="mb-4">
-            <label for="lastName" class="mb-1 text-primary-900 font-semibold">
+            <label for="last-name" class="mb-1 text-primary-900 font-semibold">
               Last Name
               <input
                 type="text"
-                id="lastName"
-                name="lastName"
+                id="last-name"
+                name="last-name"
                 autocomplete="family-name"
                 class="w-full p-2 border text-black bg-accent-50 border-muted-500 rounded-sm"
                 required
@@ -613,14 +613,14 @@ const { data } = quizForm;
 
                   // Monday.com query
                   const mondayQuery = `mutation{
-            create_item (board_id: ${MONDAY_BOARD_ID},
-            item_name: "${formData.get("first-name") + " " + formData.get("last-name")}",
-            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Enroll Form. Program of Interest: ${formData.get("interes-program")}\\"}"
-          ){
-            id
-            name
-            }
-          }`;
+                    create_item (board_id: ${MONDAY_BOARD_ID},
+                    item_name: "${formData.get("first-name") + " " + formData.get("last-name")}",
+                    column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"QUIZ FORM. Inspirations: ${formData.get("Inspirations")}, Goals: ${formData.get("goals")}, Experience: ${formData.get("experience")}, Learning Style: ${formData.get("learnstyle")}, Learning Approach: ${formData.get("approach")}, Guidance: ${formData.get("Guidance")}, Comments: ${formData.get("anything-else")}, Visit: ${formData.get("visit-us")}\\"}"
+                  ){
+                    id
+                    name
+                    }
+                  }`;
 
                   fetch("https://api.monday.com/v2", {
                     method: "POST",
