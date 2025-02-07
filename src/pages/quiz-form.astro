@@ -1,0 +1,677 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import {
+  EMAIL_ADDRESS,
+  PHONE_NUMBER,
+  ADDRESS_LINE_1,
+  ADDRESS_LINE_2,
+} from "../consts";
+import Header from "../components/Header.astro";
+import programsSwiper from "../data/programSwiper";
+import quizForm from "../data/quiz-form";
+
+const GHL_QUIZ_FORM_WEBHOOK_URL =
+  "https://services.leadconnectorhq.com/hooks/SmZxqjL2v5KaWPxMSMbW/webhook-trigger/edb78qoSjciDzbiGp39z";
+
+const MONDAY_API_KEY = import.meta.env.MONDAY_API_KEY;
+
+const MONDAY_BOARD_ID = 3536260889;
+
+const { data } = quizForm;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <Header data={data.header} />
+
+  <section class="relative isolate bg-white">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+      <div
+        class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48"
+      >
+        <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+          <div
+            class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2"
+          >
+            <svg
+              class="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+              aria-hidden="true"
+            >
+              <defs>
+                <pattern
+                  id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
+                  width="200"
+                  height="200"
+                  x="100%"
+                  y="-1"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path d="M130 200V.5M.5 .5H200" fill="none"></path>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" stroke-width="0" fill="white"
+              ></rect>
+              <svg x="100%" y="-1" class="overflow-visible fill-gray-50">
+                <path d="M-470.5 0h201v201h-201Z" stroke-width="0"></path>
+              </svg>
+              <rect
+                width="100%"
+                height="100%"
+                stroke-width="0"
+                fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"></rect>
+            </svg>
+          </div>
+          <h2 class="text-5xl font-bold tracking-tight text-gray-900">QUIZ</h2>
+          <p class="mt-12 text-lg leading-8 text-gray-600">
+            Take our quiz to find out if flight training is right for you.
+          </p>
+          <p class="mt-2 text-lg leading-8 text-gray-600">
+            Our team will review your answers and reach out to you with more
+            information.
+          </p>
+          <dl class="mt-10 space-y-4 text-base leading-7 text-gray-600">
+            <div class="flex gap-x-4">
+              <dt class="flex-none">
+                <span class="sr-only">Address</span>
+                <svg
+                  class="h-7 w-6 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"
+                  ></path>
+                </svg>
+              </dt>
+              <dd>{ADDRESS_LINE_1}<br />{ADDRESS_LINE_2}</dd>
+            </div>
+            <div class="flex gap-x-4">
+              <dt class="flex-none">
+                <span class="sr-only">Telephone</span>
+                <svg
+                  class="h-7 w-6 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                  ></path>
+                </svg>
+              </dt>
+              <dd>
+                <a class="hover:text-gray-900" href={`tel:${PHONE_NUMBER}`}
+                  >{PHONE_NUMBER}</a
+                >
+              </dd>
+            </div>
+            <div class="flex gap-x-4">
+              <dt class="flex-none">
+                <span class="sr-only">Email</span>
+                <svg
+                  class="h-7 w-6 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                  ></path>
+                </svg>
+              </dt>
+              <dd>
+                <a class="hover:text-gray-900" href={`mailto:${EMAIL_ADDRESS}`}
+                  >{EMAIL_ADDRESS}</a
+                >
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <div
+        class="bg-primary-500/20 mx-auto w-full h-full flex justify-center align-middle items-center p-6"
+      >
+        <form id="contact-form" class="w-full max-w-xl">
+          <div class="mb-4">
+            <label for="firstName" class="mb-1 text-primary-900 font-semibold">
+              First Name
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                autocomplete="given-name"
+                class="w-full p-2 border text-black bg-accent-50 border-muted-500 rounded-sm"
+                required
+              />
+            </label>
+          </div>
+          <div class="mb-4">
+            <label for="lastName" class="mb-1 text-primary-900 font-semibold">
+              Last Name
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                autocomplete="family-name"
+                class="w-full p-2 border text-black bg-accent-50 border-muted-500 rounded-sm"
+                required
+              />
+            </label>
+          </div>
+          <div class="mb-4">
+            <label for="email" class="mb-1 text-primary-900 font-semibold">
+              Email Address
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                class="w-full p-2 border text-black bg-accent-50 border-muted-500 rounded-sm"
+                required
+              />
+            </label>
+          </div>
+          <div class="hidden">
+            <label>
+              Don't fill this out if you're human:
+              <input name="confirm-email" />
+            </label>
+          </div>
+          <div class="mb-8">
+            <label for="phone" class="mb-1 text-primary-900 font-semibold">
+              Phone Number
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                min={10}
+                max={10}
+                autocomplete="tel"
+                class="w-full p-2 border text-black bg-accent-50 border-muted-500 rounded-sm"
+                required
+              />
+            </label>
+          </div>
+          <div class="mb-8">
+            <fieldset>
+              <legend class="mb-2 text-primary-900 font-semibold">
+                What inspires you to pursue a career as a pilot?{" "}
+                <small>(Check all that apply)</small>
+              </legend>
+
+              <div>
+                <input
+                  type="checkbox"
+                  class="mx-2"
+                  id="passion"
+                  name="Inspirations"
+                  value={"A passion for adventure"}
+                />
+                <label for="passion">A passion for adventure</label>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  class="mx-2"
+                  id="progrow"
+                  name="Inspirations"
+                  value={"Professional growth and opportunities"}
+                />
+                <label for="progrow">
+                  Professional growth and opportunities
+                </label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  class="mx-2"
+                  id="hobby"
+                  name="Inspirations"
+                  value={"Personal hobby"}
+                />
+                <label for="hobby">Personal hobby</label>
+              </div>
+              <div class="mb-8">
+                <label for="goals" class="mb-1 text-primary-900 font-semibold">
+                  What are your long-term goals within the aviation industry?
+                  <textarea
+                    id="goals"
+                    name="goals"
+                    rows={2}
+                    class="w-full p-2 border text-black bg-accent-50 border-muted-500 rounded-sm"
+                    required></textarea>
+                </label>
+              </div>
+              <div class="mb-8">
+                <fieldset>
+                  <legend class="mb-1 text-primary-900 font-semibold">
+                    What is your current level of aviation experience?
+                  </legend>
+
+                  <div>
+                    <input
+                      type="radio"
+                      class="mx-2"
+                      id="no-experience"
+                      name="experience"
+                      value="No prior experience with piloting aircraft"
+                      required
+                    />
+                    <label for="no-experience">
+                      No prior experience with piloting aircraft
+                    </label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="radio"
+                      class="mx-2"
+                      id="simulator-drone"
+                      name="experience"
+                      value="Experience with flight simulators or drones"
+                      required
+                    />
+                    <label for="simulator-drone">
+                      Experience with flight simulators or drones
+                    </label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="radio"
+                      class="mx-2"
+                      id="flight-training"
+                      name="experience"
+                      value="Some flight training but haven't soloed yet"
+                      required
+                    />
+                    <label for="flight-training">
+                      Some flight training but haven't soloed yet
+                    </label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="radio"
+                      class="mx-2"
+                      id="wants-checkride"
+                      name="experience"
+                      value="Currently working towards completing a checkride"
+                      required
+                    />
+                    <label for="wants-checkride">
+                      Currently working towards completing a checkride
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="mb-8">
+                <fieldset>
+                  <legend class="mb-1 text-primary-900 font-semibold">
+                    Which learning style resonates with you the most?
+                  </legend>
+
+                  <div>
+                    <input
+                      type="radio"
+                      class="mx-2"
+                      id="hands-on"
+                      name="learnstyle"
+                      value="Hands-on, practical learning"
+                      required
+                    />
+                    <label for="hands-on"> Hands-on, practical learning </label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="radio"
+                      class="mx-2"
+                      id="visual"
+                      name="learnstyle"
+                      value="Visual learning through observation"
+                      required
+                    />
+                    <label for="visual">
+                      Visual learning through observation
+                    </label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="radio"
+                      class="mx-2"
+                      id="reading"
+                      name="learnstyle"
+                      value="Learning through reading and studying materials"
+                      required
+                    />
+                    <label for="reading">
+                      Learning through reading and studying materials
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="mb-8">
+                <fieldset>
+                  <legend class="mb-1 text-primary-900 font-semibold">
+                    Do you prefer a structured learning environment with clearly
+                    defined expectations, or a more flexible, adaptable
+                    approach?
+                  </legend>
+
+                  <div>
+                    <input
+                      type="radio"
+                      class="mx-2"
+                      id="structured"
+                      name="approach"
+                      value="I prefer a structured approach"
+                      required
+                    />
+                    <label for="structured">
+                      I prefer a structured approach
+                    </label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="radio"
+                      class="mx-2"
+                      id="flexible"
+                      name="approach"
+                      value="I prefer a flexible approach"
+                      required
+                    />
+                    <label for="flexible"> I prefer a flexible approach </label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="mb-8">
+                <fieldset>
+                  <legend class="mb-2 text-primary-900 font-semibold">
+                    What kind of guidance and support would you prefer from your
+                    flight instructor?{" "}
+                    <small>(Check all that apply)</small>
+                  </legend>
+
+                  <div>
+                    <input
+                      type="checkbox"
+                      class="mx-2"
+                      id="personalized"
+                      name="Guidance"
+                      value={"A personalized approach tailored to my individual learning needs and preferences"}
+                    />
+                    <label for="personalized">
+                      A personalized approach tailored to my individual learning
+                      needs and preferences
+                    </label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="checkbox"
+                      class="mx-2"
+                      id="hands-on-constant"
+                      name="Guidance"
+                      value={"Hands-on involvement from the instructor, with constant feedback and guidance"}
+                    />
+                    <label for="hands-on-constant">
+                      Hands-on involvement from the instructor, with constant
+                      feedback and guidance
+                    </label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="checkbox"
+                      class="mx-2"
+                      id="structured-clear"
+                      name="Guidance"
+                      value={"A structured approach with clear goals and objectives"}
+                    />
+                    <label for="structured-clear">
+                      A structured approach with clear goals and objectives
+                    </label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="checkbox"
+                      class="mx-2"
+                      id="guidance-confidence"
+                      name="Guidance"
+                      value={"Supportive and encouraging guidance, with a focus on building confidence"}
+                    />
+                    <label for="guidance-confidence">
+                      Supportive and encouraging guidance, with a focus on
+                      building confidence
+                    </label>
+                  </div>
+                  <div class="mb-8">
+                    <label
+                      for="winglift"
+                      class="mb-1 text-primary-900 font-semibold"
+                    >
+                      Do you know how a wing generates lift?
+                      <textarea
+                        id="winglift"
+                        name="winglift"
+                        rows={2}
+                        class="w-full p-2 border text-black bg-accent-50 border-muted-500 rounded-sm"
+                        required></textarea>
+                    </label>
+                  </div>
+                  <div class="mb-8">
+                    <label
+                      for="anything-else"
+                      class="mb-1 text-primary-900 font-semibold"
+                    >
+                      Is there anything else you'd like us to know about your
+                      interests or expectations regarding flight training?
+                      <textarea
+                        id="anything-else"
+                        name="anything-else"
+                        rows={2}
+                        class="w-full p-2 border text-black bg-accent-50 border-muted-500 rounded-sm"
+                      ></textarea>
+                    </label>
+                  </div>
+                  <div class="mb-4">
+                    <fieldset>
+                      <legend class="mb-1 text-primary-900 font-semibold">
+                        Would you be interested in scheduling a visit to Sun
+                        City Aviation Academy?
+                      </legend>
+
+                      <div>
+                        <input
+                          type="radio"
+                          class="mx-2"
+                          id="visit-yes"
+                          name="visit-us"
+                          value="visit-yes"
+                          required
+                        />
+                        <label for="visit-yes">Yes</label>
+                      </div>
+
+                      <div>
+                        <input
+                          type="radio"
+                          class="mx-2"
+                          id="visit-no"
+                          name="visit-us"
+                          value="visit-no"
+                          required
+                        />
+                        <label for="visit-no">No</label>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="mt-8">
+                    <input
+                      type="checkbox"
+                      name="agree-data-collection"
+                      id="agree-data-collection"
+                      class="mr-2 size-6 lg:size-5"
+                    />
+
+                    <label
+                      for="agree-data-collection"
+                      class="text-gray-800 text-sm lg:text-base"
+                      set:html={data.checkboxText}
+                    />
+                  </div>
+                  <button
+                    id="submit-button"
+                    form="contact-form"
+                    disabled
+                    type="submit"
+                    class="mx-auto w-full mt-8 btn-primary cursor-not-allowed bg-gray-400 hover:bg-gray-400 hover:text-white"
+                  >
+                    Submit
+                  </button>
+                </fieldset>
+              </div>
+            </fieldset>
+          </div>
+          <script
+            define:vars={{
+              GHL_QUIZ_FORM_WEBHOOK_URL,
+              MONDAY_API_KEY,
+              MONDAY_BOARD_ID,
+            }}
+          >
+            const checkbox = document.getElementById("agree-data-collection");
+            const submitButton = document.getElementById("submit-button");
+
+            checkbox.addEventListener("change", function () {
+              if (checkbox.checked) {
+                submitButton.disabled = false;
+                submitButton.classList.remove(
+                  "cursor-not-allowed",
+                  "bg-gray-400",
+                  "hover:bg-gray-400"
+                );
+              } else {
+                submitButton.disabled = true;
+                submitButton.classList.add(
+                  "cursor-not-allowed",
+                  "bg-gray-400",
+                  "hover:bg-gray-400"
+                );
+              }
+            });
+
+            // Wait for the DOM content to be fully loaded
+            document.addEventListener("DOMContentLoaded", function () {
+              // Get the contactUs form element
+              const contactForm = document.getElementById("contact-form");
+
+              // Check if the contactUs form element exists
+              if (contactForm !== null) {
+                // Add submit event listener to the contactUs form
+                contactForm.addEventListener("submit", function (event) {
+                  // Prevent the default form submission
+                  event.preventDefault();
+
+                  // Serialize the form data
+                  const formData = new FormData(contactForm);
+
+                  // Check the value of the honeypot field
+                  const confirmEmailValue = formData.get("confirm-email");
+                  if (confirmEmailValue === "" || confirmEmailValue === null) {
+                    // If the honeypot field is empty, it's a human
+                    // Set the form action to the URL for processing the form and redirecting to thank you
+                    contactForm.action = GHL_QUIZ_FORM_WEBHOOK_URL;
+                  }
+
+                  // Convert FormData to URLSearchParams
+                  const urlSearchParams = new URLSearchParams();
+                  for (const pair of formData.entries()) {
+                    urlSearchParams.append(pair[0], pair[1]);
+                  }
+
+                  // Monday.com query
+                  const mondayQuery = `mutation{
+            create_item (board_id: ${MONDAY_BOARD_ID},
+            item_name: "${formData.get("first-name") + " " + formData.get("last-name")}",
+            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Enroll Form. Program of Interest: ${formData.get("interes-program")}\\"}"
+          ){
+            id
+            name
+            }
+          }`;
+
+                  fetch("https://api.monday.com/v2", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                      Authorization: MONDAY_API_KEY,
+                    },
+                    body: JSON.stringify({
+                      query: mondayQuery,
+                    }),
+                  })
+                    .then((res) => res.json())
+                    .then((data) => console.log("Monday response:", data))
+                    .catch((err) => console.error("Error:", err));
+
+                  // Send an AJAX request to submit the form
+                  const xhr = new XMLHttpRequest();
+                  xhr.open("POST", contactForm.action);
+                  xhr.setRequestHeader(
+                    "Content-Type",
+                    "application/x-www-form-urlencoded"
+                  );
+                  xhr.onload = function () {
+                    // Check if the request was successful (status 200)
+                    if (xhr.status === 200) {
+                      // Redirect the user after a successful form submission
+                      setTimeout(() => {
+                        window.location.href = "/enroll-confirmation";
+                      }, 1000);
+                    } else {
+                      // Handle errors if any
+                      console.error("Form submission failed:", xhr.statusText);
+                    }
+                  };
+                  xhr.onerror = function () {
+                    // Handle network errors
+                    console.error(
+                      "Network error occurred while submitting the form."
+                    );
+                  };
+                  xhr.send(urlSearchParams);
+                });
+              } else {
+                console.error("Enroll form element not found.");
+              }
+            });
+          </script>
+
+          <script src="../scripts/emailValidation.js"></script>
+        </form>
+      </div>
+    </div>
+  </section></BaseLayout
+>
