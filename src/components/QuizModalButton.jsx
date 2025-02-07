@@ -30,7 +30,37 @@ const QuizModalButton = ({ btnStyle, btnText }) => {
     console.log("Form data:", formData);
 
     const url =
-      "https://services.leadconnectorhq.com/hooks/U9ULEEpmYvsaAGJyX7Wn/webhook-trigger/51a045fe-f219-46c5-acb3-26a6344429e9";
+      "https://services.leadconnectorhq.com/hooks/SmZxqjL2v5KaWPxMSMbW/webhook-trigger/edb78qoSjciDzbiGp39z";
+
+    const MONDAY_API_KEY =
+      "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjI4NTk3MTAxNCwiYWFpIjoxMSwidWlkIjozNjU3NTA5NiwiaWFkIjoiMjAyMy0xMC0wM1QwOToxNjozNC4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MTQxNTUyMTQsInJnbiI6InVzZTEifQ.gXbleOZaGl3TvCNq--xqEyn3LzR4Y5HvWZ9yefXbis8";
+
+    const MONDAY_BOARD_ID = 3536260889;
+
+    // Monday.com query
+    const mondayQuery = `mutation{
+            create_item (board_id: ${MONDAY_BOARD_ID},
+            item_name: "${formData.get("firstName") + " " + formData.get("lastName")}",
+            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Inspirations: ${formData.get("Inspirations")}, Goals: ${formData.get("goals")}, Experience: ${formData.get("experience")}, Learning Style: ${formData.get("learnstyle")}, Learning Approach: ${formData.get("approach")}, Guidance: ${formData.get("Guidance")}, Comments: ${formData.get("anything-else")}, Visit: ${formData.get("visit-us")}\\"}"
+          ){
+            id
+            name
+            }
+          }`;
+
+    fetch("https://api.monday.com/v2", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: MONDAY_API_KEY,
+      },
+      body: JSON.stringify({
+        query: mondayQuery,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log("Monday response:", data))
+      .catch((err) => console.error("Error:", err));
 
     fetch(url, {
       method: "POST",
@@ -73,7 +103,7 @@ const QuizModalButton = ({ btnStyle, btnText }) => {
         <div id="quiz-modal" className="relative z-50">
           <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center">
             {!formSubmitted && (
-              <div className="bg-white p-12 max-w-xl my-4 text-black h-[99%] rounded-sm-sm overflow-y-auto">
+              <div className="bg-white relative p-12 max-w-xl my-4 text-black h-[99%] rounded-sm-sm overflow-y-auto">
                 <p className="text-base text-center font-bold leading-7 text-accent-300 uppercase">
                   QUIZ
                 </p>
@@ -564,23 +594,33 @@ const QuizModalButton = ({ btnStyle, btnText }) => {
                     Submit
                   </button>
                 </form>
+                <button
+                  className="bg-accent-300 p-1 rounded-full absolute top-2 right-2"
+                  onClick={() => {
+                    toggleModal();
+                    document.body.style.overflow = "auto";
+                  }}
+                >
+                  <IoMdClose className="text-2xl text-primary-900" />
+                </button>
               </div>
             )}
 
             {formSubmitted && (
-              <div className="bg-white p-12 max-w-xl m-4 text-black rounded-sm-md h-full overflow-y-auto text-center">
+              <div className="bg-white p-12 max-w-xl m-4 text-black rounded-md h-fit overflow-y-auto text-center">
                 <h2 className="font-bold text-4xl py-10">
                   Thank you {userName} for filling the Quiz.
                 </h2>
 
                 <div className="flex flex-row justify-center">
-                  <div className="bg-green-200 rounded-sm-full py-3 px-4 mb-10">
+                  <div className="bg-green-200 rounded-full py-3 px-4 mb-10">
                     <div className="text-green-700 text-5xl">✓</div>
                   </div>
                 </div>
 
                 <p className="px-5">
-                  Thank you for contacting Summit Flight Academy. We are looking
+                  Thank you for contacting{" "}
+                  <strong>Sun City Aviation Academy</strong>. We are looking
                   forward to working with you soon. We will review your message
                   and get back with you within 1-5 business days. <br />
                   <br />
@@ -597,16 +637,6 @@ const QuizModalButton = ({ btnStyle, btnText }) => {
                 </p>
               </div>
             )}
-
-            <button
-              className="bg-accent-300 p-1 rounded-full absolute top-2 right-2"
-              onClick={() => {
-                toggleModal();
-                document.body.style.overflow = "auto";
-              }}
-            >
-              <IoMdClose className="text-2xl text-primary-900" />
-            </button>
           </div>
         </div>
       )}
