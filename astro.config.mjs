@@ -12,5 +12,13 @@ export default defineConfig({
   integrations: [mdx(), sitemap(), tailwind(), react(), partytown()],
   redirects: {
     "/posts/[...slug]": "/blog/[...slug]",
+    "/planes": "/our-fleet",
+    "/frequently-asked-questions": "/why-become-a-pilot",
+    "/aerocamp": "/experience-aviation",
+    "/cessna-172": "/our-fleet/cessna-172",
+    "/youth-aviation-programs": "/experience-aviation",
+    "/beechcraft-duchess-multi-engine-airplane":
+      "/our-fleet/beechcraft-duchess",
+    "/redbird-flight-simulator": "/our-fleet/redbird-simulator",
   },
 });
