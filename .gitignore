@@ -7,5 +7,4 @@ dist
 src/.DS_Store
 .DS_Store
 
-.astro
 .env
