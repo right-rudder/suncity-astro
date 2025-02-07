@@ -10,11 +10,9 @@ import Header from "../components/Header.astro";
 import enrollInfo from "../data/enroll-now";
 import programsSwiper from "../data/programSwiper";
 
-const GHL_ENROLL_FORM_WEBHOOK_URL =
-  "https://services.leadconnectorhq.com/hooks/SmZxqjL2v5KaWPxMSMbW/webhook-trigger/0mubV6oCeGRAtK8GQB4G";
+const GHL_ENROLL_FORM_WEBHOOK_URL = import.meta.env.GHL_ENROLL_FORM_WEBHOOK_URL;
 
-const MONDAY_API_KEY =
-  "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjI4NTk3MTAxNCwiYWFpIjoxMSwidWlkIjozNjU3NTA5NiwiaWFkIjoiMjAyMy0xMC0wM1QwOToxNjozNC4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MTQxNTUyMTQsInJnbiI6InVzZTEifQ.gXbleOZaGl3TvCNq--xqEyn3LzR4Y5HvWZ9yefXbis8";
+const MONDAY_API_KEY = import.meta.env.MONDAY_API_KEY;
 
 const MONDAY_BOARD_ID = 3536260889;
 
