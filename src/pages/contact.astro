@@ -9,7 +9,8 @@ import {
   SITE_DESCRIPTION,
 } from "../consts";
 
-const GHL_CONTACT_FORM_WEBHOOK_URL = import.meta.env.GHL_CONTACT_FORM_WEBHOOK_URL;
+const GHL_CONTACT_FORM_WEBHOOK_URL = import.meta.env
+  .GHL_CONTACT_FORM_WEBHOOK_URL;
 
 const MONDAY_API_KEY = import.meta.env.MONDAY_API_KEY;
 
@@ -309,7 +310,7 @@ const { data } = contact;
           const mondayQuery = `mutation{
             create_item (board_id: ${MONDAY_BOARD_ID},
             item_name: "${formData.get("first-name") + " " + formData.get("last-name")}",
-            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"${formData.get("message")}\\"}"
+            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Contact Form. Comments: ${formData.get("message")}\\"}"
           ){
             id
             name

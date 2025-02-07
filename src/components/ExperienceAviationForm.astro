@@ -1,5 +1,6 @@
 ---
-const GHL_EXPERIENCE_FORM_WEBHOOK_URL = import.meta.env.GHL_EXPERIENCE_FORM_WEBHOOK_URL;
+const GHL_EXPERIENCE_FORM_WEBHOOK_URL = import.meta.env
+  .GHL_EXPERIENCE_FORM_WEBHOOK_URL;
 
 const MONDAY_API_KEY = import.meta.env.MONDAY_API_KEY;
 
@@ -243,7 +244,7 @@ const { data, options } = Astro.props;
         const mondayQuery = `mutation{
             create_item (board_id: ${MONDAY_BOARD_ID},
             item_name: "${formData.get("first-name") + " " + formData.get("last-name")}",
-            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Interest Program: ${formData.get("interes-program")}, Child Name: ${formData.get("attendee-first-name") + " " + formData.get("attendee-last-name")}, Child Age: ${formData.get("attendee-age")}\\"}"
+            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Experience Aviation. Interest Program: ${formData.get("interes-program")}, Child Name: ${formData.get("attendee-first-name") + " " + formData.get("attendee-last-name")}, Child Age: ${formData.get("attendee-age")}\\"}"
           ){
             id
             name
@@ -276,7 +277,7 @@ const { data, options } = Astro.props;
           if (xhr.status === 200) {
             // Redirect the user after a successful form submission
             setTimeout(() => {
-              window.location.href = "/contact-confirmation";
+              window.location.href = "/experience-aviation-confirmation";
             }, 3000);
           } else {
             // Handle errors if any

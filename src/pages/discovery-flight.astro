@@ -9,7 +9,8 @@ import {
 import discoveryInfo from "../data/discovery-flight";
 import Header from "../components/Header.astro";
 
-const GHL_DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.GHL_DISCOVERY_FORM_WEBHOOK_URL;
+const GHL_DISCOVERY_FORM_WEBHOOK_URL = import.meta.env
+  .GHL_DISCOVERY_FORM_WEBHOOK_URL;
 
 const MONDAY_API_KEY = import.meta.env.MONDAY_API_KEY;
 
@@ -313,7 +314,7 @@ const { data } = discoveryInfo;
           const mondayQuery = `mutation{
             create_item (board_id: ${MONDAY_BOARD_ID},
             item_name: "${formData.get("first-name") + " " + formData.get("last-name")}",
-            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Goal: ${formData.get("goal")}\\"}"
+            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Discovery Flight. Goal: ${formData.get("goal")}\\"}"
           ){
             id
             name

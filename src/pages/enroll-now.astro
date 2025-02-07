@@ -314,7 +314,7 @@ const { data } = enrollInfo;
           const mondayQuery = `mutation{
             create_item (board_id: ${MONDAY_BOARD_ID},
             item_name: "${formData.get("first-name") + " " + formData.get("last-name")}",
-            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Program of Interest: ${formData.get("interes-program")}\\"}"
+            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Enroll Form. Program of Interest: ${formData.get("interes-program")}\\"}"
           ){
             id
             name

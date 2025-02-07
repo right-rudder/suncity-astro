@@ -1,5 +1,6 @@
 ---
-const GHL_AVIATION101_FORM_WEBHOOK_URL = import.meta.env.GHL_AVIATION101_FORM_WEBHOOK_URL;
+const GHL_AVIATION101_FORM_WEBHOOK_URL = import.meta.env
+  .GHL_AVIATION101_FORM_WEBHOOK_URL;
 
 const MONDAY_API_KEY = import.meta.env.MONDAY_API_KEY;
 
@@ -236,7 +237,7 @@ const { data } = Astro.props;
         const mondayQuery = `mutation{
             create_item (board_id: ${MONDAY_BOARD_ID},
             item_name: "${formData.get("first-name") + " " + formData.get("last-name")}",
-            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Comments: ${formData.get("message")}, Child Name: ${formData.get("attendee-first-name") + " " + formData.get("attendee-last-name")}, Child Age: ${formData.get("attendee-age")}\\"}"
+            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Aviation 101. Comments: ${formData.get("message")}, Child Name: ${formData.get("attendee-first-name") + " " + formData.get("attendee-last-name")}, Child Age: ${formData.get("attendee-age")}\\"}"
           ){
             id
             name
@@ -269,7 +270,7 @@ const { data } = Astro.props;
           if (xhr.status === 200) {
             // Redirect the user after a successful form submission
             setTimeout(() => {
-              window.location.href = "/contact-confirmation";
+              window.location.href = "/youth-aviation-classes-confirmation";
             }, 1000);
           } else {
             // Handle errors if any
