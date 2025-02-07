@@ -32,8 +32,7 @@ const QuizModalButton = ({ btnStyle, btnText }) => {
     const url =
       "https://services.leadconnectorhq.com/hooks/SmZxqjL2v5KaWPxMSMbW/webhook-trigger/edb78qoSjciDzbiGp39z";
 
-    const MONDAY_API_KEY =
-      "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjI4NTk3MTAxNCwiYWFpIjoxMSwidWlkIjozNjU3NTA5NiwiaWFkIjoiMjAyMy0xMC0wM1QwOToxNjozNC4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MTQxNTUyMTQsInJnbiI6InVzZTEifQ.gXbleOZaGl3TvCNq--xqEyn3LzR4Y5HvWZ9yefXbis8";
+    const MONDAY_API_KEY = import.meta.env.MONDAY_API_KEY;
 
     const MONDAY_BOARD_ID = 3536260889;
 
