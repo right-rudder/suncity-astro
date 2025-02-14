@@ -10,6 +10,8 @@ import ContentCTA from "../components/ContentCTA.astro";
 import homePage from "../data/homePage";
 import programsSwiper from "../data/programSwiper";
 import BlogFeed from "../components/BlogFeed.astro";
+import BookCTA from "../components/BookCTA.astro";
+import bookCTA from "../data/book-cta";
 
 const { data } = homePage;
 ---
@@ -22,23 +24,47 @@ const { data } = homePage;
   <!-- HEADER -->
   <HeaderScreen content={data.header} />
 
-  <section id="best-of-pembroke-pines" class="bg-black p-12">
+  <section
+    id="best-of-pembroke-pines"
+    class="bg-black py-20 lg:py-12 flex flex-wrap justify-center items-center gap-12"
+  >
     <a
       href="https://issuu.com/ourcityweston/docs/bopin_2024"
       target="_blank"
-      class="flex flex-col items-center group"
+      class="flex flex-col items-center group max-w-sm"
     >
       <ImageComp
         imagePath="/src/assets/best-of-pembroke-pines-flight-school-is-sun-city-aviation-academy.webp"
         imageAlt="Best of Pembroke Pines Flight School is Sun City Aviation Academy"
-        styles="w-44 h-auto group-hover:scale-110 duration-300 ease-out"
+        styles="max-h-28 w-auto object-contain group-hover:scale-110 group-hover:brightness-110 duration-300 ease-out"
       />
       <h3
-        class="text-muted-300 text-center mt-6 font-light text-lg tracking-wide"
+        class="text-muted-300 text-center mt-6 font-light text-lg tracking-wide leading-tight px-3 group-hover:text-white duration-300 ease-out"
       >
-        Voted <strong class="text-accent-300 uppercase"
+        2024 Voted <br /><strong
+          class="text-accent-300 uppercase group-hover:font-bold duration-700 ease-out"
           >BEST Flight School</strong
-        > in Pembroke Pines 2024
+        ><br />in Pembroke Pines
+      </h3>
+    </a>
+    <a
+      href="/blog/sun-city-aviation-academy-is-2025-aopa-flight-training-experience-award-winners/"
+      target="_blank"
+      class="flex flex-col items-center group max-w-sm"
+    >
+      <ImageComp
+        imagePath="/src/assets/2025_FTExperience_BFS_Southern_FINAL.png"
+        imageAlt="Best of Pembroke Pines Flight School is Sun City Aviation Academy"
+        styles="max-h-32 w-auto object-contain group-hover:scale-110 group-hover:brightness-110 duration-300 ease-out"
+      />
+      <h3
+        class="text-muted-300 text-center mt-6 font-light text-lg tracking-wide leading-tight px-3 group-hover:text-white duration-300 ease-out"
+      >
+        2025 AOPA Flight Training<strong
+          class="text-accent-300 uppercase group-hover:font-bold duration-700 ease-out"
+        >
+          Experience Award Winners</strong
+        ><br />Southern Region
       </h3>
     </a>
   </section>
@@ -47,6 +73,7 @@ const { data } = homePage;
   <ContentSplit content={data.whySuncity} />
   <ContentCTA content={data.quizCTA} />
   <Testimonials content={data.testimonials} />
+  <BookCTA content={bookCTA} />
   <BlogFeed data={data.blogfeed} />
   <CTAColor content={data.flyWithUsCTA} />
   <script src="../scripts/creativeSwiper.js"></script>

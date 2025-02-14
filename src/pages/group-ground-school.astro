@@ -8,6 +8,7 @@ import BookCTA from "../components/BookCTA.astro";
 import groupGroundSchool from "../data/group-ground-school";
 import Content from "../components/Content.astro";
 import programsSwiper from "../data/programSwiper";
+import bookCTA from "../data/book-cta";
 
 const { data } = groupGroundSchool;
 ---
@@ -21,7 +22,7 @@ const { data } = groupGroundSchool;
   <HeaderScreen content={data.header} />
   <PageSummary content={data.pageSummary} />
   <Content data={data.groupGroundContent} />
-  <BookCTA content={data.bookCTA} />
+  <BookCTA content={bookCTA} />
   <ProgramSwiper content={programsSwiper} />
   <CTAColor content={data.flyWithUsCTA} />
   <script src="../scripts/creativeSwiper.js"></script>

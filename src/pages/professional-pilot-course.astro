@@ -8,6 +8,7 @@ import professionalPilotCourse from "../data/professional-pilot-course";
 import Zero2Hero from "../components/Zero2Hero";
 import BookCTA from "../components/BookCTA.astro";
 import programsSwiper from "../data/programSwiper";
+import bookCTA from "../data/book-cta";
 
 const { data } = professionalPilotCourse;
 ---
@@ -56,7 +57,7 @@ const { data } = professionalPilotCourse;
     </div>
   </section>
 
-  <BookCTA content={data.bookCTA} />
+  <BookCTA content={bookCTA} />
   <ProgramSwiper content={programsSwiper} />
   <CTAColor content={data.flyWithUsCTA} />
   <script src="../scripts/creativeSwiper.js"></script>

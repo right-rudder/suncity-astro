@@ -9,6 +9,7 @@ import programsSwiper from "../../data/programSwiper";
 import FleetGrid from "../../components/FleetGrid.astro";
 import ourFleet from "../../data/fleet";
 import ContentCTA from "../../components/ContentCTA.astro";
+import bookCTA from "../../data/book-cta";
 
 const { data } = ourFleet;
 ---
@@ -24,7 +25,7 @@ const { data } = ourFleet;
   <FleetGrid data={data.fleetGrid} />
   <ContentCTA content={data.quizCTA} />
   <ProgramSwiper content={programsSwiper} />
-  <BookCTA content={data.bookCTA} />
+  <BookCTA content={bookCTA} />
   <CTAColor content={data.flyWithUsCTA} />
   <script src="../../scripts/creativeSwiper.js"></script>
 </BaseLayout>
