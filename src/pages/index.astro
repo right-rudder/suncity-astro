@@ -10,6 +10,8 @@ import ContentCTA from "../components/ContentCTA.astro";
 import homePage from "../data/homePage";
 import programsSwiper from "../data/programSwiper";
 import BlogFeed from "../components/BlogFeed.astro";
+import BookCTA from "../components/BookCTA.astro";
+import bookCTA from "../data/book-cta";
 
 const { data } = homePage;
 ---
@@ -38,6 +40,7 @@ const { data } = homePage;
       >
         Voted <strong class="text-accent-300 uppercase"
           >BEST Flight School</strong
+        >
         > in Pembroke Pines 2024
       </h3>
     </a>
@@ -47,6 +50,7 @@ const { data } = homePage;
   <ContentSplit content={data.whySuncity} />
   <ContentCTA content={data.quizCTA} />
   <Testimonials content={data.testimonials} />
+  <BookCTA content={bookCTA} />
   <BlogFeed data={data.blogfeed} />
   <CTAColor content={data.flyWithUsCTA} />
   <script src="../scripts/creativeSwiper.js"></script>

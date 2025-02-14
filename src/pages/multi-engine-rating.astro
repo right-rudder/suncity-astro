@@ -8,6 +8,7 @@ import BookCTA from "../components/BookCTA.astro";
 import multiEngineRating from "../data/multi-engine-rating";
 import Content from "../components/Content.astro";
 import programsSwiper from "../data/programSwiper";
+import bookCTA from "../data/book-cta";
 
 const { data } = multiEngineRating;
 ---
@@ -21,7 +22,7 @@ const { data } = multiEngineRating;
   <HeaderScreen content={data.header} />
   <PageSummary content={data.pageSummary} />
   <Content data={data.multiEngine} />
-  <BookCTA content={data.bookCTA} />
+  <BookCTA content={bookCTA} />
   <ProgramSwiper content={programsSwiper} />
   <CTAColor content={data.flyWithUsCTA} />
   <script src="../scripts/creativeSwiper.js"></script>
