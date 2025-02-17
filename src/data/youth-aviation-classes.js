@@ -39,10 +39,10 @@ const aviation101Info = {
     },
 
     expectAviation101: {
-      imagePath: "/src/assets/AeroCamp76.jpg",
+      imagePath: "/src/assets/Sun-city-aviation-academy-aerocamp-2025.jpeg",
       imageAlt: "Sun City Aviation Academy youth program students",
-      heading: "Training Future Pilots",
       upperHeading: "Aviation 101",
+      heading: "Training Future Pilots",
       description: `The High School Aviation Program is a unique opportunity designed to introduce younger minds to the marvels of flight. Led by experienced instructors, this program immerses aspiring aviators in the world of aircraft, aerodynamics, and the science of flying. It's not just a course though; it's a pathway to ignite a lifelong passion for aviation from an early age.`,
       paragraphs: [
         "For parents, our commitment extends beyond the classroom. Sun City Aviation boasts a team of expert instructors dedicated to providing a safe and enriching learning environment. We believe in opening doors to diverse educational and career paths through aviation, and our curriculum prepares students to meet the requirements of the Airmen Certification Standards (ACS) laid out by the FAA. By the end of the course your child will be ready to take their FAA private pilot written exam.",
