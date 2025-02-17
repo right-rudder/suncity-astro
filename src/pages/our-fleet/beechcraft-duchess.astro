@@ -8,6 +8,7 @@ import BookCTA from "../../components/BookCTA.astro";
 import programsSwiper from "../../data/programSwiper";
 import AircraftInfo from "../../components/AircraftInfo.astro";
 import duchessInfo from "../../data/beechcraft-duchess";
+import bookCTA from "../../data/book-cta";
 
 const { data } = duchessInfo;
 ---
@@ -22,7 +23,7 @@ const { data } = duchessInfo;
   <PageSummary content={data.pageSummary} />
   <AircraftInfo data={data.aircraftInfo} />
   <ProgramSwiper content={programsSwiper} />
-  <BookCTA content={data.bookCTA} />
+  <BookCTA content={bookCTA} />
   <CTAColor content={data.flyWithUsCTA} />
   <script src="../../scripts/creativeSwiper.js"></script>
 </BaseLayout>

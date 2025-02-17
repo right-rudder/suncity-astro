@@ -9,6 +9,7 @@ import Content from "../components/Content.astro";
 import programsSwiper from "../data/programSwiper";
 import Aviation101Form from "../components/Aviation101Form.astro";
 import aviation101Info from "../data/youth-aviation-classes";
+import bookCTA from "../data/book-cta";
 
 const { data } = aviation101Info;
 ---
@@ -23,7 +24,7 @@ const { data } = aviation101Info;
   <PageSummary content={data.pageSummary} />
   <Content data={data.expectAviation101} />
   <Aviation101Form data={data.form} />
-  <BookCTA content={data.bookCTA} />
+  <BookCTA content={bookCTA} />
   <ProgramSwiper content={programsSwiper} />
   <CTAColor content={data.flyWithUsCTA} />
   <script src="../scripts/creativeSwiper.js"></script>

@@ -51,7 +51,7 @@ const privatePilotTraining = {
           paragraphs: [
             "The <strong>Federal Aviation Administration (FAA)</strong> requires all pilots to meet certain medical standards to ensure that they are physically and mentally fit. At Sun City, we understand that the medical exam can seem daunting, which is why we provide support and guidance to our students throughout the process.",
             "We work closely with certified aviation medical examiners and will be able to link you up with an Aviation Medical Examiner (AME) who can assist you in navigating the examination requirements seamlessly.",
-            "Our experienced team of instructors will guide you through the exam process, explain what the exam entails, and what conditions may disqualify you from obtaining a pilot's license.",
+            "Our experienced team of instructors will guide you through the exam process, explain what the exam entails, and what conditions may disqualify you from obtaining a pilot's certificate.",
             "We'll provide you with tips on how to prepare for the exam, including what to bring, what to expect on the day, and how to deal with any potential issues that may arise.",
           ],
           imagePath: "/src/assets/sun-city-medical-exam.webp",
@@ -60,7 +60,7 @@ const privatePilotTraining = {
         {
           title: "Written Exam",
           paragraphs: [
-            "The written exam is the second step towards obtaining your pilot's license. It covers a wide range of topics, including regulations, airspace, weather, aerodynamics, and aircraft performance.",
+            "The written exam is the second step towards obtaining your pilot's certificate. It covers a wide range of topics, including regulations, airspace, weather, aerodynamics, and aircraft performance.",
             "The exam is designed to test your knowledge and ensure that you have a comprehensive understanding of what it takes to be a safe and competent pilot.",
             "At <strong>Sun City Aviation Academy</strong>, we offer comprehensive ground school training to prepare you thoroughly for this crucial examination, equipping you with the knowledge and confidence to excel in your written test and ultimately in your flying career.",
             "Our experienced instructors will guide you through the material, answer your questions, and help you grasp the essential concepts required for success.",
@@ -72,9 +72,9 @@ const privatePilotTraining = {
         {
           title: "Flight Exam",
           paragraphs: [
-            "The flight exam, also known as the checkride, is the final step towards obtaining your license. It is designed to assess your ability to operate an aircraft safely and competently in various flight scenarios.",
+            "The flight exam, also known as the checkride, is the final step towards obtaining your certificate. It is designed to assess your ability to operate an aircraft safely and competently in various flight scenarios.",
             "The exam consists of both oral and practical components and is conducted by a certified FAA examiner. During the oral portion, you'll be tested on your knowledge of aircraft systems, flight planning, regulations, and aeronautical decision making (ADM).",
-            "In the practical portion, you'll demonstrate your flying skills by performing maneuvers, takeoffs, landings, and emergency procedures. By training at our academy, you can be confident that you're receiving the best possible training and support to pass the flight exam and become a licensed pilot.",
+            "In the practical portion, you'll demonstrate your flying skills by performing maneuvers, takeoffs, landings, and emergency procedures. By training at our academy, you can be confident that you're receiving the best possible training and support to pass the flight exam and become a certified pilot.",
             "Our experienced instructors will ensure that you have everything you need to succeed, from in-depth knowledge of the aircraft to proficient flying skills. We take pride in our high pass rates, and our commitment to your success means that you'll be well-prepared to confidently tackle the checkride and earn your wings.",
           ],
           imagePath: "/src/assets/sun-city-aviation-academy-why-pilot.jpg",

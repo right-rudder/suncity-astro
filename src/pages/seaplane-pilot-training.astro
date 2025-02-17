@@ -8,6 +8,7 @@ import BookCTA from "../components/BookCTA.astro";
 import Content from "../components/Content.astro";
 import seaplanePilot from "../data/seaplane-pilot-training";
 import programsSwiper from "../data/programSwiper";
+import bookCTA from "../data/book-cta";
 
 const { data } = seaplanePilot;
 ---
@@ -21,7 +22,7 @@ const { data } = seaplanePilot;
   <HeaderScreen content={data.header} />
   <PageSummary content={data.pageSummary} />
   <Content data={data.howtoSeaplane} />
-  <BookCTA content={data.bookCTA} />
+  <BookCTA content={bookCTA} />
   <ProgramSwiper content={programsSwiper} />
   <CTAColor content={data.flyWithUsCTA} />
   <script src="../scripts/creativeSwiper.js"></script>
