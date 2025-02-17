@@ -4,6 +4,7 @@ declare module 'astro:content' {
 			Content: import('astro').MarkdownInstance<{}>['Content'];
 			headings: import('astro').MarkdownHeading[];
 			remarkPluginFrontmatter: Record<string, any>;
+			components: import('astro').MDXInstance<{}>['components'];
 		}>;
 	}
 }
@@ -259,6 +260,13 @@ declare module 'astro:content' {
 "sun-city-aviation-academy-partners-with-civil-air-patrol-to-host-their-weekly-meetings-and-events.md": {
 	id: "sun-city-aviation-academy-partners-with-civil-air-patrol-to-host-their-weekly-meetings-and-events.md";
   slug: "sun-city-aviation-academy-partners-with-civil-air-patrol-to-host-their-weekly-meetings-and-events";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sun-city-aviation-academy-takes-flight-at-the-wings-and-wheels-expo-2025.md": {
+	id: "sun-city-aviation-academy-takes-flight-at-the-wings-and-wheels-expo-2025.md";
+  slug: "sun-city-aviation-academy-takes-flight-at-the-wings-and-wheels-expo-2025";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
