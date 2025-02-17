@@ -64,7 +64,7 @@ Selecting the right aircraft is essential for effective flight training. At Sun 
 
 ---
 
-![Sun City Aviation team in front of a sea plane](/blog/sun-city-aviation-team-in-front-of-plane-used-for-seaplane-training.webp)
+![Sun City Aviation team in front of a seaplane](/blog/sun-city-aviation-team-in-front-of-plane-used-for-seaplane-training.webp)
 _Visit our fleet page for more details on each aircraft and to start your aviation journey with us today!._
 
 ---
