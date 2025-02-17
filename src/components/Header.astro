@@ -31,13 +31,13 @@ if (!images[data.imagePath])
       <div class="text-muted-100 text-center lg:text-left z-10 flex flex-col items-center gap-4 px-5 h-full lg:pt-16 justify-center">
         {data.headerH1 && (
           <h1
-            class="text-2xl px-6 lg:px-24 md:text-5xl lg:text-6xl drop-shadow-lg xl:text-7xl text-center font-black tracking-normal"
+            class="text-2xl px-6 lg:px-24 md:text-5xl lg:text-6xl drop-shadow-lg xl:text-7xl text-center font-black tracking-normal animate-slow-fade"
             set:html={data.headerH1}
           />
         )}
         {data.paragraph && (
           <p
-            class="text-base lg:text-xl mt-3 font-semibold text-muted-200 tracking-wide text-center max-w-3xl"
+            class="text-base lg:text-xl mt-3 font-semibold text-muted-200 tracking-wide text-center max-w-3xl animate-slow-fade"
             set:html={data.paragraph}
           />
         )}

@@ -29,18 +29,18 @@ if (!images[content.imagePath]) {
   </div>
   <!-- Text -->
   <div
-    class="text-white mt-20 lg:mt-0 text-center lg:text-left z-10 flex flex-col items-center gap-4 px-5 h-full lg:pt-28 justify-center animate-slow-fade"
+    class="text-white mt-20 lg:mt-0 text-center lg:text-left z-10 flex flex-col items-center gap-4 px-5 h-full lg:pt-28 justify-center"
   >
     <h1
-      class="text-4xl md:text-5xl lg:text-6xl max-w-6xl drop-shadow-lg xl:text-7xl text-center font-black tracking-wide text-gray-100"
+      class="text-4xl md:text-5xl lg:text-6xl max-w-6xl drop-shadow-lg xl:text-7xl text-center font-black tracking-wide text-gray-100 animate-slow-fade"
       set:html={content.headerH1}
     />
     <h2
-      class="text-xl mt-3 font-semibold tracking-wide text-center max-w-4xl"
+      class="text-xl mt-3 font-semibold tracking-wide text-center max-w-4xl animate-slow-fade"
       set:html={content.paragraph}
     />
     <div
-      class="mt-6 flex flex-wrap justify-center align-middle items-center gap-6 z-10"
+      class="mt-6 flex flex-wrap justify-center align-middle items-center gap-6 z-10 animate-slow-fade"
     >
       {
         content.buttons.map((btn) => (
