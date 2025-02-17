@@ -22,7 +22,7 @@ const programsSwiper = {
         "Your passport to the skies! Learn to pilot your dreams with our Private Pilot Course.",
       link: "/private-pilot-training",
     },
-    {
+    /* {
       title: "Youth Programs",
       imagePath: "/src/assets/AeroCamp156.jpg",
       imageAlt:
@@ -30,7 +30,7 @@ const programsSwiper = {
       description:
         "Inspire the next generation of aviators with our youth programs. The sky is the limit!",
       link: "/experience-aviation",
-    },
+    }, */
     {
       title: "Instrument Rating",
       imagePath: "/src/assets/sun-city-aviation-academy-why-pilot.jpg",
@@ -48,15 +48,6 @@ const programsSwiper = {
       description:
         "Start your pilot career with our Commercial Pilot Course. Your path to the captain's seat is here.",
       link: "/commercial-pilot-training",
-    },
-    {
-      title: "Airline Transport Pilot",
-      imagePath: "/src/assets/sun-city-airliner-cockpit.webp",
-      imageAlt:
-        "sun city aviation instruments panel of a commercial airline airplane cockpit",
-      description:
-        "For many this is their goal. The ATP certificate is a minimum requirement to join the airlines.",
-      link: "/airline-transport-pilot-atp",
     },
     {
       title: "Multi-Engine Rating",
@@ -77,8 +68,17 @@ const programsSwiper = {
       link: "/certified-flight-instructor-cfi",
     },
     {
+      title: "Airline Transport Pilot",
+      imagePath: "/src/assets/sun-city-airliner-cockpit.webp",
+      imageAlt:
+        "sun city aviation instruments panel of a commercial airline airplane cockpit",
+      description:
+        "For many this is their goal. The ATP certificate is a minimum requirement to join the airlines.",
+      link: "/airline-transport-pilot-atp",
+    },
+    {
       title: "Flight Review",
-      imagePath: "/src/assets/sun-city-aviation-academy-cool-pilot-3.jpg",
+      imagePath: "/src/assets/Sun-city-aviation-academy-Miami-2.jpeg",
       imageAlt: "sun city aviation cessna airplane on a runway",
       description:
         "Recurrent training requirement for pilots to ensure they maintain proficiency and safety standards.",
@@ -86,11 +86,20 @@ const programsSwiper = {
     },
     {
       title: "Instrument Proficiency Check",
-      imagePath: "/src/assets/chuttersnap-M2-_GRvWWg0-unsplash.jpg",
-      imageAlt: "sun city aviation clouds and sky",
+      imagePath:
+        "/src/assets/Sun-city-aviation-academy-instrument-proficiency-check.jpg",
+      imageAlt: "sun city aviation academy cockpit instruments",
       description:
         "Stay current with our Instrument Proficiency Check (IPC) to ensure your instrument flying skills are up to date.",
       link: "/instrument-proficiency-check-ipc",
+    },
+    {
+      title: "Seaplane Safari",
+      imagePath: "/src/assets/sun-city-seaplane.jpeg",
+      imageAlt: "sun city aviation seaplane floating on the water",
+      description:
+        "Seaplane flying opens up an extraordinary new world for pilots. Start SES training here.",
+      link: "/seaplane-pilot-training",
     },
     {
       title: "Wingman Course",
@@ -99,14 +108,6 @@ const programsSwiper = {
       description:
         "Equip your loved ones with essential aviation safety skills through our Wingman Course.",
       link: "/wingman-family-member-training",
-    },
-    {
-      title: "Sea Plane Safari",
-      imagePath: "/src/assets/sun-city-seaplane.jpeg",
-      imageAlt: "sun city aviation seaplane floating on the water",
-      description:
-        "Seaplane flying opens up an extraordinary new world for pilots. Start SES training here.",
-      link: "/seaplane-pilot-training",
     },
   ],
 };
