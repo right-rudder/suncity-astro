@@ -37,7 +37,7 @@ Directly in front of the pilot are the flight instruments. There are six princip
 
 These instruments ensure that the airplane is at the desired pitch and bank whether it be a descending, left turn, or just straight-and-level flight. These instruments are so important that they are found in virtually every powered aircraft, from the smallest trainer to the space shuttle.
 
-## Let's elaborate on these instruments:
+## Let's elaborate on these instruments
 
 - **The attitude indicator**, or artificial horizon, displays your flight attitude, or what you should see out the windshield if the weather were to allow it. It has blue shading on the top, depicting an artificial sky, and a black or brown bottom, representing the ground. In between is the horizon bar. A fixed miniature airplane lies in the middle of the instrument, giving the pilot a tail view of what the airplane's attitude is.
 - **The altimeter** lies to the right of the attitude indicator. The altimeter is user-friendly even to the newcomer. It reads just like a clock; the big hand marks hundreds of feet, and the little hand marks thousands of feet.
