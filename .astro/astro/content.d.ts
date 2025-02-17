@@ -4,7 +4,6 @@ declare module 'astro:content' {
 			Content: import('astro').MarkdownInstance<{}>['Content'];
 			headings: import('astro').MarkdownHeading[];
 			remarkPluginFrontmatter: Record<string, any>;
-			components: import('astro').MDXInstance<{}>['components'];
 		}>;
 	}
 }
@@ -176,6 +175,13 @@ declare module 'astro:content' {
 "choosing-your-aircraft-exploring-different-training-planes.md": {
 	id: "choosing-your-aircraft-exploring-different-training-planes.md";
   slug: "choosing-your-aircraft-exploring-different-training-planes";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"how-flight-simulators-improve-your-skills-and-confidence.md": {
+	id: "how-flight-simulators-improve-your-skills-and-confidence.md";
+  slug: "how-flight-simulators-improve-your-skills-and-confidence";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
