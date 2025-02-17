@@ -1,7 +1,7 @@
 const seaplanePilot = {
   data: {
     //SEO Header Stuff
-    pageTitle: "Sea Plane Safari Course | Sun City Aviation Academy",
+    pageTitle: "Seaplane Safari Course | Sun City Aviation Academy",
     pageDescription:
       "From land to lakes, start training here. Become a seaplane pilot and open up an extraordinary new world of aviation. Start SES training today.",
     pageKeywords:
@@ -13,7 +13,7 @@ const seaplanePilot = {
       imagePath: "/src/assets/sun-city-seaplane.jpeg",
       imageAlt:
         "sun city aviation academy student flying a plane over the sunset",
-      headerH1: `Sea Plane</br><span class="text-accent-300">Safari Course</span>`,
+      headerH1: `Seaplane</br><span class="text-accent-300">Safari Course</span>`,
       paragraph:
         "From land to lakes, start training here. Become a seaplane pilot and open up an extraordinary new world of aviation.",
       buttons: [
@@ -34,8 +34,8 @@ const seaplanePilot = {
       title: `What is the Seaplane Safari?`,
       paragraphs: [
         "Picture yourself gliding across serene lakes or touching down on remote waters, a skill set that marks you as a truly versatile aviator. Seaplane training brings with it the thrill of amphibious flight, adding an exciting and rewarding dimension to your aviation journey.",
-        "Seaplane flying opens up an extraordinary new world for pilots. Our newly introduced Sea Plane Safari Course offers you the unique experience of mastering takeoffs and landings on freshwater lakes, safeguarding your aircraft from the corrosive effects of saltwater while providing all the adventure of seaplane flying.",
-        "The Sea Plane Safari Course at Sun City Aviation Academy is designed to provide you with the skills and knowledge to safely operate seaplanes, preparing you for the challenges and rewards of seaplane flying.",
+        "Seaplane flying opens up an extraordinary new world for pilots. Our newly introduced Seaplane Safari Course offers you the unique experience of mastering takeoffs and landings on freshwater lakes, safeguarding your aircraft from the corrosive effects of saltwater while providing all the adventure of seaplane flying.",
+        "The Seaplane Safari Course at Sun City Aviation Academy is designed to provide you with the skills and knowledge to safely operate seaplanes, preparing you for the challenges and rewards of seaplane flying.",
       ],
     },
 
@@ -43,13 +43,13 @@ const seaplanePilot = {
       imagePath: "/src/assets/sun-city-aviation-academy-seaplane.jpg",
       imageAlt:
         "Sun City Aviation Academy student flying a plane over the city of Miami",
-      heading: "Sea Plane Safari",
+      heading: "Seaplane Safari",
       upperHeading: "How To Start",
       description: `With a focus on freshwater operations, this course ensures that your training maintains the longevity and durability of your aircraft while enhancing your capabilities as a pilot. It's more than just a skill—it's a transformation that makes you a well-rounded and resourceful aviator.`,
       paragraphs: [
-        "At <strong>Sun City Aviation Academy</strong>, we train pilots to confidently navigate these dynamic aircraft. For pilots eager to expand their skill set, or for those pursuing a career that demands flexibility and precision, our Sea Plane Safari Course equips you with the expertise needed to operate seaplanes safely and efficiently.",
+        "At <strong>Sun City Aviation Academy</strong>, we train pilots to confidently navigate these dynamic aircraft. For pilots eager to expand their skill set, or for those pursuing a career that demands flexibility and precision, our Seaplane Safari Course equips you with the expertise needed to operate seaplanes safely and efficiently.",
         "Throughout your training, you’ll cover essential topics such as aquatic takeoffs, landings on freshwater lakes, and mastering seaplane-specific navigation and regulations. Our structured program caters to both seasoned pilots and those just beginning their adventure in seaplane flying. With comprehensive ground and flight instruction, you will experience firsthand the joy and challenge of amphibious aircraft operations.",
-        "To enroll in our Sea Plane Safari Course, you'll need a private pilot certificate and a valid medical certificate. At <strong>Sun City Aviation Academy</strong>, we understand the steps involved in reaching this milestone, and we are here to guide you every step of the way. Our team is dedicated to ensuring you’re prepared for this thrilling chapter of your piloting career.",
+        "To enroll in our Seaplane Safari Course, you'll need a private pilot certificate and a valid medical certificate. At <strong>Sun City Aviation Academy</strong>, we understand the steps involved in reaching this milestone, and we are here to guide you every step of the way. Our team is dedicated to ensuring you’re prepared for this thrilling chapter of your piloting career.",
       ],
       list: {
         heading: "Prepare for Your Seaplane Rating",

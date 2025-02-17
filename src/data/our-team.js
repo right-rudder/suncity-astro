@@ -142,20 +142,6 @@ const ourTeam = {
         "Our team of staff and instructors are dedicated to providing the highest quality flight training in South Florida. With years of experience and a passion for aviation, our team is here to help you achieve your aviation goals.",
       members: [
         {
-          name: "Jean Dorcelien",
-          imagePath: "/src/assets/sun-city-team-123abc2.webp",
-          imageAlt:
-            "Sun City Aviation Academy Certified Flight Instructor Jean Dorcelien",
-          rank: "Flight Instructor",
-        },
-        {
-          name: "Nicolas McCaulsky",
-          imagePath: "/src/assets/sun-city-team-123abc5.webp",
-          imageAlt:
-            "Sun City Aviation Academy Certified Flight Instructor Nicolas McCaulsky",
-          rank: "Flight Instructor",
-        },
-        {
           name: "Gleb Sokolov",
           imagePath: "/src/assets/sun-city-team-123abc6.webp",
           imageAlt:
@@ -163,11 +149,17 @@ const ourTeam = {
           rank: "Flight Instructor",
         },
         {
-          name: "Mafer Caceres",
-          imagePath: "/src/assets/sun-city-team-mafer.webp",
+          name: "Jean Dorcelien",
+          imagePath: "/src/assets/sun-city-team-123abc2.webp",
           imageAlt:
-            "Sun City Aviation Academy Dispatch Administrator Mafer Caceres",
-          rank: "Office Manager Assistant",
+            "Sun City Aviation Academy Certified Flight Instructor Jean Dorcelien",
+          rank: "Flight Instructor",
+        },
+        {
+          name: "Cara Ming",
+          imagePath: "/src/assets/woman-silhouette.webp",
+          imageAlt: "Sun City Aviation Certified Flight Instructor Cara Ming",
+          rank: "Flight Instructor",
         },
         {
           name: "Marko Pavlichenko",
@@ -191,10 +183,24 @@ const ourTeam = {
           rank: "Flight Instructor",
         },
         {
+          name: "Andrew Graeler",
+          imagePath: "/src/assets/Sun-City-Andrew.jpeg",
+          imageAlt:
+            "Sun City Aviation Certified Flight Instructor Andrew Graeler",
+          rank: "Flight Instructor",
+        },
+        {
           name: "Jacqueline Wicker-McAllister",
           imagePath: "/src/assets/Sun-City-JAckie.jpg",
           imageAlt:
             "Sun City Aviation Certified Flight Instructor Jacqueline Wicker-McAllister",
+          rank: "Flight Instructor",
+        },
+        {
+          name: "Nicolas McCaulsky",
+          imagePath: "/src/assets/sun-city-team-123abc5.webp",
+          imageAlt:
+            "Sun City Aviation Academy Certified Flight Instructor Nicolas McCaulsky",
           rank: "Flight Instructor",
         },
         {
@@ -205,17 +211,11 @@ const ourTeam = {
           rank: "Office Manager",
         },
         {
-          name: "Cara Ming",
-          imagePath: "/src/assets/woman-silhouette.webp",
-          imageAlt: "Sun City Aviation Certified Flight Instructor Cara Ming",
-          rank: "Flight Instructor",
-        },
-        {
-          name: "Andrew Graeler",
-          imagePath: "/src/assets/man-silhouette.webp",
+          name: "Mafer Caceres",
+          imagePath: "/src/assets/sun-city-team-mafer.webp",
           imageAlt:
-            "Sun City Aviation Certified Flight Instructor Andrew Graeler",
-          rank: "Flight Instructor",
+            "Sun City Aviation Academy Dispatch Administrator Mafer Caceres",
+          rank: "Office Manager Assistant",
         },
         {
           name: "Zaccur Christophe",
@@ -224,12 +224,12 @@ const ourTeam = {
             "Sun City Aviation Certified Flight Instructor Zaccur Christophe",
           rank: "Inventory Manager",
         },
-        {
+        /* {
           name: "Brian Combs",
           imagePath: "/src/assets/man-silhouette.webp",
           imageAlt: "Sun City Aviation Certified Flight Instructor Brian Combs",
           rank: "Outreach Director",
-        },
+        }, */
       ],
     },
 

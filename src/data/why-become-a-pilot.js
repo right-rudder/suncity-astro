@@ -5,7 +5,7 @@ const whyBecomePilot = {
     pageDescription:
       "Becoming a pilot is a thrilling journey that opens up a world of possibilities and adventure. It's not just a career choice - it's a lifestyle. Whether you've always dreamed of soaring through the clouds or are considering a pilot's license for the first time, the decision to become a pilot is a significant one.",
     pageKeywords:
-      "why become a pilot, pilot career path, pilot training, pilot programs, professional pilot course, private pilot, group ground school, instrument rating, commercial pilot, airline transport pilot, multi-engine rating, certified flight instructor, flight review, instrument proficiency check, wingman course, sea plane safari, south florida flight training, sun city aviation academy",
+      "why become a pilot, pilot career path, pilot training, pilot programs, professional pilot course, private pilot, group ground school, instrument rating, commercial pilot, airline transport pilot, multi-engine rating, certified flight instructor, flight review, instrument proficiency check, wingman course, seaplane safari, south florida flight training, sun city aviation academy",
 
     //top header
     header: {
