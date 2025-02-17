@@ -4,7 +4,6 @@ declare module 'astro:content' {
 			Content: import('astro').MarkdownInstance<{}>['Content'];
 			headings: import('astro').MarkdownHeading[];
 			remarkPluginFrontmatter: Record<string, any>;
-			components: import('astro').MDXInstance<{}>['components'];
 		}>;
 	}
 }
@@ -179,6 +178,13 @@ declare module 'astro:content' {
   body: string;
   collection: "blog";
   data: any
+} & { render(): Render[".md"] };
+"how-flight-simulators-improve-your-skills-and-confidence.md": {
+	id: "how-flight-simulators-improve-your-skills-and-confidence.md";
+  slug: "how-flight-simulators-improve-your-skills-and-confidence";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "how-to-choose-the-right-flight-school-for-you.md": {
 	id: "how-to-choose-the-right-flight-school-for-you.md";
@@ -451,5 +457,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("./../../src/content/config.js");
 }
