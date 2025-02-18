@@ -29,7 +29,7 @@ Sun City Aviation Academy wasn't just a spectator, though. We were active partic
 
 The Wings and Wheels Expo wasn't just about looking at cool machines, though. It was a true community event, with contests, giveaways, and a palpable sense of shared excitement. The highlight for many, ourselves included, were the discovery flights. Imagine taking to the skies for the first time, experiencing the world from a completely new perspective. For some attendees, this might have been the spark that ignites a lifelong passion for aviation.
 
-"The Wings and Wheels Expo was a tremendous success," said [Name and Title]. "We were so impressed by the enthusiasm of the attendees and the fantastic organization of the event. The interest in our seaplane was incredible! It was a real privilege to be a part of it and share our love of flying, especially seaplane flying, with so many people."
+"The Wings and Wheels Expo was a tremendous success," said Mafer Caceres, Sun City Office Manager Assistant. "We were so impressed by the enthusiasm of the attendees and the fantastic organization of the event. The interest in our seaplane was incredible! It was a real privilege to be a part of it and share our love of flying, especially seaplane flying, with so many people."
 
 ![Sun City Aviation Academy at the Wings and Wheels Expo](/blog/sun-city-aviation-academy-wings-wheelsimage00012.jpeg)
 
