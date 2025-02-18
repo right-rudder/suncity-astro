@@ -45,6 +45,6 @@ The personalized approach to instruction at Sun City Aviation Academy goes hand 
 
 Sun City Aviation Academy is not just a flight school. Sun City Aviation Academy is a community of experienced and aspiring aviators that support one another in order to achieve their mission: To train professional, safe, and proficient pilots that excel in the aviation industry.
 
-For inquiries regarding flight training at Sun City Aviation Academy, please reach out to the Sun City Aviation team at https://suncityaviation.com/contact.
+For inquiries regarding flight training at Sun City Aviation Academy, please reach out to the Sun City Aviation team at <https://suncityaviation.com/contact>.
 
-For inquiries regarding the Civil Air Patrol Squadron #286, please send them a message at https://fl286.cap.gov/join/contact-us.
+For inquiries regarding the Civil Air Patrol Squadron #286, please send them a message at <https://fl286.cap.gov/join/contact-us>.

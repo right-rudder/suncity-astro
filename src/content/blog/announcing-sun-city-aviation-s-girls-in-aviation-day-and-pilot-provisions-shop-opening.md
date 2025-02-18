@@ -11,7 +11,7 @@ tags: ["GIAD2024", "Provisions Shop"]
 
 Sun City Aviation is excited to share some fantastic news for August! We have two major announcements that highlight our commitment to supporting and inspiring the next generation of aviators. We're thrilled to introduce our new Pilot Provisions shop and invite you to our 10th Annual Girls in Aviation Day event.
 
-## Pilot Provisions Shop Now Open!
+## Pilot Provisions Shop Now Open
 
 We are delighted to announce the grand opening of Sun City's Pilot Provisions shop! 🎉🥳 Our shop is now open Monday through Saturday, from 9 am to 5 pm, offering a wide range of high-quality aviation products. Whether you're a seasoned pilot or just starting your aviation journey, our shop has everything you need to gear up and fly higher with Sun City.
 
@@ -54,7 +54,7 @@ We are also excited to announce the 10th Annual Girls in Aviation Day on Septemb
 
 Girls in Aviation Day is all about empowering girls to reach for the skies and explore the exhilarating worlds of aviation and STEM. The event will feature hands-on STEM projects, inspiring talks, and interactive activities that highlight the exciting opportunities in aviation. Sun City Aviation Academy is proud to be a contributor to this event, supporting the dreams of young girls aspiring to become aviators.
 
-## Event Highlights:
+## Event Highlights
 
 - Interactive activities and games
 - Opportunities to meet female aviators and industry professionals
