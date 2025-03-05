@@ -5,6 +5,7 @@ const { data } = Astro.props;
 ---
 
 <div
+  id="team-grid"
   class="relative isolate overflow-hidden bg-gradient-to-b from-primary-50 to-primary-100 px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
 >
   <div class="mx-auto max-w-6xl lg:pr-4">
@@ -62,6 +63,7 @@ const { data } = Astro.props;
             imageAlt={member.imageAlt}
             rank={member.rank}
             social={member.social}
+            awards={member.awards}
           />
         ))
       }

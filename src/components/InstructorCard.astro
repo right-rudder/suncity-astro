@@ -9,7 +9,7 @@ import { FaExternalLinkSquareAlt } from "react-icons/fa";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
-const { name, imagePath, imageAlt, rank, social } = Astro.props;
+const { name, imagePath, imageAlt, rank, social, awards } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp}"
 );
@@ -19,7 +19,21 @@ if (!images[imagePath])
   );
 ---
 
-<li class="group max-w-56">
+<li class="group max-w-56 relative">
+  {
+    awards && (
+      <div
+        class="absolute top-0 size-16 z-10"
+        aria-label="Awards"
+        title="AOPA Flight Experience Award 2025"
+      >
+        <img
+          src="/2025_FTExperience_BFS_CFI.png"
+          class="object-contain w-full h-full group-hover:scale-125 duration-200 ease-in-out"
+        />
+      </div>
+    )
+  }
   <div
     class="mx-auto rounded-full overflow-hidden h-56 w-56 ring-primary-100 group-hover:ring-2 group-hover:shadow-lg duration-200 ease-in-out"
   >

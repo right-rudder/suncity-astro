@@ -25,7 +25,7 @@ const { data } = homePage;
   <HeaderScreen content={data.header} />
 
   <section
-    id="best-of-pembroke-pines"
+    id="awards"
     class="bg-black py-20 lg:py-12 flex flex-wrap justify-center items-center gap-y-14 lg:gap-y-0"
   >
     <a
@@ -54,7 +54,7 @@ const { data } = homePage;
     >
       <ImageComp
         imagePath="/src/assets/2025_FTExperience_BFS_Southern_FINAL.png"
-        imageAlt="Best of Pembroke Pines Flight School is Sun City Aviation Academy"
+        imageAlt="AOPA Flight Training Experience Award Winners 2025 badge"
         styles="max-h-32 w-auto object-contain group-hover:scale-110 group-hover:brightness-110 duration-300 ease-out"
       />
       <h3
@@ -65,6 +65,26 @@ const { data } = homePage;
         >
           Experience Award Winners</strong
         ><br />Southern Region
+      </h3>
+    </a>
+    <a
+      href="/blog/our-own-cara-ming-earns-distinguished-flight-instructor-award/"
+      target="_blank"
+      class="flex flex-col items-center group w-full lg:w-1/4"
+    >
+      <ImageComp
+        imagePath="/src/assets/2025_FTExperience_BFS_CFI.png"
+        imageAlt="AOPA Flight Training Experience Award Distinguished Flight Instructor 2025 badge"
+        styles="max-h-36 w-auto object-contain group-hover:scale-110 group-hover:brightness-110 duration-300 ease-out"
+      />
+      <h3
+        class="text-muted-300 text-center mt-6 font-light text-lg tracking-wide leading-tight px-3 group-hover:text-white duration-300 ease-out"
+      >
+        2025 AOPA Distinguished CFI<br /><strong
+          class="text-accent-300 uppercase group-hover:font-bold duration-700 ease-out"
+        >
+          Experience Award Winner</strong
+        >
       </h3>
     </a>
   </section>

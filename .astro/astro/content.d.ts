@@ -222,6 +222,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"our-own-cara-ming-earns-distinguished-flight-instructor-award.md": {
+	id: "our-own-cara-ming-earns-distinguished-flight-instructor-award.md";
+  slug: "our-own-cara-ming-earns-distinguished-flight-instructor-award";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "preparing-for-the-faa-private-pilot-written-test.md": {
 	id: "preparing-for-the-faa-private-pilot-written-test.md";
   slug: "preparing-for-the-faa-private-pilot-written-test";

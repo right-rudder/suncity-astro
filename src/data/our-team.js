@@ -157,9 +157,10 @@ const ourTeam = {
         },
         {
           name: "Cara Ming",
-          imagePath: "/src/assets/woman-silhouette.webp",
+          imagePath: "/src/assets/Sun-City-Team-Cara.jpeg",
           imageAlt: "Sun City Aviation Certified Flight Instructor Cara Ming",
           rank: "Flight Instructor",
+          awards: true,
         },
         {
           name: "Marko Pavlichenko",
