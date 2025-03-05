@@ -10,7 +10,7 @@ tags:
   [
     "AOPA",
     "Flight Training Experience Award",
-    "Distiguished Flight Instructor",
+    "Distinguished Flight Instructor",
     "Cara Ming",
     "Sun City Aviation Academy",
   ]
