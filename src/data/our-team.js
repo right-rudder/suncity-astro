@@ -5,7 +5,7 @@ const ourTeam = {
     pageDescription:
       "Our team of experienced pilots and instructors are dedicated to providing the highest quality flight training in South Florida. Learn more about our team and how they can help you achieve your aviation goals.",
     pageKeywords:
-      "flight school, flight training, pilot training, aviation academy, flight instructors, aviation instructors, flight school instructors, aviation school instructors, flight school team, aviation academy team, flight instructors team, aviation instructors team",
+      "certified flight instructors Miami, Sun City Aviation instructors, CFII South Florida, experienced flight school team, award-winning flight instructors, ATP pilots Florida, aviation academy staff, flight instructor credentials, flight school leadership, Pembroke Pines pilot instructors, KHWO flight teachers, best flight instructors Miami, pilot teaching experience Florida",
 
     //top header
     header: {

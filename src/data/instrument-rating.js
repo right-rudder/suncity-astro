@@ -5,7 +5,7 @@ const instrumentRating = {
     pageDescription:
       "Master the art of flying without visual references. Our Instrument Rating course will teach you how to navigate through clouds and the skies with precision.",
     pageKeywords:
-      "private pilot course, private pilot training, learn to fly, sun city aviation academy, pilot training, flight school, become a pilot, private pilot license, private pilot certificate",
+      "instrument rating training Miami, IFR training Florida, instrument flight rules course, fly in IMC conditions, instrument approach training, CFII instruction Pembroke Pines, IFR checkride preparation, instrument rating cost, aviation weather training, Sun City Aviation instrument rating, KHWO instrument training, aircraft instrument panel, cross-country IFR flight",
 
     //top header
     header: {

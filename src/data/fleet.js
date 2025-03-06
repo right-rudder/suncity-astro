@@ -5,7 +5,7 @@ const ourFleet = {
     pageDescription:
       "We have a fleet of modern aircraft for your training needs. Our fleet includes Cessna 172s, Beechcraft Duchess, Cessna 182 Skylane Seaplane and Redbird Simulator.",
     pageKeywords:
-      "aircraft, fleet, training, Cessna 172, Beechcraft Duchess, Redbird Simulator, Sun City Aviation Academy fleet, flight training, pilot training, aviation training",
+      "flight training aircraft Miami, Cessna 172 training Florida, Beechcraft Duchess multi-engine training, Redbird flight simulator Pembroke Pines, flight school aircraft KHWO, training planes South Florida, Sun City Aviation Academy fleet, pilot training aircraft, seaplane training Miami, North Perry Airport flight training fleet",
 
     //top header
     header: {

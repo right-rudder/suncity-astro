@@ -5,7 +5,7 @@ const commercialPilotTraining = {
     pageDescription:
       "Commercial Pilot Certificate will allow you to fly for hire. Start your pilot career with Sun City Aviation Academy and become a professional pilot.",
     pageKeywords:
-      "commercial pilot course, commercial pilot training, commercial pilot license, commercial pilot certificate, commercial pilot school, commercial pilot training cost, commercial pilot training near me, commercial pilot training programs, commercial pilot training requirements, commercial pilot training florida, commercial pilot training miami, commercial pilot training fort lauderdale, commercial pilot training south florida, commercial pilot training usa, commercial pilot training international, commercial pilot training academy, commercial pilot training center, commercial pilot training online, commercial pilot training school, commercial pilot training program, commercial pilot training course, commercial pilot training academy, commercial pilot training center, commercial pilot training online, commercial pilot training school, commercial pilot training program, commercial pilot training course",
+      "commercial pilot license Miami, CPL training Florida, professional pilot career path, commercial pilot certificate cost, fly for hire training, airline pilot preparation, Sun City Aviation CPL, commercial pilot requirements FAA, commercial pilot flight hours, Pembroke Pines flight career, South Florida commercial pilot school, KHWO commercial training",
 
     //top header
     header: {

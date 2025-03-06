@@ -4,9 +4,9 @@ const homePage = {
     pageTitle:
       "Sun City Aviation Academy | Miami South Florida Flight Training",
     pageDescription:
-      "Grow and scale your aviation business. Right Rudder Marketing specializes in aviation marketing services, helping flight schools and aviation companies increase visibility and grow enrollment. We offer tailored digital marketing solutions, including SEO, web design, and lead generation to help you reach more aspiring pilots. With proven aviation marketing strategies, we can help your flight school stand out in the competitive market and boost student enrollment efficiently.",
+      "Our mission is to train professional, safe, and proficient pilots, who will one day excel in the aviation industry. When you fly with the team at Sun City Aviation Academy, you're family. Individualized instruction means you're more than just a number. You're a future Sun City aviator. We offer a variety of flight training programs, from private pilot to commercial pilot, and everything in between. Our flight school is located in Pembroke Pines, Florida, and we serve the greater Miami area. Contact us today to learn more about our flight training programs.",
     pageKeywords:
-      "grow flight school, scale flight school, grow and scale flight school, aviation business, aviation training,Right Rudder Marketing, Aviation marketing, Flight school marketing, Aviation digital marketing, SEO for aviation, Digital marketing for flight schools, Aviation marketing agency, Lead generation for aviation companies, Increase flight school enrollment, Aviation advertising services, Content marketing for aviation businesses, Aviation marketing strategies, Aviation SEO services",
+      "flight school Miami, pilot training Florida, Sun City Aviation Academy, best flight school South Florida, learn to fly Pembroke Pines, discovery flight Miami, flight lessons near me, professional pilot program, how to become a pilot, aviation training North Perry Airport, KHWO flight school, flight training academy Florida, certified flight instructor Miami",
 
     //top header
     header: {
