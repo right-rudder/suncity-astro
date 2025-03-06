@@ -427,9 +427,30 @@ declare module 'astro:content' {
   collection: "location";
   data: InferEntrySchema<"location">
 } & { render(): Render[".md"] };
+"miami-beach-fl.md": {
+	id: "miami-beach-fl.md";
+  slug: "miami-beach-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"miami-fl.md": {
+	id: "miami-fl.md";
+  slug: "miami-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
 "miramar-fl.md": {
 	id: "miramar-fl.md";
   slug: "miramar-fl";
+  body: string;
+  collection: "location";
+  data: InferEntrySchema<"location">
+} & { render(): Render[".md"] };
+"north-miami-fl.md": {
+	id: "north-miami-fl.md";
+  slug: "north-miami-fl";
   body: string;
   collection: "location";
   data: InferEntrySchema<"location">
