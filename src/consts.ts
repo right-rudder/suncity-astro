@@ -11,7 +11,7 @@ export const SITE_DESCRIPTION =
 //typical keywords = how to become a pilot, flight school near, private pilot, discovery flight, introductory flight, instrument rating, commercial certificate, certified flight instructor, airline programs, how to become an airline pilot
 // CHANGE default keywords -> should only be used in homepage technically, but is there for a fallback in case a page is missed
 export const KEYWORDS =
-  "flight school near me, KHWO, KHWO airport, how to become a pilot, private pilot, discovery flight, introductory flight, instrument rating, commercial certificate, certified flight instructor, airline programs, how to become an airline pilot, Miami, South Florida, Fort Lauderdale, Hollywood, Pembroke Pines, Miramar, Weston, Davie, Plantation, Cooper City, Dania Beach, Hallandale Beach, Aventura, North Miami Beach, Miami Beach, Miami Gardens, Hialeah, Opa-locka, Miami Lakes, Miami Springs, Miami Shores, Miami Gardens, Miami Dade, Broward County";
+  "flight school Miami, pilot training South Florida, aviation academy Pembroke Pines, flight lessons KHWO, learn to fly Florida, discovery flight near me, private pilot license training, commercial pilot courses, instrument rating Florida, certified flight instructors, North Perry Airport flight school, professional pilot program Miami, seaplane training, flight simulator training";
 
 export const OG_IMAGE = "/SunCity-OG-image.png";
 
