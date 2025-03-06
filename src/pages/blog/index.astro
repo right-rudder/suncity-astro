@@ -20,9 +20,9 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <BaseLayout
-  pageTitle="Blog | Sun City Aviation Academy"
-  pageDescription="Get the latest insights and tips from Sun City Aviation Academy. Stay up-to-date with the latest happenings in the world of flight training."
-  pageKeywords="blog, flight training blog, aviation blog, pilot training blog, flight school blog, latest tips for pilots, latest insights for pilots"
+  pageTitle="Aviation Blog | Sun City Aviation Academy Florida"
+  pageDescription="Get the latest aviation insights, pilot training tips, and flight school news from Sun City Aviation Academy in Miami, Florida. Expert advice for aspiring and current pilots."
+  pageKeywords="aviation blog Florida, pilot training tips Miami, flight school news Pembroke Pines, learn to fly blog, flying lessons advice, aviation industry updates South Florida, Sun City Aviation articles, pilot career guidance, flight training resources, aviation community KHWO, student pilot blog, flight instructor insights, aviation techniques South Florida"
 >
   <!-- Header -->
   <Header data={data.header} />
@@ -81,7 +81,7 @@ const posts = (await getCollection("blog")).sort(
             <article class="relative group w-full lg:m-0 md:w-2/5 lg:w-1/4 isolate flex flex-col justify-end overflow-hidden rounded-md bg-white px-8 pb-8 pt-48 lg:pt-80 hover:ring-1 hover:ring-accent-500 duration-200">
               <img
                 src={post.data.heroImage}
-                alt={post.data.title}
+                alt={`Sun City Aviation Academy Blog - ${post.data.title}`}
                 class="absolute inset-0 -z-10 h-full w-full object-cover group-hover:scale-110 group-hover:brightness-125 duration-200"
               />
               <div class="absolute inset-0 -z-10 bg-gradient-to-t from-primary-950 via-primary-900/20 group-hover:bg-black/60 duration-200" />
