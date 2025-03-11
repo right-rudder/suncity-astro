@@ -327,9 +327,26 @@ const { data } = contact;
               query: mondayQuery,
             }),
           })
-            .then((res) => res.json())
-            .then((data) => console.log("Monday response:", data))
-            .catch((err) => console.error("Error:", err));
+            .then((res) => {
+              if (!res.ok) {
+                throw new Error(
+                  `Monday.com API responded with status: ${res.status}`
+                );
+              }
+              return res.json();
+            })
+            .then((data) => {
+              if (data.errors) {
+                console.error("Monday.com API errors:", data.errors);
+                // Continue with form submission anyway since we don't want to block the user
+              } else {
+                console.log("Monday contact created successfully:", data);
+              }
+            })
+            .catch((err) => {
+              console.error("Monday.com submission error:", err);
+              // Continue with form submission even if Monday fails
+            });
 
           // Send an AJAX request to submit the form
           const xhr = new XMLHttpRequest();
@@ -339,20 +356,22 @@ const { data } = contact;
             "application/x-www-form-urlencoded"
           );
           xhr.onload = function () {
-            // Check if the request was successful (status 200)
             if (xhr.status === 200) {
-              // Redirect the user after a successful form submission
               setTimeout(() => {
                 window.location.href = "/contact-confirmation";
               }, 500);
             } else {
-              // Handle errors if any
               console.error("Form submission failed:", xhr.statusText);
+              alert(
+                "There was a problem submitting the form. Please try again."
+              );
             }
           };
           xhr.onerror = function () {
-            // Handle network errors
             console.error("Network error occurred while submitting the form.");
+            alert(
+              "Network error occurred. Please check your connection and try again."
+            );
           };
           xhr.send(urlSearchParams);
         });
