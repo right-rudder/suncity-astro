@@ -334,6 +334,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"understanding-faa-regulations-every-student-pilot-should-know.md": {
+	id: "understanding-faa-regulations-every-student-pilot-should-know.md";
+  slug: "understanding-faa-regulations-every-student-pilot-should-know";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "understanding-the-difference-between-part-61-and-part-141-flight-schools.md": {
 	id: "understanding-the-difference-between-part-61-and-part-141-flight-schools.md";
   slug: "understanding-the-difference-between-part-61-and-part-141-flight-schools";
