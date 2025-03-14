@@ -30,7 +30,7 @@ const {
   <div class="h-20 lg:h-28 w-full bg-primary-950/80"></div>
 
   <section
-    class="flex justify-center pt-2 bg-gradient-to-b from-primary-50 to-primary-100"
+    class="flex justify-center pt-2 bg-gradient-to-b from-primary-50 to-primary-100 overflow-hidden"
   >
     <article class="mx-auto max-w-4xl">
       <div
@@ -46,7 +46,9 @@ const {
           )
         }
       </div>
-      <div class="mx-auto max-w-4xl bg-white prose font-sans pt-12 pb-32 px-5">
+      <div
+        class="mx-auto max-w-4xl bg-white prose font-sans pt-12 pb-32 px-5 overflow-hidden"
+      >
         <div class="title">
           <div class="date">
             <FormattedDate date={pubDate} />
@@ -58,12 +60,12 @@ const {
               )
             }
           </div>
-          <h1 class="text-5xl m-0 font-sans">{title}</h1>
+          <h1 class="text-4xl md:text-5xl m-0 font-sans">{title}</h1>
           <p class="text-sm font-light">Published by:</p>
           <p class="-mt-5 text-base font-medium">{author}</p>
-          <div class="md:flex gap-2 hidden">
+          <div class="flex flex-wrap justify-center md:justify-start gap-2">
             <span
-              class="bg-primary-600 text-white inline-block px-3 py-1 rounded-md"
+              class="bg-primary-600 text-white text-xs leading-3 md:text-sm px-3 py-1 rounded-md capitalize"
             >
               {category}
             </span>
@@ -72,7 +74,7 @@ const {
                 .slice(0, 3)
                 .map((tag, index) => (
                   <span
-                    class={`bg-teal-500 text-white inline-block px-3 py-1 rounded-md`}
+                    class={`bg-teal-500 text-white text-xs leading-3 md:text-sm px-3 py-1 rounded-md capitalize`}
                   >
                     {tag}
                   </span>
