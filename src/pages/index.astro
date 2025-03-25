@@ -12,6 +12,8 @@ import programsSwiper from "../data/programSwiper";
 import BlogFeed from "../components/BlogFeed.astro";
 import BookCTA from "../components/BookCTA.astro";
 import bookCTA from "../data/book-cta";
+import UnderHeaderVideo from "../components/UnderHeaderVideo.astro";
+import Awards from "../components/Awards.astro";
 
 const { data } = homePage;
 ---
@@ -24,72 +26,14 @@ const { data } = homePage;
   <!-- HEADER -->
   <HeaderScreen content={data.header} />
 
-  <section
-    id="awards"
-    class="bg-black py-20 lg:py-12 flex flex-wrap justify-center items-center gap-y-14 lg:gap-y-0"
-  >
-    <a
-      href="https://issuu.com/ourcityweston/docs/bopin_2024"
-      target="_blank"
-      class="flex flex-col items-center group w-full lg:w-1/4"
-    >
-      <ImageComp
-        imagePath="/src/assets/best-of-pembroke-pines-flight-school-is-sun-city-aviation-academy.webp"
-        imageAlt="Best of Pembroke Pines Flight School is Sun City Aviation Academy"
-        styles="max-h-28 w-auto object-contain group-hover:scale-110 group-hover:brightness-110 duration-300 ease-out"
-      />
-      <h3
-        class="text-muted-300 text-center mt-6 font-light text-lg tracking-wide leading-tight px-3 group-hover:text-white duration-300 ease-out"
-      >
-        2024 Voted <br /><strong
-          class="text-accent-300 uppercase group-hover:font-bold duration-700 ease-out"
-          >BEST Flight School</strong
-        ><br />in Pembroke Pines
-      </h3>
-    </a>
-    <a
-      href="/blog/sun-city-aviation-academy-is-2025-aopa-flight-training-experience-award-winners/"
-      target="_blank"
-      class="flex flex-col items-center group w-full lg:w-1/4"
-    >
-      <ImageComp
-        imagePath="/src/assets/2025_FTExperience_BFS_Southern_FINAL.png"
-        imageAlt="AOPA Flight Training Experience Award Winners 2025 badge"
-        styles="max-h-32 w-auto object-contain group-hover:scale-110 group-hover:brightness-110 duration-300 ease-out"
-      />
-      <h3
-        class="text-muted-300 text-center mt-6 font-light text-lg tracking-wide leading-tight px-3 group-hover:text-white duration-300 ease-out"
-      >
-        2025 AOPA Flight Training<br /><strong
-          class="text-accent-300 uppercase group-hover:font-bold duration-700 ease-out"
-        >
-          Experience Award Winners</strong
-        ><br />Southern Region
-      </h3>
-    </a>
-    <a
-      href="/blog/our-own-cara-ming-earns-distinguished-flight-instructor-award/"
-      target="_blank"
-      class="flex flex-col items-center group w-full lg:w-1/4"
-    >
-      <ImageComp
-        imagePath="/src/assets/2025_FTExperience_BFS_CFI.png"
-        imageAlt="AOPA Flight Training Experience Award Distinguished Flight Instructor 2025 badge"
-        styles="max-h-36 w-auto object-contain group-hover:scale-110 group-hover:brightness-110 duration-300 ease-out"
-      />
-      <h3
-        class="text-muted-300 text-center mt-6 font-light text-lg tracking-wide leading-tight px-3 group-hover:text-white duration-300 ease-out"
-      >
-        2025 AOPA Distinguished CFI<br /><strong
-          class="text-accent-300 uppercase group-hover:font-bold duration-700 ease-out"
-        >
-          Experience Award Winner</strong
-        >
-      </h3>
-    </a>
-  </section>
+  <Awards />
 
   <ProgramSwiper content={programsSwiper} />
+  <UnderHeaderVideo
+    title="Best Flight School in the Southwest"
+    description="Experience, customer service, and excellence in flight training make Sun City the best choice for your aviation career. Watch the video to learn more."
+    videoId="F68KG_5tauU"
+  />
   <ContentSplit content={data.whySuncity} />
   <ContentCTA content={data.quizCTA} />
   <Testimonials content={data.testimonials} />
