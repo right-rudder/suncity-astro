@@ -310,6 +310,10 @@ const { data } = discoveryInfo;
             urlSearchParams.append(pair[0], pair[1]);
           }
 
+          // Show loading state
+          submitButton.textContent = "Sending...";
+          submitButton.disabled = true;
+
           // Monday.com query
           const mondayQuery = `mutation{
             create_item (board_id: ${MONDAY_BOARD_ID},
@@ -321,6 +325,7 @@ const { data } = discoveryInfo;
             }
           }`;
 
+          // Submit to Monday.com first
           fetch("https://api.monday.com/v2", {
             method: "POST",
             headers: {
@@ -331,34 +336,66 @@ const { data } = discoveryInfo;
               query: mondayQuery,
             }),
           })
-            .then((res) => res.json())
-            .then((data) => console.log("Monday response:", data))
-            .catch((err) => console.error("Error:", err));
+            .then((res) => {
+              if (!res.ok) {
+                throw new Error(`Monday API returned ${res.status}`);
+              }
+              return res.json();
+            })
+            .then((data) => {
+              console.log("Monday response:", data);
 
-          // Send an AJAX request to submit the form
-          const xhr = new XMLHttpRequest();
-          xhr.open("POST", contactForm.action);
-          xhr.setRequestHeader(
-            "Content-Type",
-            "application/x-www-form-urlencoded"
-          );
-          xhr.onload = function () {
-            // Check if the request was successful (status 200)
-            if (xhr.status === 200) {
-              // Redirect the user after a successful form submission
+              // Only proceed with GHL submission if Monday was successful
+              // Submit to GHL form webhook
+              if (!contactForm.action) {
+                console.error("Form action URL is missing");
+                submitButton.textContent = "Error";
+                setTimeout(() => {
+                  submitButton.textContent = "Send Message";
+                  submitButton.disabled = false;
+                }, 2000);
+                return;
+              }
+
+              fetch(contactForm.action, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: urlSearchParams,
+              })
+                .then((res) => {
+                  if (!res.ok) {
+                    throw new Error(`Form submission failed: ${res.status}`);
+                  }
+
+                  // Success - redirect after brief delay
+                  submitButton.textContent = "Success!";
+                  setTimeout(() => {
+                    window.location.href = "/discovery-flight-confirmation";
+                  }, 1000);
+                })
+                .catch((err) => {
+                  console.error("Form submission error:", err);
+                  submitButton.textContent = "Error";
+
+                  // Reset button after error
+                  setTimeout(() => {
+                    submitButton.textContent = "Send Message";
+                    submitButton.disabled = false;
+                  }, 2000);
+                });
+            })
+            .catch((err) => {
+              console.error("Monday API Error:", err);
+              submitButton.textContent = "Error";
+
+              // Reset button after Monday API error
               setTimeout(() => {
-                window.location.href = "/discovery-flight-confirmation";
-              }, 1000);
-            } else {
-              // Handle errors if any
-              console.error("Form submission failed:", xhr.statusText);
-            }
-          };
-          xhr.onerror = function () {
-            // Handle network errors
-            console.error("Network error occurred while submitting the form.");
-          };
-          xhr.send(urlSearchParams);
+                submitButton.textContent = "Send Message";
+                submitButton.disabled = false;
+              }, 2000);
+            });
         });
       } else {
         console.error("Discovery Flight form element not found.");
