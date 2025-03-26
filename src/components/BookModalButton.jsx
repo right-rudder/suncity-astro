@@ -6,18 +6,25 @@ const BookModalButton = ({ btnStyle, btnText }) => {
   const [showModal, setShowModal] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [userName, setUserName] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
 
   const toggleModal = () => {
     console.log(btnStyle);
     setShowModal(!showModal);
     setFormSubmitted(false);
+    setSubmitError(null);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError(null);
+
     const formData = new FormData(e.target);
 
     if (formData.get("confirm-email")) {
+      setIsSubmitting(false);
       return;
     }
 
@@ -37,7 +44,7 @@ const BookModalButton = ({ btnStyle, btnText }) => {
     // Monday.com query
     const mondayQuery = `mutation{
             create_item (board_id: ${MONDAY_BOARD_ID},
-            item_name: "${formData.get("firstName") + " " + formData.get("lastName")}",
+            item_name: "${formData.get("first-name") + " " + formData.get("last-name")}",
             column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"BOOK FORM.\\"}"
           ){
             id
@@ -45,44 +52,60 @@ const BookModalButton = ({ btnStyle, btnText }) => {
             }
           }`;
 
-    fetch("https://api.monday.com/v2", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: MONDAY_API_KEY,
-      },
-      body: JSON.stringify({
-        query: mondayQuery,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => console.log("Monday response:", data))
-      .catch((err) => console.error("Error:", err));
-
-    fetch(GHL_BOOK_FORM_WEBHOOK_URL, {
-      method: "POST",
-      body: new URLSearchParams(formData),
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    })
-      .then((response) => {
-        if (response.ok) {
-          setFormSubmitted(true);
-          setTimeout(() => {
-            toggleModal();
-            document.body.style.overflow = "auto";
-          }, 5400);
-        } else {
-          console.error("Form submission failed:", response.statusText);
-        }
-      })
-      .catch((error) => {
-        console.error(
-          "Network error occurred while submitting the form:",
-          error
-        );
+    try {
+      // First post to Monday
+      const mondayResponse = await fetch("https://api.monday.com/v2", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: MONDAY_API_KEY,
+        },
+        body: JSON.stringify({
+          query: mondayQuery,
+        }),
       });
+
+      const mondayData = await mondayResponse.json();
+      console.log("Monday response:", mondayData);
+
+      if (
+        !mondayResponse.ok ||
+        (mondayData.errors && mondayData.errors.length > 0)
+      ) {
+        throw new Error(
+          "Monday.com submission failed: " +
+            (mondayData.errors?.[0]?.message || mondayResponse.statusText)
+        );
+      }
+
+      // If Monday post successful, then post to GHL
+      const ghlResponse = await fetch(GHL_BOOK_FORM_WEBHOOK_URL, {
+        method: "POST",
+        body: new URLSearchParams(formData),
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      });
+
+      if (!ghlResponse.ok) {
+        throw new Error("GHL submission failed: " + ghlResponse.statusText);
+      }
+
+      // Success case
+      setFormSubmitted(true);
+      setTimeout(() => {
+        toggleModal();
+        document.body.style.overflow = "auto";
+      }, 5400);
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitError(
+        error.message ||
+          "An error occurred during submission. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -110,6 +133,11 @@ const BookModalButton = ({ btnStyle, btnText }) => {
                 <p className="text-center italic text-base mt-0 mb-6">
                   Please fill out the form below to get started.
                 </p>
+                {submitError && (
+                  <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                    {submitError}
+                  </div>
+                )}
                 <form onSubmit={handleSubmit} className="mt-8 font-light">
                   <div className="flex flex-wrap justify-between">
                     <div className="mb-4 w-full md:w-[48%]">
@@ -185,8 +213,12 @@ const BookModalButton = ({ btnStyle, btnText }) => {
                     </label>
                   </p>
 
-                  <button type="submit" className="btn-accent w-full mt-8">
-                    Get the guide
+                  <button
+                    type="submit"
+                    className={`btn-accent w-full mt-8 ${isSubmitting ? "opacity-75 cursor-not-allowed" : ""}`}
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Sending..." : "Get the guide"}
                   </button>
                 </form>
                 <button
