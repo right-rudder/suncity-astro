@@ -6,7 +6,6 @@ const QuizModalButton = ({ btnStyle, btnText }) => {
   const [showModal, setShowModal] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [userName, setUserName] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [pursue, setPursue] = useState(false);
   const [guidance, setGuidance] = useState(false);
@@ -19,11 +18,9 @@ const QuizModalButton = ({ btnStyle, btnText }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
     const formData = new FormData(e.target);
 
     if (formData.get("confirm-email")) {
-      setIsSubmitting(false);
       return;
     }
 
@@ -50,7 +47,6 @@ const QuizModalButton = ({ btnStyle, btnText }) => {
             }
           }`;
 
-    // First submit to Monday.com and only if successful, submit to webhook
     fetch("https://api.monday.com/v2", {
       method: "POST",
       headers: {
@@ -62,45 +58,31 @@ const QuizModalButton = ({ btnStyle, btnText }) => {
       }),
     })
       .then((res) => res.json())
-      .then((data) => {
-        console.log("Monday response:", data);
+      .then((data) => console.log("Monday response:", data))
+      .catch((err) => console.error("Error:", err));
 
-        // Check if Monday response contains an error or was successful
-        if (data.errors) {
-          console.error("Monday.com submission failed:", data.errors);
-          throw new Error("Monday.com submission failed");
-        }
-
-        // If Monday submission was successful, proceed with webhook submission
-        return fetch(url, {
-          method: "POST",
-          body: new URLSearchParams(formData),
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-        });
-      })
+    fetch(url, {
+      method: "POST",
+      body: new URLSearchParams(formData),
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    })
       .then((response) => {
-        if (!response || !response.ok) {
-          console.error(
-            "Form submission failed:",
-            response ? response.statusText : "No response"
-          );
-          throw new Error("Webhook submission failed");
+        if (response.ok) {
+          setFormSubmitted(true);
+          setTimeout(() => {
+            toggleModal();
+            document.body.style.overflow = "auto";
+          }, 6300);
+        } else {
+          console.error("Form submission failed:", response.statusText);
         }
-
-        setFormSubmitted(true);
-        setIsSubmitting(false);
-        setTimeout(() => {
-          toggleModal();
-          document.body.style.overflow = "auto";
-        }, 6300);
       })
       .catch((error) => {
-        console.error("Error during form submission process:", error);
-        setIsSubmitting(false);
-        alert(
-          "There was a problem submitting your form. Please try again or contact us directly."
+        console.error(
+          "Network error occurred while submitting the form:",
+          error
         );
       });
   };
@@ -607,12 +589,8 @@ const QuizModalButton = ({ btnStyle, btnText }) => {
                       </div>
                     </fieldset>
                   </div>
-                  <button
-                    className="btn-accent mt-8 w-full disabled:opacity-70"
-                    type="submit"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? "Sending..." : "Submit"}
+                  <button className="btn-accent mt-8 w-full" type="submit">
+                    Submit
                   </button>
                 </form>
                 <button
@@ -621,7 +599,6 @@ const QuizModalButton = ({ btnStyle, btnText }) => {
                     toggleModal();
                     document.body.style.overflow = "auto";
                   }}
-                  disabled={isSubmitting}
                 >
                   <IoMdClose className="text-2xl text-primary-900" />
                 </button>
