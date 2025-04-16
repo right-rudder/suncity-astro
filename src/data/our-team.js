@@ -198,6 +198,26 @@ const ourTeam = {
           rank: "Flight Instructor",
         },
         {
+          name: "Chase Olson",
+          imagePath: "/src/assets/man-silhouette.webp",
+          imageAlt: "Sun City Aviation Certified Flight Instructor Chase Olson",
+          rank: "Flight Instructor",
+        },
+        {
+          name: "Chase Bramblett",
+          imagePath: "/src/assets/man-silhouette.webp",
+          imageAlt:
+            "Sun City Aviation Certified Flight Instructor Chase Bramblett",
+          rank: "Flight Instructor",
+        },
+        {
+          name: "Tyler Franco-Pinto",
+          imagePath: "/src/assets/man-silhouette.webp",
+          imageAlt:
+            "Sun City Aviation Certified Flight Instructor Tyler Franco-Pinto",
+          rank: "Flight Instructor",
+        },
+        {
           name: "Nicolas McCaulsky",
           imagePath: "/src/assets/sun-city-team-123abc5.webp",
           imageAlt:
