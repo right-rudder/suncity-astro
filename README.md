@@ -1,6 +1,16 @@
 # Astro Starter Kit: Docs Site
 
-[![Build Astro site](https://github.com/advanced-astro/astro-docs-template/actions/workflows/test.yml/badge.svg)](https://github.com/advanced-astro/astro-docs-template/actions/workflows/test.yml)
+Click any of the buttons below to start a new development environment to demo or contribute to the codebase without having to install anything on your machine:
+
+[![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-blue?logo=visualstudiocode)](https://vscode.dev/github/advanced-astro/astro-docs-template/actions/workflows/test.yml)
+[![Open in Glitch](https://img.shields.io/badge/Open%20in-Glitch-blue?logo=glitch)](https://glitch.com/edit/#!/import/github/advanced-astro/astro-docs-template/actions/workflows/test.yml)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/advanced-astro/astro-docs-template/actions/workflows/test.yml)
+[![Edit in Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/advanced-astro/astro-docs-template/actions/workflows/test.yml)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/advanced-astro/astro-docs-template/actions/workflows/test.yml)
+[![Open in Repl.it](https://replit.com/badge/github/withastro/astro)](https://replit.com/github/advanced-astro/astro-docs-template/actions/workflows/test.yml)
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/advanced-astro/astro-docs-template/actions/workflows/test.yml)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/advanced-astro/astro-docs-template/actions/workflows/test.yml)
+
 
 ```bash
 pnpm create astro@latest -- --template advanced-astro/astro-docs-template
