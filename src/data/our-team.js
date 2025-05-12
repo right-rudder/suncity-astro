@@ -117,14 +117,6 @@ const ourTeam = {
           rank: "Chief Pilot",
         },
         {
-          name: "Cris Freilich",
-          imagePath: "/src/assets/sun-city-team-cris.webp",
-          imageAlt:
-            "Sun City Aviation Academy Director of Sales, Service, & Finance Cris Freilich",
-          bio: "Cris has a Bachelor's degree in business management with a background in finance, aviation, and marketing. Cris spent the last 10 years working as sales, service, and school director for several prominent fight schools in Florida. Throughout his time working at these flight schools, Cris' love and passion for aviation grew and has led him to complete his Private Pilot Certificate.",
-          rank: "Director of Sales, Service, & Finance",
-        },
-        {
           name: "Georgette Poulos",
           imagePath: "/src/assets/sun-city-team-georgette.webp",
           imageAlt:
