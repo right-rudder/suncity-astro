@@ -30,35 +30,6 @@ const BookModalButton = ({ btnStyle, btnText }) => {
       import.meta.env.GHL_BOOK_FORM_WEBHOOK_URL ||
       "https://services.leadconnectorhq.com/hooks/SmZxqjL2v5KaWPxMSMbW/webhook-trigger/nNJghJYDO9zZiCHoc82r";
 
-    const MONDAY_API_KEY = import.meta.env.MONDAY_API_KEY;
-
-    const MONDAY_BOARD_ID = 3536260889;
-
-    // Monday.com query
-    const mondayQuery = `mutation{
-            create_item (board_id: ${MONDAY_BOARD_ID},
-            item_name: "${formData.get("firstName") + " " + formData.get("lastName")}",
-            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"BOOK FORM.\\"}"
-          ){
-            id
-            name
-            }
-          }`;
-
-    fetch("https://api.monday.com/v2", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: MONDAY_API_KEY,
-      },
-      body: JSON.stringify({
-        query: mondayQuery,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => console.log("Monday response:", data))
-      .catch((err) => console.error("Error:", err));
-
     fetch(GHL_BOOK_FORM_WEBHOOK_URL, {
       method: "POST",
       body: new URLSearchParams(formData),

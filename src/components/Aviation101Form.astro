@@ -233,55 +233,34 @@ const { data } = Astro.props;
           urlSearchParams.append(pair[0], pair[1]);
         }
 
-        // Monday.com query
-        const mondayQuery = `mutation{
-            create_item (board_id: ${MONDAY_BOARD_ID},
-            item_name: "${formData.get("first-name") + " " + formData.get("last-name")}",
-            column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"Aviation 101. Comments: ${formData.get("message")}, Child Name: ${formData.get("attendee-first-name") + " " + formData.get("attendee-last-name")}, Child Age: ${formData.get("attendee-age")}\\"}"
-          ){
-            id
-            name
-            }
-          }`;
+        // Show loading state
+        submitButton.textContent = "Sending...";
+        submitButton.disabled = true;
 
-        fetch("https://api.monday.com/v2", {
+        // Send form data to GHL webhook
+        fetch(GHL_AVIATION101_FORM_WEBHOOK_URL, {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
-            Authorization: MONDAY_API_KEY,
+            "Content-Type": "application/x-www-form-urlencoded",
           },
-          body: JSON.stringify({
-            query: mondayQuery,
-          }),
+          body: urlSearchParams,
         })
-          .then((res) => res.json())
-          .then((data) => console.log("Monday response:", data))
-          .catch((err) => console.error("Error:", err));
-
-        // Send an AJAX request to submit the form
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", contactForm.action);
-        xhr.setRequestHeader(
-          "Content-Type",
-          "application/x-www-form-urlencoded"
-        );
-        xhr.onload = function () {
-          // Check if the request was successful (status 200)
-          if (xhr.status === 200) {
-            // Redirect the user after a successful form submission
-            setTimeout(() => {
-              window.location.href = "/youth-aviation-classes-confirmation";
-            }, 1000);
-          } else {
-            // Handle errors if any
-            console.error("Form submission failed:", xhr.statusText);
-          }
-        };
-        xhr.onerror = function () {
-          // Handle network errors
-          console.error("Network error occurred while submitting the form.");
-        };
-        xhr.send(urlSearchParams);
+          .then((response) => {
+            if (response.ok) {
+              // Redirect on success
+              setTimeout(() => {
+                window.location.href = "/youth-aviation-classes-confirmation";
+              }, 1000);
+            } else {
+              console.error("Form submission failed:", response.statusText);
+            }
+          })
+          .catch((error) => {
+            console.error(
+              "Network error occurred while submitting the form:",
+              error
+            );
+          });
       });
     } else {
       console.error("Discovery Flight form element not found.");
