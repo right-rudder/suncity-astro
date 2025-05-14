@@ -615,93 +615,50 @@ const { data } = quizForm;
                   submitButton.textContent = "Sending...";
                   submitButton.disabled = true;
 
-                  // Monday.com query
-                  const mondayQuery = `mutation{
-                    create_item (board_id: ${MONDAY_BOARD_ID},
-                    item_name: "${formData.get("first-name") + " " + formData.get("last-name")}",
-                    column_values: "{\\"lead_email\\": {\\"text\\": \\"${formData.get("email")}\\", \\"email\\": \\"${formData.get("email")}\\"}, \\"lead_phone\\": \\"${formData.get("phone")}\\", \\"long_text\\" : \\"QUIZ FORM. Inspirations: ${formData.get("Inspirations")}, Goals: ${formData.get("goals")}, Experience: ${formData.get("experience")}, Learning Style: ${formData.get("learnstyle")}, Learning Approach: ${formData.get("approach")}, Guidance: ${formData.get("Guidance")}, Comments: ${formData.get("anything-else")}, Visit: ${formData.get("visit-us")}\\"}"
-                  ){
-                    id
-                    name
-                    }
-                  }`;
+                  // Submit to GHL form webhook
+                  if (!contactForm.action) {
+                    console.error("Form action URL is missing");
+                    submitButton.textContent = "Error";
+                    setTimeout(() => {
+                      submitButton.textContent = "Submit";
+                      submitButton.disabled = false;
+                    }, 2000);
+                    return;
+                  }
 
-                  // Submit to Monday.com first
-                  fetch("https://api.monday.com/v2", {
+                  fetch(contactForm.action, {
                     method: "POST",
                     headers: {
-                      "Content-Type": "application/json",
-                      Authorization: MONDAY_API_KEY,
+                      "Content-Type": "application/x-www-form-urlencoded",
                     },
-                    body: JSON.stringify({
-                      query: mondayQuery,
-                    }),
+                    body: urlSearchParams,
                   })
                     .then((res) => {
                       if (!res.ok) {
-                        throw new Error(`Monday API returned ${res.status}`);
-                      }
-                      return res.json();
-                    })
-                    .then((data) => {
-                      console.log("Monday response:", data);
-
-                      // Only proceed with GHL submission if Monday was successful
-                      // Submit to GHL form webhook
-                      if (!contactForm.action) {
-                        console.error("Form action URL is missing");
-                        submitButton.textContent = "Error";
-                        setTimeout(() => {
-                          submitButton.textContent = "Send Message";
-                          submitButton.disabled = false;
-                        }, 2000);
-                        return;
+                        throw new Error(
+                          `Form submission failed: ${res.status}`
+                        );
                       }
 
-                      fetch(contactForm.action, {
-                        method: "POST",
-                        headers: {
-                          "Content-Type": "application/x-www-form-urlencoded",
-                        },
-                        body: urlSearchParams,
-                      })
-                        .then((res) => {
-                          if (!res.ok) {
-                            throw new Error(
-                              `Form submission failed: ${res.status}`
-                            );
-                          }
-
-                          // Success - redirect after brief delay
-                          submitButton.textContent = "Success!";
-                          setTimeout(() => {
-                            window.location.href = "/contact-confirmation";
-                          }, 1000);
-                        })
-                        .catch((err) => {
-                          console.error("Form submission error:", err);
-                          submitButton.textContent = "Error";
-
-                          // Reset button after error
-                          setTimeout(() => {
-                            submitButton.textContent = "Send Message";
-                            submitButton.disabled = false;
-                          }, 2000);
-                        });
+                      // Success - redirect after brief delay
+                      submitButton.textContent = "Success!";
+                      setTimeout(() => {
+                        window.location.href = "/contact-confirmation";
+                      }, 1000);
                     })
                     .catch((err) => {
-                      console.error("Monday API Error:", err);
+                      console.error("Form submission error:", err);
                       submitButton.textContent = "Error";
 
-                      // Reset button after Monday API error
+                      // Reset button after error
                       setTimeout(() => {
-                        submitButton.textContent = "Send Message";
+                        submitButton.textContent = "Submit";
                         submitButton.disabled = false;
                       }, 2000);
                     });
                 });
               } else {
-                console.error("Enroll form element not found.");
+                console.error("Contact form element not found.");
               }
             });
           </script>
