@@ -2,7 +2,15 @@
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import BaseLayout from "./BaseLayout.astro";
-import { KEYWORDS } from "../consts";
+import {
+  KEYWORDS,
+  SITE_TITLE,
+  OG_IMAGE,
+  PHONE_NUMBER,
+  EMAIL_ADDRESS,
+  ADDRESS_LINE_1,
+  ADDRESS_LINE_2,
+} from "../consts";
 import CTAColor from "../components/CTAColor.astro";
 import flyWithUsCTA from "../data/flyWithUsCTA";
 
@@ -19,15 +27,71 @@ const {
   tags,
   keywords,
 } = Astro.props;
+
+const siteURL = Astro.site
+  ? Astro.site.toString()
+  : "https://suncityaviation.com";
+const authorName = author || "Sun City Aviation Academy Team";
+const heroImageURL = heroImage
+  ? new URL(heroImage, siteURL).toString()
+  : new URL(OG_IMAGE, siteURL).toString();
+const logoURL = new URL("/sun-city-white-text-logo.webp", siteURL).toString();
+const pageKeywords = (category ? [category] : [])
+  .concat(tags || [])
+  .concat(keywords || [])
+  .join(", ");
 ---
 
 <BaseLayout
-  siteTitle={title + " | Blog | Right Rudder Marketing"}
-  siteDescription={description + " Right Rudder Marketing Blog."}
-  keywords={category + ", " + tags.join(", ") + keywords ? keywords : KEYWORDS}
+  siteTitle={title + " | Blog | Sun City Aviation Academy"}
+  siteDescription={description}
+  keywords={pageKeywords}
   ogImage={heroImage}
 >
   <div class="h-20 lg:h-28 w-full bg-primary-950/80"></div>
+
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": Astro.url.toString(),
+      },
+      headline: title,
+      description: description,
+      image: heroImageURL,
+      author: {
+        "@type": "Organization",
+        name: authorName,
+        url: siteURL,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Sun City Aviation Academy",
+        logo: {
+          "@type": "ImageObject",
+          url: logoURL,
+        },
+        telephone: PHONE_NUMBER,
+        email: EMAIL_ADDRESS,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: ADDRESS_LINE_1,
+          addressLocality: "Pembroke Pines",
+          addressRegion: "FL",
+          postalCode: ADDRESS_LINE_2.split(" ").pop(),
+          addressCountry: "US",
+        },
+      },
+      datePublished: pubDate.toISOString(),
+      dateModified: updatedDate
+        ? updatedDate.toISOString()
+        : pubDate.toISOString(),
+      keywords: pageKeywords,
+    })}
+  />
 
   <section
     class="flex justify-center pt-2 bg-gradient-to-b from-primary-50 to-primary-100 overflow-hidden"
