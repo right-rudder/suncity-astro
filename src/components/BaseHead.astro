@@ -92,41 +92,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 <!-- NEED TO UPDATE SCHEMA -->
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Sun City Aviation Academy",
-    "description": {description},
-    "keywords": {keywords},
-    "image": {new URL(image, Astro.url)},
-    "telephone": "+1-754-423-2159",
-    "email": "info@suncityaviation.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "7201 S Airport Rd #504A",
-      "addressLocality": "Pembroke Pines",
-      "addressRegion": "FL",
-      "postalCode": "33023",
-      "addressCountry": "US"
-    },
-    "url": {Astro.url},
-    "logo": {new URL("/sun-city-white-text-logo.webp", Astro.site)},
-    "hasMap": "https://maps.app.goo.gl/yugDmTfMfqUNYQ7G7",
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+1-754-423-2159",
-        "contactType": "customer service",
-        "areaServed": "US",
-        "availableLanguage": "en"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/SunCityAviationAcademy",
-      "https://www.instagram.com/suncity_aviation/",
-      "https://www.linkedin.com/company/sun-city-aviation-academy/",
-      "https://www.youtube.com/@suncityaviation/"
-    ]
-  }
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Sun City Aviation Academy",
+  "description": description,
+  "keywords": keywords,
+  "image": new URL(image, Astro.url).toString(),
+  "telephone": "+1-754-423-2159",
+  "email": "info@suncityaviation.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "7201 S Airport Rd #504A",
+    "addressLocality": "Pembroke Pines",
+    "addressRegion": "FL",
+    "postalCode": "33023",
+    "addressCountry": "US"
+  },
+  "url": Astro.url.toString(),
+  "logo": new URL("/sun-city-white-text-logo.webp", Astro.site).toString(),
+  "hasMap": "https://maps.app.goo.gl/yugDmTfMfqUNYQ7G7",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+1-754-423-2159",
+      "contactType": "customer service",
+      "areaServed": "US",
+      "availableLanguage": "en"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/SunCityAviationAcademy",
+    "https://www.instagram.com/suncity_aviation/",
+    "https://www.linkedin.com/company/sun-city-aviation-academy/",
+    "https://www.youtube.com/@suncityaviation/"
+  ]
+
+})}>
 </script>
