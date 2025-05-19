@@ -124,6 +124,15 @@ const ourTeam = {
           bio: " Georgette holds a bachelor's degree in Alternative Medicine and is a graduate of culinary school, but she is no stranger to aviation. Being married to a pilot for 28 years and having two pilots for children, she is well versed in the aviation field. Georgette is Sun City's executive business manager and is presently pursuing a bachelor's degree in aerospace management.",
           rank: "Executive Business Manager",
         },
+        {
+          name: "Christopher Boldrin",
+          imagePath:
+            "/src/assets/Sun-City-Aviation-Academy-Chris-Boldrin-Office-Manager.webp",
+          imageAlt:
+            "Sun City Aviation Academy Office Manager Christopher Boldrin",
+          bio: "Christopher Boldrin serves as the Office Manager at Sun City Aviation Academy, where he plays a pivotal role in ensuring the smooth operation of the academy's administrative functions. With a keen eye for detail and a commitment to excellence, Christopher oversees daily office activities, coordinates scheduling, and supports both staff and students to foster an efficient and welcoming environment.",
+          rank: "Office Manager",
+        },
       ],
     },
 
@@ -133,6 +142,41 @@ const ourTeam = {
       description:
         "Our team of staff and instructors are dedicated to providing the highest quality flight training in South Florida. With years of experience and a passion for aviation, our team is here to help you achieve your aviation goals.",
       members: [
+        {
+          name: "Jacqueline Wicker-McAllister",
+          imagePath: "/src/assets/Sun-City-JAckie.jpg",
+          imageAlt:
+            "Sun City Aviation Certified Flight Instructor Jacqueline Wicker-McAllister",
+          rank: "Flight Instructor",
+        },
+        {
+          name: "Chase Olson",
+          imagePath:
+            "/src/assets/Sun-City-Aviation-Academy-Chase-Olson-CFI.webp",
+          imageAlt: "Sun City Aviation Certified Flight Instructor Chase Olson",
+          rank: "Flight Instructor",
+        },
+        {
+          name: "Chase Bramblett",
+          imagePath: "/src/assets/man-silhouette.webp",
+          imageAlt:
+            "Sun City Aviation Certified Flight Instructor Chase Bramblett",
+          rank: "Flight Instructor",
+        },
+        {
+          name: "Tyler Franco-Pinto",
+          imagePath: "/src/assets/man-silhouette.webp",
+          imageAlt:
+            "Sun City Aviation Certified Flight Instructor Tyler Franco-Pinto",
+          rank: "Flight Instructor",
+        },
+        {
+          name: "Nicolas McCaulsky",
+          imagePath: "/src/assets/sun-city-team-123abc5.webp",
+          imageAlt:
+            "Sun City Aviation Academy Certified Flight Instructor Nicolas McCaulsky",
+          rank: "Flight Instructor",
+        },
         {
           name: "Gleb Sokolov",
           imagePath: "/src/assets/sun-city-team-123abc6.webp",
@@ -183,46 +227,12 @@ const ourTeam = {
           rank: "Flight Instructor",
         },
         {
-          name: "Jacqueline Wicker-McAllister",
-          imagePath: "/src/assets/Sun-City-JAckie.jpg",
-          imageAlt:
-            "Sun City Aviation Certified Flight Instructor Jacqueline Wicker-McAllister",
-          rank: "Flight Instructor",
-        },
-        {
-          name: "Nicolas McCaulsky",
-          imagePath: "/src/assets/sun-city-team-123abc5.webp",
-          imageAlt:
-            "Sun City Aviation Academy Certified Flight Instructor Nicolas McCaulsky",
-          rank: "Flight Instructor",
-        },
-        {
-          name: "Angel Christophe",
-          imagePath: "/src/assets/Sun-City-Angel.jpeg",
-          imageAlt:
-            "Sun City Aviation Certified Flight Instructor Angel Christophe",
-          rank: "Office Manager",
-        },
-        {
           name: "Mafer Caceres",
           imagePath: "/src/assets/sun-city-team-mafer.webp",
           imageAlt:
             "Sun City Aviation Academy Dispatch Administrator Mafer Caceres",
           rank: "Office Manager Assistant",
         },
-        {
-          name: "Zaccur Christophe",
-          imagePath: "/src/assets/man-silhouette.webp",
-          imageAlt:
-            "Sun City Aviation Certified Flight Instructor Zaccur Christophe",
-          rank: "Inventory Manager",
-        },
-        /* {
-          name: "Brian Combs",
-          imagePath: "/src/assets/man-silhouette.webp",
-          imageAlt: "Sun City Aviation Certified Flight Instructor Brian Combs",
-          rank: "Outreach Director",
-        }, */
       ],
     },
 
