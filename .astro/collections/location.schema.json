@@ -1,0 +1,41 @@
+{
+  "$ref": "#/definitions/location",
+  "definitions": {
+    "location": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "stateShort": {
+          "type": "string"
+        },
+        "stateLong": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "keyPlace1": {
+          "type": "string"
+        },
+        "keyPlace2": {
+          "type": "string"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "city",
+        "stateShort",
+        "stateLong",
+        "description",
+        "keyPlace1",
+        "keyPlace2"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -158,14 +158,16 @@ const ourTeam = {
         },
         {
           name: "Chase Bramblett",
-          imagePath: "/src/assets/man-silhouette.webp",
+          imagePath:
+            "/src/assets/Sun-City-Aviation-Academy-team-Chase-Bramblett.jpg",
           imageAlt:
             "Sun City Aviation Certified Flight Instructor Chase Bramblett",
           rank: "Flight Instructor",
         },
         {
           name: "Tyler Franco-Pinto",
-          imagePath: "/src/assets/man-silhouette.webp",
+          imagePath:
+            "/src/assets/Sun-City-Aviation-Academy-team-Tyler-Franco-Pinto.jpg",
           imageAlt:
             "Sun City Aviation Certified Flight Instructor Tyler Franco-Pinto",
           rank: "Flight Instructor",
