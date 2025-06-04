@@ -11,7 +11,6 @@ const QuizModalButton = ({ btnStyle, btnText, webhookUrl, apiKey }) => {
   const [guidance, setGuidance] = useState(false);
 
   const toggleModal = () => {
-    console.log(btnStyle);
     setShowModal(!showModal);
     setFormSubmitted(false);
   };
