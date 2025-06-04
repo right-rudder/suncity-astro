@@ -2,58 +2,72 @@ import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { PHONE_NUMBER, EMAIL_ADDRESS } from "../consts";
 
-const BookModalButton = ({ btnStyle, btnText }) => {
+const BookModalButton = ({ btnStyle, btnText, webhookUrl, apiKey }) => {
   const [showModal, setShowModal] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [userName, setUserName] = useState("");
 
   const toggleModal = () => {
-    console.log(btnStyle);
     setShowModal(!showModal);
     setFormSubmitted(false);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
 
-    if (formData.get("confirm-email")) {
-      return;
-    }
+    const confirmEmail = formData.get("confirm-email")?.trim();
+    if (confirmEmail) return;
 
     const name = formData.get("first-name");
     setUserName(name);
 
-    console.log("Form data:", formData);
+    const urlEncodedBody = new URLSearchParams(formData).toString();
 
-    const GHL_BOOK_FORM_WEBHOOK_URL =
-      import.meta.env.GHL_BOOK_FORM_WEBHOOK_URL ||
-      "https://services.leadconnectorhq.com/hooks/SmZxqjL2v5KaWPxMSMbW/webhook-trigger/nNJghJYDO9zZiCHoc82r";
+    const jsonBody = {
+      first_name: formData.get("first-name")?.trim() || "",
+      last_name: formData.get("last-name")?.trim() || "",
+      email: formData.get("email")?.trim() || "",
+      phone: formData.get("phone")?.trim() || "",
+      campaign: "book",
+      account_random_id: "ac_axavkvti",
+    };
 
-    fetch(GHL_BOOK_FORM_WEBHOOK_URL, {
-      method: "POST",
-      body: new URLSearchParams(formData),
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    })
-      .then((response) => {
-        if (response.ok) {
-          setFormSubmitted(true);
-          setTimeout(() => {
-            toggleModal();
-            document.body.style.overflow = "auto";
-          }, 5400);
-        } else {
-          console.error("Form submission failed:", response.statusText);
-        }
-      })
-      .catch((error) => {
-        console.error(
-          "Network error occurred while submitting the form:",
-          error
-        );
-      });
+    try {
+      const [ghlRes, portalRes] = await Promise.all([
+        fetch(webhookUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: urlEncodedBody,
+        }),
+        fetch("https://portal.rightruddermarketing.com/api/leads", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            "x-api-key": apiKey,
+          },
+          body: JSON.stringify(jsonBody),
+        }),
+      ]);
+
+      if (ghlRes.ok && portalRes.ok) {
+        setFormSubmitted(true);
+        setTimeout(() => {
+          toggleModal();
+          document.body.style.overflow = "auto";
+        }, 5400);
+      } else {
+        console.error("Submission failed", {
+          ghlStatus: ghlRes.status,
+          portalStatus: portalRes.status,
+        });
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+    }
   };
 
   return (
@@ -130,7 +144,7 @@ const BookModalButton = ({ btnStyle, btnText }) => {
                       onChange={(e) => {
                         e.target.value = e.target.value.replace(
                           /(\d{3})(\d{3})(\d{4})/,
-                          "($1) $2-$3"
+                          "($1) $2-$3",
                         );
                       }}
                     />

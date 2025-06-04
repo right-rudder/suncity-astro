@@ -16,6 +16,46 @@ const {
   keywords,
   image = "/SunCity-OG-image.png",
 } = Astro.props;
+
+const jsonLD = JSON.stringify({
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  name: "Sun City Aviation Academy",
+  description: Astro.props.description,
+  keywords: Astro.props.keywords,
+  image: new URL(
+    Astro.props.image ?? "/SunCity-OG-image.png",
+    Astro.url,
+  ).toString(),
+  telephone: "+1-754-423-2159",
+  email: "info@suncityaviation.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "7201 S Airport Rd #504A",
+    addressLocality: "Pembroke Pines",
+    addressRegion: "FL",
+    postalCode: "33023",
+    addressCountry: "US",
+  },
+  url: Astro.url.toString(),
+  logo: new URL("/sun-city-white-text-logo.webp", Astro.site).toString(),
+  hasMap: "https://maps.app.goo.gl/yugDmTfMfqUNYQ7G7",
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+1-754-423-2159",
+      contactType: "customer service",
+      areaServed: "US",
+      availableLanguage: "en",
+    },
+  ],
+  sameAs: [
+    "https://www.facebook.com/SunCityAviationAcademy",
+    "https://www.instagram.com/suncity_aviation/",
+    "https://www.linkedin.com/company/sun-city-aviation-academy/",
+    "https://www.youtube.com/@suncityaviation/",
+  ],
+});
 ---
 
 <!-- Global Metadata -->
@@ -83,50 +123,19 @@ const {
 </script>
 
 <!-- Google Tag Manager -->
-<script type="text/partytown"
-  async>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PW8G695M');</script>
+<script async>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-PW8G695M");
+</script>
 <!-- End Google Tag Manager -->
 
 <!-- NEED TO UPDATE SCHEMA -->
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "http://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Sun City Aviation Academy",
-  "description": description,
-  "keywords": keywords,
-  "image": new URL(image, Astro.url).toString(),
-  "telephone": "+1-754-423-2159",
-  "email": "info@suncityaviation.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "7201 S Airport Rd #504A",
-    "addressLocality": "Pembroke Pines",
-    "addressRegion": "FL",
-    "postalCode": "33023",
-    "addressCountry": "US"
-  },
-  "url": Astro.url.toString(),
-  "logo": new URL("/sun-city-white-text-logo.webp", Astro.site).toString(),
-  "hasMap": "https://maps.app.goo.gl/yugDmTfMfqUNYQ7G7",
-  "contactPoint": [
-    {
-      "@type": "ContactPoint",
-      "telephone": "+1-754-423-2159",
-      "contactType": "customer service",
-      "areaServed": "US",
-      "availableLanguage": "en"
-    }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/SunCityAviationAcademy",
-    "https://www.instagram.com/suncity_aviation/",
-    "https://www.linkedin.com/company/sun-city-aviation-academy/",
-    "https://www.youtube.com/@suncityaviation/"
-  ]
-
-})}>
-</script>
+<script type="application/ld+json" set:html={jsonLD} />

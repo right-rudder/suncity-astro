@@ -1,7 +1,8 @@
 ---
 import BookModalButton from "./BookModalButton";
 import ImageComp from "./ImageComp.astro";
-
+const GHL_BOOK_FORM_WEBHOOK_URL = import.meta.env.GHL_BOOK_FORM_WEBHOOK_URL;
+const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 const { content } = Astro.props;
 ---
 
@@ -46,6 +47,8 @@ const { content } = Astro.props;
             btnStyle="btn-accent mt-8"
             btnText="Get The Guide"
             client:only
+            webhookUrl={GHL_BOOK_FORM_WEBHOOK_URL}
+            apiKey={PORTAL_API_KEY}
           />
         )
       }
