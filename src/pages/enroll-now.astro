@@ -11,6 +11,7 @@ import enrollInfo from "../data/enroll-now";
 import programsSwiper from "../data/programSwiper";
 
 const GHL_ENROLL_FORM_WEBHOOK_URL = import.meta.env.GHL_ENROLL_FORM_WEBHOOK_URL;
+const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 
 const MONDAY_API_KEY = import.meta.env.MONDAY_API_KEY;
 
@@ -253,13 +254,7 @@ const { data } = enrollInfo;
       </div>
     </div>
   </section>
-  <script
-    define:vars={{
-      GHL_ENROLL_FORM_WEBHOOK_URL,
-      MONDAY_API_KEY,
-      MONDAY_BOARD_ID,
-    }}
-  >
+  <script define:vars={{ GHL_ENROLL_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
     const checkbox = document.getElementById("agree-data-collection");
     const submitButton = document.getElementById("submit-button");
 
@@ -269,94 +264,99 @@ const { data } = enrollInfo;
         submitButton.classList.remove(
           "cursor-not-allowed",
           "bg-gray-400",
-          "hover:bg-gray-400"
+          "hover:bg-gray-400",
         );
       } else {
         submitButton.disabled = true;
         submitButton.classList.add(
           "cursor-not-allowed",
           "bg-gray-400",
-          "hover:bg-gray-400"
+          "hover:bg-gray-400",
         );
       }
     });
-
-    // Wait for the DOM content to be fully loaded
-    document.addEventListener("DOMContentLoaded", function () {
-      // Get the contactUs form element
-      const contactForm = document.getElementById("contact-form");
-
-      // Check if the contactUs form element exists
-      if (contactForm !== null) {
-        // Add submit event listener to the contactUs form
-        contactForm.addEventListener("submit", function (event) {
-          // Prevent the default form submission
-          event.preventDefault();
-
-          // Serialize the form data
-          const formData = new FormData(contactForm);
-
-          // Check the value of the honeypot field
-          const confirmEmailValue = formData.get("confirm-email");
-          if (confirmEmailValue === "" || confirmEmailValue === null) {
-            // If the honeypot field is empty, it's a human
-            // Set the form action to the URL for processing the form and redirecting to thank you
-            contactForm.action = GHL_ENROLL_FORM_WEBHOOK_URL;
-          }
-
-          // Convert FormData to URLSearchParams
-          const urlSearchParams = new URLSearchParams();
-          for (const pair of formData.entries()) {
-            urlSearchParams.append(pair[0], pair[1]);
-          }
-
-          // Show loading state
-          submitButton.textContent = "Sending...";
-          submitButton.disabled = true;
-
-          // Submit to GHL form webhook
-          if (!contactForm.action) {
-            console.error("Form action URL is missing");
-            submitButton.textContent = "Error";
-            setTimeout(() => {
-              submitButton.textContent = "Send Message";
-              submitButton.disabled = false;
-            }, 2000);
-            return;
-          }
-
-          fetch(contactForm.action, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-            body: urlSearchParams,
-          })
-            .then((res) => {
-              if (!res.ok) {
-                throw new Error(`Form submission failed: ${res.status}`);
-              }
-
-              // Success - redirect after brief delay
-              submitButton.textContent = "Success!";
-              setTimeout(() => {
-                window.location.href = "/enroll-confirmation";
-              }, 1000);
-            })
-            .catch((err) => {
-              console.error("Form submission error:", err);
-              submitButton.textContent = "Error";
-
-              // Reset button after error
-              setTimeout(() => {
-                submitButton.textContent = "Send Message";
-                submitButton.disabled = false;
-              }, 2000);
-            });
-        });
-      } else {
-        console.error("Enroll form element not found.");
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contact-form");
+      if (!form) {
+        console.error("Form element not found.");
+        return;
       }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const confirmEmail = formData.get("confirm-email")?.trim();
+        if (confirmEmail) return;
+
+        const webhookURL = GHL_ENROLL_FORM_WEBHOOK_URL;
+        const apiKey = PORTAL_API_KEY;
+
+        const urlEncodedBody = new URLSearchParams(formData).toString();
+
+        submitButton.textContent = "Sending...";
+        submitButton.disabled = true;
+
+        const excludedFields = [
+          "first-name",
+          "last-name",
+          "email",
+          "phone",
+          "confirm-email",
+          "agree-data-collection",
+        ];
+
+        const metadata = {};
+
+        for (const [key, value] of formData.entries()) {
+          if (!excludedFields.includes(key)) {
+            metadata[key] = value?.trim?.() ?? value;
+          }
+        }
+
+        const jsonBody = {
+          first_name: formData.get("first-name")?.trim() || "",
+          last_name: formData.get("last-name")?.trim() || "",
+          email: formData.get("email")?.trim() || "",
+          phone: formData.get("phone")?.trim() || "",
+          campaign: "enrollment",
+          account_random_id: "ac_axavkvti",
+          metadata: metadata,
+        };
+
+        try {
+          const [ghlRes, portalRes] = await Promise.all([
+            fetch(webhookURL, {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: urlEncodedBody,
+            }),
+            fetch("https://portal.rightruddermarketing.com/api/leads", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "x-api-key": apiKey,
+              },
+              body: JSON.stringify(jsonBody),
+            }),
+          ]);
+
+          if (ghlRes.ok && portalRes.ok) {
+            submitButton.textContent = "Success!";
+            setTimeout(() => {
+              window.location.href = "/enroll-confirmation";
+            }, 1000);
+          } else {
+            console.error("Submission failed", {
+              ghlStatus: ghlRes.status,
+              portalStatus: portalRes.status,
+            });
+          }
+        } catch (err) {
+          console.error("Submission error:", err);
+        }
+      });
     });
   </script>
 

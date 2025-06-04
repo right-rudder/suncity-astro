@@ -2,7 +2,7 @@ import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { PHONE_NUMBER, EMAIL_ADDRESS } from "../consts";
 
-const QuizModalButton = ({ btnStyle, btnText }) => {
+const QuizModalButton = ({ btnStyle, btnText, webhookUrl, apiKey }) => {
   const [showModal, setShowModal] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [userName, setUserName] = useState("");
@@ -16,47 +16,62 @@ const QuizModalButton = ({ btnStyle, btnText }) => {
     setFormSubmitted(false);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
 
-    if (formData.get("confirm-email")) {
-      return;
-    }
+    const confirmEmail = formData.get("confirm-email")?.trim();
+    if (confirmEmail) return;
 
     const name = formData.get("firstName");
     setUserName(name);
 
-    console.log("Form data:", formData);
+    const urlEncodedBody = new URLSearchParams(formData).toString();
 
-    const url =
-      "https://services.leadconnectorhq.com/hooks/SmZxqjL2v5KaWPxMSMbW/webhook-trigger/edb78qoSjciDzbiGp39z";
+    const jsonBody = {
+      first_name: formData.get("firstName")?.trim() || "",
+      last_name: formData.get("lastName")?.trim() || "",
+      email: formData.get("email")?.trim() || "",
+      phone: formData.get("phone")?.trim() || "",
+      campaign: "quiz",
+      account_random_id: "ac_axavkvti",
+    };
 
-    // Only fetch to GHL (Go High Level)
-    fetch(url, {
-      method: "POST",
-      body: new URLSearchParams(formData),
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    })
-      .then((response) => {
-        if (response.ok) {
-          setFormSubmitted(true);
-          setTimeout(() => {
-            toggleModal();
-            document.body.style.overflow = "auto";
-          }, 6300);
-        } else {
-          console.error("Form submission failed:", response.statusText);
-        }
-      })
-      .catch((error) => {
-        console.error(
-          "Network error occurred while submitting the form:",
-          error
-        );
-      });
+    try {
+      const [ghlRes, portalRes] = await Promise.all([
+        fetch(webhookUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: urlEncodedBody,
+        }),
+        fetch("https://portal.rightruddermarketing.com/api/leads", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            "x-api-key": apiKey,
+          },
+          body: JSON.stringify(jsonBody),
+        }),
+      ]);
+
+      if (ghlRes.ok && portalRes.ok) {
+        setFormSubmitted(true);
+        setTimeout(() => {
+          toggleModal();
+          document.body.style.overflow = "auto";
+        }, 6300);
+      } else {
+        console.error("Submission failed", {
+          ghlStatus: ghlRes.status,
+          portalStatus: portalRes.status,
+        });
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+    }
   };
 
   return (
