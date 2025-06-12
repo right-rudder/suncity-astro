@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeaderScreen from "../components/HeaderScreen.astro";
+import ProgramSwiper from "../components/ProgramSwiper.astro";
+import PageSummary from "../components/PageSummary.astro";
+import BookCTA from "../components/BookCTA.astro";
+import TrainingRoadmap from "../components/TrainingRoadmap.astro";
+import pilotProvision from "../data/pilot-provision";
+import pilotProvisionSwiper from "../data/pilotProvisionSwiper";
+import bookCTA from "../data/book-cta";
+
+const { data } = pilotProvision;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+  <PageSummary content={data.pageSummary} />
+
+  <TrainingRoadmap content={data.privateRoadmap} />
+
+  <ProgramSwiper content={pilotProvisionSwiper} />
+
+  <BookCTA content={bookCTA} />
+  <script src="../scripts/creativeSwiper.js"></script>
+</BaseLayout>
