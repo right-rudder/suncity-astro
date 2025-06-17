@@ -8,3 +8,6 @@ src/.DS_Store
 .DS_Store
 
 .env
+/.astro
+.astro
+/astro
