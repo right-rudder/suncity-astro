@@ -51,8 +51,8 @@ const pilotProvision = {
             "Update your kit before each new training module or checkride.",
             "Staff can help you find the right region and supplement.",
           ],
-            imagePath: "/src/assets/suncity_pilot_provision_store_suplements.png",
-            imageAlt: "",
+            imagePath: "/src/assets/suncity_pilot_provisions_store_2.jpg",
+            imageAlt: "Suncity's provision store shell of supplies",
         },
         {
           title: "Training & Planning Tools",
@@ -63,8 +63,8 @@ const pilotProvision = {
             "Perfect for both students and licensed pilots keeping their skills sharp.",
             "Every tool meets training and FAA standards.",
           ],        
-            imagePath: "/src/assets/suncity_pilot_provision_store_training_planning_tools.png",
-            imageAlt: "",
+            imagePath: "/src/assets/suncity_pilot_provisions_store_3.jpg",
+            imageAlt: "Suncity's provision store shell of supplies",
         },
         {
           title: "Gear & Accessories",
@@ -74,8 +74,8 @@ const pilotProvision = {
             "Great for students, instructors, or aviation enthusiasts.",
             "A perfect gift shop for your favorite pilot-in-training.",
           ],
-            imagePath: "/src/assets/suncity_pilot_provision_store_gears_and_accessories.png",
-            imageAlt: "",
+            imagePath: "/src/assets/suncity_pilot_provisions_store_4.jpg",
+            imageAlt: "Suncity's provision store shell of supplies",
         },
       ],
       finalParagraph:
