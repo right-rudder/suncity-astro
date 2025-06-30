@@ -95,6 +95,10 @@ export const mobileNavbarLinks = [
         link: "/stratus-finance",
       },
       {
+        name: "Pilot Provision",
+        link: "/pilot-provision",
+      },
+      {
         name: "Contact",
         link: "/contact",
       },
