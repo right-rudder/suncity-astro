@@ -3,7 +3,47 @@ const homePage = {
     //SEO Header Stuff
     pageTitle:
       "Sun City Aviation Academy | Premier Flight School Miami & South Florida",
-    pageDescription:
+           author: "Joelle D.",
+        },
+        {
+          body: "Anyone who care about having a positive  experience, prompt communication, and quality learning, you will not regret going to Sun City. Georgette and the staff are fantastic. The environment itself is built to enrich your personal understanding of flying. My son had a blast and can't wait to continue. Thank you so much Georgette.",
+          author: "Olgyu C.",
+        },
+      ],
+    },
+
+    // FAQ Section for Homepage
+    faq: {
+      title: "Frequently Asked Questions",
+      items: [
+        {
+          question: "How long does it take to get a private pilot license?",
+          answer: "The time to earn your private pilot license varies by individual, but typically takes 3-6 months with consistent training. Factors include your schedule, weather conditions, and how quickly you progress through the required 40 hours of flight time and ground training. Our accelerated programs can help you finish faster."
+        },
+        {
+          question: "What are the requirements to start flight training?",
+          answer: "To begin private pilot training, you must be at least 17 years old (16 for a sport pilot license), able to read and speak English, and hold at least a third-class medical certificate from an FAA-authorized medical examiner. We'll help guide you through the medical certification process."
+        },
+        {
+          question: "How much does flight training cost?",
+          answer: "Flight training costs vary depending on the program and your pace of learning. Private pilot training typically ranges from $8,000-$12,000. We offer financing options through Stratus Finance to help make your aviation dreams affordable. Contact us for a detailed cost breakdown for your specific goals."
+        },
+        {
+          question: "Do you offer financing for flight training?",
+          answer: "Yes! We partner with Stratus Finance to offer competitive financing options for qualified students. This allows you to begin training immediately while spreading the cost over manageable monthly payments. Our staff can help you understand your financing options."
+        },
+        {
+          question: "What makes Sun City Aviation Academy different?",
+          answer: "Sun City Aviation Academy stands out with our experienced instructors, modern fleet including Cessna 172s and Beechcraft Duchess aircraft, personalized training approach, and prime location at North Perry Airport (KHWO). We treat every student like family and focus on safety, professionalism, and excellence in aviation education."
+        },
+        {
+          question: "Can I schedule a discovery flight?",
+          answer: "Absolutely! A discovery flight is the perfect way to experience aviation firsthand. During this introductory flight, you'll take the controls with an experienced instructor and see South Florida from a whole new perspective. It's an excellent way to determine if pilot training is right for you."
+        }
+      ]
+    },
+  },
+};cription:
       "Sun City Aviation Academy: South Florida's premier flight training school. Professional pilot programs, private pilot licenses, instrument ratings, and commercial certifications. Located at North Perry Airport (KHWO) serving Miami, Fort Lauderdale, and Pembroke Pines. Expert instructors, modern fleet, and personalized training programs. Start your aviation career today with discovery flights and comprehensive pilot training courses.",
     pageKeywords:
       "flight school Miami, pilot training South Florida, Sun City Aviation Academy, aviation academy Pembroke Pines, flight lessons KHWO, learn to fly Florida, discovery flight Miami, private pilot license training, commercial pilot courses, instrument rating Florida, certified flight instructors, North Perry Airport flight school, professional pilot program, aviation career training, flight simulator training, multi-engine rating, seaplane training, ATP certification, flight review BFR",
@@ -54,6 +94,13 @@ const homePage = {
           icon: "M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z",
         },
         {
+          title: "Individualized Attention",
+          descriptions: [
+            "We provide personalized training to ensure you receive the attention you need to succeed.",
+          ],
+          icon: "M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z",
+        },
+        {
           title: "Excellent Customer Service",
           descriptions: [
             "Our team is dedicated to providing you with the best customer service experience possible.",
@@ -64,13 +111,6 @@ const homePage = {
           title: "Structured Lessons",
           descriptions: [
             "Our programs are designed to provide you with a structured learning experience that will help you succeed.",
-          ],
-          icon: "M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z",
-        },
-        {
-          title: "Individualized Attention",
-          descriptions: [
-            "We provide personalized training to ensure you receive the attention you need to succeed.",
           ],
           icon: "M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z",
         },
@@ -122,7 +162,7 @@ const homePage = {
       upperHeading: "The Sun City Family",
       heading: "Our Students Love Us",
       headingText: [
-        "While our main goal is to train future pilots safely and effectively, it's important to us at Sun City Aviation Academy our students have a fun and comfortable environment to practice in.",
+        "While our main goal is to train future pilots safely and effectively, it’s important to us at Sun City Aviation Academy our students have a fun and comfortable environment to practice in.",
         "Check out what our students and guests have to say about their experiences at Sun City.",
       ],
       buttonText: "Leave Us a Review",
@@ -130,11 +170,11 @@ const homePage = {
         "https://search.google.com/local/writereview?placeid=ChIJu5ZskWyp2YgR6CAUxEAZ5H8",
       reviews: [
         {
-          body: "This flight school provides premium service, wonderful atmosphere and excellent safety. I am very pleased with Sun City Aviation. I am working on getting my instrument rating and the Sun City team has been wonderful. My Flight Instructor Jean is great. I feel like I'm becoming a better pilot after each lesson. The planes are in great shape and I feel safe flying them (especially flying XC). Overall 5 Stars!",
+          body: "This flight school provides premium service, wonderful atmosphere and excellent safety. I am very pleased with Sun City Aviation. I am working on getting my instrument rating and the Sun City team has been wonderful. My Flight Instructor Jean is great. I feel like I’m becoming a better pilot after each lesson. The planes are in great shape and I feel safe flying them (especially flying XC). Overall 5 Stars!",
           author: "Hector R.",
         },
         {
-          body: "Sun City Aviation is hands down one of the best flight schools out there! The instructors are not only super knowledgeable but also genuinely care about helping you succeed. They take the time to explain everything clearly, so you never feel lost. The planes are in great shape, and you always feel safe and comfortable when you're up in the air. What I love most is the friendly and supportive vibe—everyone there is rooting for you. Whether you're just starting out or looking to level up your skills, Sun City Aviation is the place to be. Highly recommend!",
+          body: "Sun City Aviation is hands down one of the best flight schools out there! The instructors are not only super knowledgeable but also genuinely care about helping you succeed. They take the time to explain everything clearly, so you never feel lost. The planes are in great shape, and you always feel safe and comfortable when you’re up in the air. What I love most is the friendly and supportive vibe—everyone there is rooting for you. Whether you're just starting out or looking to level up your skills, Sun City Aviation is the place to be. Highly recommend!",
           author: "Zaccur C.",
         },
         {
@@ -146,53 +186,15 @@ const homePage = {
           author: "Jeff B.",
         },
         {
-          body: "I spent almost a full year with this Sun City family and I couldn't be more grateful. Getting to the finish line for my PPL would not have happened without Georgette and Luke, the owners. They are like a second set of parents to me after this rating. They are by far the most family oriented flight school I have been apart of and if you give them the chance, they will treat you like their family.",
+          body: "I spent almost a full year with this Sun City family and I couldn’t be more grateful. Getting to the finish line for my PPL would not have happened without Georgette and Luke, the owners. They are like a second set of parents to me after this rating. They are by far the most family oriented flight school I have been apart of and if you give them the chance, they will treat you like their family.",
           author: "Joelle D.",
         },
         {
-          body: "Anyone who care about having a positive  experience, prompt communication, and quality learning, you will not regret going to Sun City. Georgette and the staff are fantastic. The environment itself is built to enrich your personal understanding of flying. My son had a blast and can't wait to continue. Thank you so much Georgette.",
+          body: "Anyone who care about having a positive  experience, prompt communication, and quality learning, you will not regret going to Sun City. Georgette and the staff are fantastic. The environment itself is built to enrich your personal understanding of flying. My son had a blast and can’t wait to continue. Thank you so much Georgette.",
           author: "Olgyu C.",
-        },
-      ],
-    },
-
-    // FAQ Section for Homepage
-    faq: {
-      title: "Frequently Asked Questions",
-      items: [
-        {
-          question: "How long does it take to get a private pilot license?",
-          answer:
-            "The time to earn your private pilot license varies by individual, but typically takes 3-6 months with consistent training. Factors include your schedule, weather conditions, and how quickly you progress through the required 40 hours of flight time and ground training. Our accelerated programs can help you finish faster.",
-        },
-        {
-          question: "What are the requirements to start flight training?",
-          answer:
-            "To begin private pilot training, you must be at least 17 years old (16 for a sport pilot license), able to read and speak English, and hold at least a third-class medical certificate from an FAA-authorized medical examiner. We'll help guide you through the medical certification process.",
-        },
-        {
-          question: "How much does flight training cost?",
-          answer:
-            "Flight training costs vary depending on the program and your pace of learning. Private pilot training typically ranges from $8,000-$12,000. We offer financing options through Stratus Finance to help make your aviation dreams affordable. Contact us for a detailed cost breakdown for your specific goals.",
-        },
-        {
-          question: "Do you offer financing for flight training?",
-          answer:
-            "Yes! We partner with Stratus Finance to offer competitive financing options for qualified students. This allows you to begin training immediately while spreading the cost over manageable monthly payments. Our staff can help you understand your financing options.",
-        },
-        {
-          question: "What makes Sun City Aviation Academy different?",
-          answer:
-            "Sun City Aviation Academy stands out with our experienced instructors, modern fleet including Cessna 172s and Beechcraft Duchess aircraft, personalized training approach, and prime location at North Perry Airport (KHWO). We treat every student like family and focus on safety, professionalism, and excellence in aviation education.",
-        },
-        {
-          question: "Can I schedule a discovery flight?",
-          answer:
-            "Absolutely! A discovery flight is the perfect way to experience aviation firsthand. During this introductory flight, you'll take the controls with an experienced instructor and see South Florida from a whole new perspective. It's an excellent way to determine if pilot training is right for you.",
         },
       ],
     },
   },
 };
-
 export default homePage;

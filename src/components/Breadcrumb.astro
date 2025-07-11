@@ -1,0 +1,102 @@
+---
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+  currentPage?: string;
+}
+
+const { items, currentPage } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="py-4">
+  <ol
+    class="flex items-center space-x-2 text-sm"
+    itemscope
+    itemtype="https://schema.org/BreadcrumbList"
+  >
+    <li
+      itemprop="itemListElement"
+      itemscope
+      itemtype="https://schema.org/ListItem"
+    >
+      <a
+        href="/"
+        class="text-primary-600 hover:text-primary-700 transition-colors"
+        itemprop="item"
+        aria-label="Go to homepage"
+      >
+        <span itemprop="name">Home</span>
+      </a>
+      <meta itemprop="position" content="1" />
+    </li>
+
+    {
+      items.map((item, index) => (
+        <li
+          class="flex items-center"
+          itemprop="itemListElement"
+          itemscope
+          itemtype="https://schema.org/ListItem"
+        >
+          <svg
+            class="mx-2 h-4 w-4 text-gray-400"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <a
+            href={item.url}
+            class="text-primary-600 hover:text-primary-700 transition-colors"
+            itemprop="item"
+            aria-label={`Go to ${item.name}`}
+          >
+            <span itemprop="name">{item.name}</span>
+          </a>
+          <meta itemprop="position" content={(index + 2).toString()} />
+        </li>
+      ))
+    }
+
+    {
+      currentPage && (
+        <li
+          class="flex items-center"
+          itemprop="itemListElement"
+          itemscope
+          itemtype="https://schema.org/ListItem"
+        >
+          <svg
+            class="mx-2 h-4 w-4 text-gray-400"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span
+            class="text-gray-500 font-medium"
+            aria-current="page"
+            itemprop="name"
+          >
+            {currentPage}
+          </span>
+          <meta itemprop="position" content={(items.length + 2).toString()} />
+        </li>
+      )
+    }
+  </ol>
+</nav>

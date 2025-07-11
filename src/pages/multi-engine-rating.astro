@@ -17,6 +17,11 @@ const { data } = multiEngineRating;
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
   keywords={data.pageKeywords}
+  schemaType="Course"
+  breadcrumbs={[
+    { name: "Training Courses", url: "/flight-training-pilot-programs" },
+    { name: "Multi-Engine Rating", url: "/multi-engine-rating" },
+  ]}
 >
   <!-- HEADER -->
   <HeaderScreen content={data.header} />
