@@ -6,6 +6,7 @@ import CTAColor from "../components/CTAColor.astro";
 import PageSummary from "../components/PageSummary.astro";
 import BookCTA from "../components/BookCTA.astro";
 import Content from "../components/Content.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
 import flightReview from "../data/flight-review-bfr";
 import programsSwiper from "../data/programSwiper";
 import bookCTA from "../data/book-cta";
@@ -17,9 +18,22 @@ const { data } = flightReview;
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
   keywords={data.pageKeywords}
+  schemaType="Service"
+  breadcrumbs={[
+    { name: "Training Courses", url: "/flight-training-pilot-programs" },
+    { name: "Flight Review", url: "/flight-review-bfr" },
+  ]}
 >
   <!-- HEADER -->
   <HeaderScreen content={data.header} />
+  <div class="container mx-auto px-4">
+    <Breadcrumb
+      items={[
+        { name: "Training Courses", url: "/flight-training-pilot-programs" },
+      ]}
+      currentPage="Flight Review (BFR)"
+    />
+  </div>
   <PageSummary content={data.pageSummary} />
   <Content data={data.expectBFR} />
   <BookCTA content={bookCTA} />

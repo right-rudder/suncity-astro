@@ -23,6 +23,7 @@ const posts = (await getCollection("blog")).sort(
   pageTitle="Aviation Blog | Sun City Aviation Academy Florida"
   pageDescription="Get the latest aviation insights, pilot training tips, and flight school news from Sun City Aviation Academy in Miami, Florida. Expert advice for aspiring and current pilots."
   pageKeywords="aviation blog Florida, pilot training tips Miami, flight school news Pembroke Pines, learn to fly blog, flying lessons advice, aviation industry updates South Florida, Sun City Aviation articles, pilot career guidance, flight training resources, aviation community KHWO, student pilot blog, flight instructor insights, aviation techniques South Florida"
+  breadcrumbs={[{ name: "Blog", url: "/blog" }]}
 >
   <!-- Header -->
   <Header data={data.header} />

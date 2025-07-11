@@ -1,13 +1,24 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
+import SkipNav from "../components/SkipNav.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, KEYWORDS, OG_IMAGE } from "../consts";
 import "@fontsource-variable/montserrat";
 import "@fontsource/merriweather";
 import "@fontsource-variable/quicksand";
 import Navbar from "../components/Navbar";
 const { pathname } = Astro.url;
-const { siteTitle, siteDescription, keywords, ogImage } = Astro.props;
+const {
+  siteTitle,
+  siteDescription,
+  keywords,
+  ogImage,
+  breadcrumbs,
+  schemaType,
+  pageTitle,
+  pageDescription,
+  pageKeywords,
+} = Astro.props;
 import ChatWidget from "../components/ChatWidget.astro";
 import Banner from "../components/Banner.astro";
 ---
@@ -16,10 +27,12 @@ import Banner from "../components/Banner.astro";
 <html lang="en" class="scroll-smooth">
   <head>
     <BaseHead
-      title={siteTitle || SITE_TITLE}
-      description={siteDescription || SITE_DESCRIPTION}
-      keywords={keywords || KEYWORDS}
+      title={siteTitle || pageTitle || SITE_TITLE}
+      description={siteDescription || pageDescription || SITE_DESCRIPTION}
+      keywords={keywords || pageKeywords || KEYWORDS}
       image={ogImage || OG_IMAGE}
+      breadcrumbs={breadcrumbs}
+      schemaType={schemaType}
     />
   </head>
   <body class="font-sans">
@@ -32,9 +45,11 @@ import Banner from "../components/Banner.astro";
         style="display:none;visibility:hidden"></iframe></noscript
     >
     <!-- End Google Tag Manager (noscript) -->
+
+    <SkipNav />
     <Banner />
     <Navbar pathname={pathname} client:load />
-    <main>
+    <main id="main-content" tabindex="-1">
       <slot />
     </main>
     <Footer />

@@ -7,6 +7,7 @@ import ContentSplit from "../components/ContentSplit.astro";
 import CTAColor from "../components/CTAColor.astro";
 import Testimonials from "../components/Testimonials.astro";
 import ContentCTA from "../components/ContentCTA.astro";
+import FAQ from "../components/FAQ.astro";
 import homePage from "../data/homePage";
 import programsSwiper from "../data/programSwiper";
 import BlogFeed from "../components/BlogFeed.astro";
@@ -35,6 +36,7 @@ const { data } = homePage;
   <ContentSplit content={data.whySuncity} />
   <ContentCTA content={data.quizCTA} />
   <Testimonials content={data.testimonials} />
+  <FAQ title={data.faq.title} items={data.faq.items} className="bg-gray-50" />
   <BookCTA content={bookCTA} />
   <BlogFeed data={data.blogfeed} />
   <CTAColor content={data.flyWithUsCTA} />

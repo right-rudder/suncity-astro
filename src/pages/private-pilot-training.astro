@@ -17,6 +17,11 @@ const { data } = privatePilotTraining;
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
   keywords={data.pageKeywords}
+  schemaType="Course"
+  breadcrumbs={[
+    { name: "Training Courses", url: "/flight-training-pilot-programs" },
+    { name: "Private Pilot Training", url: "/private-pilot-training" },
+  ]}
 >
   <!-- HEADER -->
   <HeaderScreen content={data.header} />

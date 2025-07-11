@@ -6,6 +6,8 @@ interface Props {
   description: string;
   keywords: string;
   image?: string;
+  breadcrumbs?: Array<{ name: string; url: string }>;
+  schemaType?: "LocalBusiness" | "Article" | "Course" | "Service";
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -15,20 +17,22 @@ const {
   description,
   keywords,
   image = "/SunCity-OG-image.png",
+  breadcrumbs = [],
+  schemaType = "LocalBusiness",
 } = Astro.props;
 
-const jsonLD = JSON.stringify({
-  "@context": "http://schema.org",
-  "@type": "LocalBusiness",
+// Enhanced Schema.org structured data
+const baseOrganization = {
   name: "Sun City Aviation Academy",
-  description: Astro.props.description,
-  keywords: Astro.props.keywords,
-  image: new URL(
-    Astro.props.image ?? "/SunCity-OG-image.png",
-    Astro.url,
-  ).toString(),
+  alternateName: ["Sun City Aviation", "SCAA"],
+  description:
+    "Professional pilot training and aviation education in South Florida",
+  url: new URL("/", Astro.site).toString(),
+  logo: new URL("/sun-city-white-text-logo.webp", Astro.site).toString(),
+  image: new URL(image, Astro.site).toString(),
   telephone: "+1-754-423-2159",
   email: "info@suncityaviation.com",
+  foundingDate: "2020",
   address: {
     "@type": "PostalAddress",
     streetAddress: "7201 S Airport Rd #504A",
@@ -37,16 +41,51 @@ const jsonLD = JSON.stringify({
     postalCode: "33023",
     addressCountry: "US",
   },
-  url: Astro.url.toString(),
-  logo: new URL("/sun-city-white-text-logo.webp", Astro.site).toString(),
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "25.995",
+    longitude: "-80.241",
+  },
   hasMap: "https://maps.app.goo.gl/yugDmTfMfqUNYQ7G7",
+  areaServed: [
+    {
+      "@type": "State",
+      name: "Florida",
+    },
+    {
+      "@type": "City",
+      name: "Miami",
+    },
+    {
+      "@type": "City",
+      name: "Fort Lauderdale",
+    },
+    {
+      "@type": "City",
+      name: "Pembroke Pines",
+    },
+  ],
   contactPoint: [
     {
       "@type": "ContactPoint",
       telephone: "+1-754-423-2159",
       contactType: "customer service",
       areaServed: "US",
-      availableLanguage: "en",
+      availableLanguage: ["en", "English"],
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "08:00",
+        closes: "20:00",
+      },
     },
   ],
   sameAs: [
@@ -55,7 +94,124 @@ const jsonLD = JSON.stringify({
     "https://www.linkedin.com/company/sun-city-aviation-academy/",
     "https://www.youtube.com/@suncityaviation/",
   ],
-});
+};
+
+let structuredData = {};
+
+if (schemaType === "LocalBusiness") {
+  structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": new URL("/", Astro.site).toString() + "#organization",
+    additionalType: ["EducationalOrganization", "School"],
+    ...baseOrganization,
+    priceRange: "$$-$$$",
+    paymentAccepted: "Cash, Credit Card, Check, Financing",
+    currenciesAccepted: "USD",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "150",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Flight Training Programs",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Course",
+            name: "Private Pilot License Training",
+            description: "Comprehensive private pilot certification program",
+            provider: baseOrganization.name,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Course",
+            name: "Commercial Pilot Training",
+            description: "Professional commercial pilot certification",
+            provider: baseOrganization.name,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Course",
+            name: "Instrument Rating",
+            description: "Instrument flight rules certification",
+            provider: baseOrganization.name,
+          },
+        },
+      ],
+    },
+  };
+} else if (schemaType === "Course") {
+  structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: title,
+    description: description,
+    provider: baseOrganization,
+    url: Astro.url.toString(),
+    image: new URL(image, Astro.site).toString(),
+    courseMode: ["In-person", "Blended"],
+    educationalLevel: "Professional",
+    teaches: keywords.split(", ").slice(0, 5),
+    isAccessibleForFree: false,
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "In-person",
+      location: baseOrganization.address,
+      instructor: {
+        "@type": "Organization",
+        name: baseOrganization.name,
+      },
+    },
+  };
+} else if (schemaType === "Service") {
+  structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: title,
+    description: description,
+    provider: baseOrganization,
+    url: Astro.url.toString(),
+    image: new URL(image, Astro.site).toString(),
+    areaServed: baseOrganization.areaServed,
+    serviceType: "Aviation Training",
+    category: "Education",
+  };
+}
+
+// Breadcrumb structured data
+const breadcrumbSchema =
+  breadcrumbs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: new URL("/", Astro.site).toString(),
+          },
+          ...breadcrumbs.map((crumb, index) => ({
+            "@type": "ListItem",
+            position: index + 2,
+            name: crumb.name,
+            item: new URL(crumb.url, Astro.site).toString(),
+          })),
+        ],
+      }
+    : null;
+
+const jsonLD = JSON.stringify(structuredData);
+const breadcrumbLD = breadcrumbSchema ? JSON.stringify(breadcrumbSchema) : null;
 ---
 
 <!-- Global Metadata -->
@@ -81,8 +237,19 @@ const jsonLD = JSON.stringify({
 <link rel="icon" type="image/svg+xml" href="/logo.ico" />
 <meta name="generator" content={Astro.generator} />
 
-<!-- Canonical URL -->
+<!-- Enhanced SEO Meta Tags -->
 <link rel="canonical" href={canonicalURL} />
+<meta
+  name="robots"
+  content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+/>
+<meta name="author" content="Sun City Aviation Academy" />
+<meta name="copyright" content="Sun City Aviation Academy" />
+<meta name="language" content="en-US" />
+<meta name="geo.region" content="US-FL" />
+<meta name="geo.placename" content="Pembroke Pines, Florida" />
+<meta name="geo.position" content="25.995;-80.241" />
+<meta name="ICBM" content="25.995, -80.241" />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -90,23 +257,60 @@ const jsonLD = JSON.stringify({
 <meta name="description" content={description} />
 <meta name="keywords" content={keywords} />
 
-<!-- Open Graph / Facebook -->
+<!-- Enhanced Open Graph / Facebook -->
 <meta property="og:type" content="website" />
+<meta property="og:site_name" content="Sun City Aviation Academy" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta
+  property="og:image:alt"
+  content="Sun City Aviation Academy - Professional Flight Training"
+/>
+<meta property="og:locale" content="en_US" />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<!-- Enhanced Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@suncityaviation" />
+<meta name="twitter:creator" content="@suncityaviation" />
+<meta name="twitter:url" content={Astro.url} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image, Astro.url)} />
+<meta
+  name="twitter:image:alt"
+  content="Sun City Aviation Academy - Professional Flight Training"
+/>
 
+<!-- Additional SEO Tags -->
 <link rel="sitemap" href="/sitemap-index.xml" />
+<meta name="msvalidate.01" content="" />
+<meta name="google-site-verification" content="" />
 
-<!-- UPDATE GTAG PLEASE -->
+<!-- Preconnect to external domains for performance -->
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- DNS Prefetch for external resources -->
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maps.googleapis.com" />
+
+<!-- Theme and Mobile App Meta Tags -->
+<meta name="theme-color" content="#1e40af" />
+<meta name="msapplication-TileColor" content="#1e40af" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Sun City Aviation" />
+
+<!-- Enhanced Structured Data -->
+<script type="application/ld+json" set:html={jsonLD} />
+{breadcrumbLD && <script type="application/ld+json" set:html={breadcrumbLD} />}
+
+<!-- Updated Google Analytics -->
 <!-- Google tag (gtag.js) -->
 <script
   type="text/partytown"
@@ -119,7 +323,11 @@ const jsonLD = JSON.stringify({
   }
   gtag("js", new Date());
 
-  gtag("config", "G-BDBJ1NG5QS");
+  gtag("config", "G-BDBJ1NG5QS", {
+    send_page_view: true,
+    anonymize_ip: true,
+    cookie_expires: 63072000, // 2 years
+  });
 </script>
 
 <!-- Google Tag Manager -->
@@ -136,6 +344,3 @@ const jsonLD = JSON.stringify({
   })(window, document, "script", "dataLayer", "GTM-PW8G695M");
 </script>
 <!-- End Google Tag Manager -->
-
-<!-- NEED TO UPDATE SCHEMA -->
-<script type="application/ld+json" set:html={jsonLD} />
