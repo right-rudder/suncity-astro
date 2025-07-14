@@ -100,8 +100,8 @@ export const navbarLinks = [
         link: "/stratus-finance",
       },
       {
-        name: "Pilot Provision",
-        link: "/pilot-provision",
+        name: "Pilot Shop",
+        link: "/pilot-shop",
       },
       {
         name: "Blog",
