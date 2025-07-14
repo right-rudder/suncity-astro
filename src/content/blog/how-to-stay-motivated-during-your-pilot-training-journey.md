@@ -44,4 +44,4 @@ Ready to Begin Your Pilot Journey?
 If you’re ready to take the first step toward becoming a pilot, **Sun City Aviation Academy** is here to guide you. Our team in **Pembroke Pines, FL** is dedicated to helping students achieve their aviation goals with top-notch training and resources.
 
 - [Enroll as a New Student](/enroll-now)
-- Call us at [(754) 423-2159](tel:7544232159) to speak with our team.
+- Call us at [(754) 314-5076](tel:7544232159) to speak with our team.

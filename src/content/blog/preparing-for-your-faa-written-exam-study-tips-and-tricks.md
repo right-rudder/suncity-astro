@@ -52,6 +52,6 @@ Ready to Pass Your FAA Written Exam?
 Take the first step toward your aviation goals with Sun City Aviation Academy. Our team in Pembroke Pines, FL, is committed to helping students achieve their dreams with the best training and resources available.
 
 - [Enroll as a New Student](/enroll-now)
-- Call us at [(754) 423-2159](tel:7544232159) to speak with our team.
+- Call us at [(754) 314-5076](tel:7544232159) to speak with our team.
 
 **Let’s make your aviation journey a success together!**

@@ -96,7 +96,7 @@ Whether you're a student pilot wanting to involve your spouse, a parent eager to
 
 Ready to transform your flying experience? Learn more about our comprehensive Wingman program and get started today.
 
-**[Learn More About Wingman Training](https://suncityaviation.com/wingman-family-member-training/)** | **[Schedule Your Course](https://suncityaviation.com/contact/)** | **Call (754) 423-2159**
+**[Learn More About Wingman Training](https://suncityaviation.com/wingman-family-member-training/)** | **[Schedule Your Course](https://suncityaviation.com/contact/)** | **Call (754) 314-5076**
 
 _At Sun City Aviation Academy, we believe flying is better when shared. Join us in making aviation a family affair._
 

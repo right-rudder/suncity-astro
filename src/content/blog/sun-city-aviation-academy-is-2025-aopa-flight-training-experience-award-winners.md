@@ -40,6 +40,6 @@ For aspiring pilots in the Southern Region and beyond, **Sun City Aviation Acade
 A big thank you to You Can Fly as well as all of the students and instructors who nominated us for this incredible honor. We are truly grateful for your support and recognition. This award is a testament to the hard work and dedication of our entire team, and we couldn’t have achieved it without you.
 **Thank you for believing in us and for being part of our journey!**
 
-Learn more about **Sun City Aviation Academy** and their award-winning flight training programs by visiting [suncityaviation.com](https://suncityaviation.com) or contacting them at [1-(754)423-2159](<tel:1-(754)423-2159>) or [info@suncityaviation.com](mailto:info@suncityaviation.com).
+Learn more about **Sun City Aviation Academy** and their award-winning flight training programs by visiting [suncityaviation.com](https://suncityaviation.com) or contacting them at [1-(754)314-5076](<tel:1-(754)314-5076>) or [info@suncityaviation.com](mailto:info@suncityaviation.com).
 
 To see all the winners of the 2025 Flight Training Experience Awards, visit [www.aopa.org/FTawardsb.](http://aopa.org/ftsurvey)
