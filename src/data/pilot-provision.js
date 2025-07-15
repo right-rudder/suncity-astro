@@ -1,9 +1,9 @@
 const pilotProvision = {
   data: {
     // SEO Header Stuff
-    pageTitle: "Pilot Provision – Sun City Aviation Supply Store",
+    pageTitle: "Pilot Shop – Sun City Aviation Supply Store",
     pageDescription:
-      "Pilot Provision is Sun City Aviation’s in-house pilot supply store. Open to students and the public, it offers flight training supplies, charts, headsets, and more.",
+      "Pilot Shop is Sun City Aviation’s in-house pilot supply store. Open to students and the public, it offers flight training supplies, charts, headsets, and more.",
     pageKeywords: "pilot store, flight supplies, aviation gear, FAA charts, pilot training, Sun City Aviation",
 
     // Top header
@@ -30,7 +30,7 @@ const pilotProvision = {
     pageSummary: {
       title: "About Our In-House Store",
       paragraphs: [
-        "Pilot Provision is Sun City Aviation’s in-house pilot supply store, conveniently located on campus and open to the public.",
+        "Pilot Shop is Sun City Aviation’s in-house pilot supply store, conveniently located on campus and open to the public.",
         "Whether you're a student pilot preparing for your first solo flight or a seasoned aviator refreshing your flight kit, our store offers a carefully curated selection of essential flight training supplies.",
         "From up-to-date FAA charts and supplements to headsets, kneeboards, and branded gear, we’ve got everything you need to stay prepared and professional.",
       ],
@@ -40,7 +40,7 @@ const pilotProvision = {
       upperHeading: "Explore Our Offerings",
       heading: "Stocked With What Pilots Need Most",
       descriptions: [
-        "We provide more than just books and charts – Pilot Provision is designed with aviators in mind, featuring trusted brands and training essentials.",
+        "We provide more than just books and charts – Pilot Shop is designed with aviators in mind, featuring trusted brands and training essentials.",
       ],
       steps: [
         {
@@ -79,7 +79,7 @@ const pilotProvision = {
         },
       ],
       finalParagraph:
-        "Whether you’re looking for essentials or just browsing, Pilot Provision offers everything you need to elevate your aviation journey.",
+        "Whether you’re looking for essentials or just browsing, Pilot Shop offers everything you need to elevate your aviation journey.",
       finalButton: {
         name: "Get Directions",
         link: "/contact",
@@ -91,7 +91,7 @@ const pilotProvision = {
       upperHeading: "Open to Everyone",
       headerH1: "For Students and Local Aviators Alike",
       paragraph:
-        "You don’t need to be enrolled in our programs to shop at Pilot Provision. Local pilots, aviation enthusiasts, and visitors are welcome to stop by and browse.",
+        "You don’t need to be enrolled in our programs to shop at Pilot Shop. Local pilots, aviation enthusiasts, and visitors are welcome to stop by and browse.",
       buttons: [
         {
           name: "See What's In Stock",
@@ -106,7 +106,7 @@ const pilotProvision = {
     flyWithUsCTA: {
       imagePath: "/src/assets/avel-chuklanov-QbTBCUJLqKY-unsplash(1).jpg",
       imageAlt: "",
-      headerH1: "Visit Pilot Provision at Sun City Aviation",
+      headerH1: "Visit Pilot Shop at Sun City Aviation",
       paragraph:
         "Located in the main lobby of our campus, the store is open Monday to Friday, 9:00 AM – 5:00 PM. Walk-ins welcome.",
       buttons: [

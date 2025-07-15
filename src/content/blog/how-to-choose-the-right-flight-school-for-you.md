@@ -67,4 +67,4 @@ If you're in the South Florida area, you might be wondering where to find the fl
 
 Sun City offers all the benefits we've talked about. But here's the real value: they're ready to help you take that first step towards your aviation dream today! Your journey to the skies can start right here at the North Perry Airport. So, whether you're just beginning your adventure or advancing your pilot career, consider Sun City Aviation Academy as the place to kickstart your journey. Your path to the skies starts here, in Hollywood, FL. Let’s go flying together.
 
-If you’re ready to take the next step, give us a call at [(754) 423-2159](tel:7544232159) or [send us a message](/contac).
+If you’re ready to take the next step, give us a call at [(754) 314-5076](tel:7544232159) or [send us a message](/contac).

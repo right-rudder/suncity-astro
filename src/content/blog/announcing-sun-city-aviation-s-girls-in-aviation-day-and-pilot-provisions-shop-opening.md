@@ -26,7 +26,7 @@ Monday - Saturday: 9 am - 5 pm
 Sun City Aviation Academy\
 7201 S. Airport Rd. Suite 504A\
 Pembroke Pines, FL 33023\
-[754-423-2159](tel:754-423-2159)
+[754-314-5076](tel:754-314-5076)
 
 ---
 
@@ -67,6 +67,6 @@ For more information and to register, visit [Girls in Aviation Day 2024 Event Pa
 
 We invite you to visit our new Pilot Provisions shop and join us for Girls in Aviation Day. These initiatives reflect our dedication to fostering a love for aviation and supporting the aspirations of future pilots. Whether you're gearing up with the best aviation products or participating in an inspiring event, Sun City Aviation is here to help you soar.
 
-For any inquiries, feel free to contact us at [754-423-2159](tel:754-423-2159) or visit us at **[Sun City Aviation Academy](/)**.
+For any inquiries, feel free to contact us at [754-314-5076](tel:754-314-5076) or visit us at **[Sun City Aviation Academy](/)**.
 
 **Gear up, take flight, and join us in celebrating the thrill of flight!**

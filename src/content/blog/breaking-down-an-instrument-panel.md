@@ -50,4 +50,4 @@ Understanding your instrument panel is a crucial part of pilot training. It's yo
 
 Ready to start your adventure in the world of aviation? Contact Sun City Aviation Academy for more details about our training programs and discover how we can help you achieve your pilot dreams.
 
-Visit us at [Sun City Aviation Academy](/), or call us at [(754) 423-2159](tel:7544232159) to schedule your discovery flight or to learn more about our [flight training offerings](/flight-training-pilot-programs).
+Visit us at [Sun City Aviation Academy](/), or call us at [(754) 314-5076](tel:7544232159) to schedule your discovery flight or to learn more about our [flight training offerings](/flight-training-pilot-programs).

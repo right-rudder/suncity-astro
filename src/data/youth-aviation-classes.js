@@ -50,7 +50,7 @@ const aviation101Info = {
       ],
       afterListParagraphs: [
         "Don't miss the chance for your high schooler to enter into the exciting realm of aviation. Remember, our next Aviation 101 course kicks off soon, so register your student today!",
-        `For more information, feel free to call us at <a href="tel:7544232159" class="text-accent-500 font-semibold hover:underline">(754) 423-2159</a> or email <a href="mailto:info@suncityaviation.com" class="text-accent-500 font-semibold hover:underline">info@suncityaviation.com</a>. We look forward to welcoming your child to the Sun City Aviation family!`,
+        `For more information, feel free to call us at <a href="tel:7544232159" class="text-accent-500 font-semibold hover:underline">(754) 314-5076</a> or email <a href="mailto:info@suncityaviation.com" class="text-accent-500 font-semibold hover:underline">info@suncityaviation.com</a>. We look forward to welcoming your child to the Sun City Aviation family!`,
         "The future generation of skilled pilots and aviators starts here! Enroll your child in the High School Aviation Program today!",
       ],
       finalButton: {

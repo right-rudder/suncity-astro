@@ -48,6 +48,6 @@ At Sun City Aviation Academy, we integrate flight simulators into our pilot trai
 
 Take the next step toward your aviation goals. [Enroll as a new student](https://suncityaviation.com/enroll-now/) today or schedule a [Discovery Flight](http://suncityaviation.com/discovery-flight/) to experience flight training firsthand.
 
-For more information, call us at [(754) 423-2159](tel:7544232159).
+For more information, call us at [(754) 314-5076](tel:7544232159).
 
 **Train smarter and build confidence with Sun City Aviation Academy!**
