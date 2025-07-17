@@ -124,15 +124,15 @@ const ourTeam = {
           bio: " Georgette holds a bachelor's degree in Alternative Medicine and is a graduate of culinary school, but she is no stranger to aviation. Being married to a pilot for 28 years and having two pilots for children, she is well versed in the aviation field. Georgette is Sun City's executive business manager and is presently pursuing a bachelor's degree in aerospace management.",
           rank: "Executive Business Manager",
         },
-        {
-          name: "Christopher Boldrin",
-          imagePath:
-            "/src/assets/Sun-City-Aviation-Academy-Chris-Boldrin-Office-Manager.webp",
-          imageAlt:
-            "Sun City Aviation Academy Office Manager Christopher Boldrin",
-          bio: "Christopher Boldrin serves as the Office Manager at Sun City Aviation Academy, where he plays a pivotal role in ensuring the smooth operation of the academy's administrative functions. With a keen eye for detail and a commitment to excellence, Christopher oversees daily office activities, coordinates scheduling, and supports both staff and students to foster an efficient and welcoming environment.",
-          rank: "Office Manager",
-        },
+        // {
+        //   name: "Christopher Boldrin",
+        //   imagePath:
+        //     "/src/assets/Sun-City-Aviation-Academy-Chris-Boldrin-Office-Manager.webp",
+        //   imageAlt:
+        //     "Sun City Aviation Academy Office Manager Christopher Boldrin",
+        //   bio: "Christopher Boldrin serves as the Office Manager at Sun City Aviation Academy, where he plays a pivotal role in ensuring the smooth operation of the academy's administrative functions. With a keen eye for detail and a commitment to excellence, Christopher oversees daily office activities, coordinates scheduling, and supports both staff and students to foster an efficient and welcoming environment.",
+        //   rank: "Office Manager",
+        // },
       ],
     },
 
