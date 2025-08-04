@@ -162,13 +162,6 @@ const ourTeam = {
           rank: "Flight Instructor",
         },
         {
-          name: "Alexis Vassel",
-          imagePath: "/src/assets/sun-city-team-alexis.webp",
-          imageAlt:
-            "Sun City Aviation Certified Flight Instructor Alexis Vassel",
-          rank: "Flight Instructor",
-        },
-        {
           name: "Charles Mesina",
           imagePath: "/src/assets/sun-city-team-charles.webp",
           imageAlt:
