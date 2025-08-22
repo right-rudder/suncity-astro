@@ -67,9 +67,9 @@ Training at Sun City means busy, diverse airspace, lots of real-world radio time
 
 1. [Book a Discovery Flight](/discovery-flight) to get your hands on the controls and talk goals with a CFI.
 
-2. Download the free [Pilot Training Guide](/book-download) to understand timelines, costs, and requirements at a glance.
+2. Download the free [Pilot Training Guide](/#book-cta) to understand timelines, costs, and requirements at a glance.
 
-3. Choose your starting point—[Private Pilot License (PPL)](/private-pilot), [Professional Pilot Course](/professional-pilot-course), or a specialty add-on like [Multi-Engine](/multi-engine) or [Seaplane](/seaplane).
+3. Choose your starting point—[Private Pilot License (PPL)](/private-pilot-training), [Professional Pilot Course](/professional-pilot-course), or a specialty add-on like [Multi-Engine](/multi-engine-rating) or [Seaplane](/seaplane-pilot-training).
 
 Whether you’re chasing a lifelong dream or charting a new career, Sun City Aviation is ready to welcome you aboard. Book your Discovery Flight, enroll in the program that fits your goals, and let’s get you from first takeoff to certified pilot.
 
