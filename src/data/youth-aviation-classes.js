@@ -1,11 +1,12 @@
 const aviation101Info = {
   data: {
     //SEO Header Stuff
-    pageTitle: "Aviation 101 | Youth Programs | Sun City Aviation Academy",
+    pageTitle:
+      "Experience Aviation | Youth Programs | Sun City Aviation Academy",
     pageDescription:
-      "In our Aviation 101 - Ground Training Program, students aged 15 to 18 are invited to embark on a 13-week journey. Every Saturday morning from 10 am to 12 pm, participants will delve into an immersive course, culminating in test preparation and qualification for the Private Pilot Written Exam.",
+      "In our Experience Aviation - Ground Training Program, students aged 15 to 18 are invited to embark on a 13-week journey. Every Saturday morning from 10 am to 12 pm, participants will delve into an immersive course, culminating in test preparation and qualification for the Private Pilot Written Exam.",
     pageKeywords:
-      "aviation 101, youth programs, sun city aviation academy, aviation 101 program, aviation 101 course, aviation 101 training, aviation 101 classes, aviation 101 for high school students, aviation 101 for teens, aviation 101 for kids, aviation 101 for youth, aviation 101 for teenagers, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation",
+      "Experience Aviation, ground training program , youth programs, sun city aviation academy, Experience Aviation program, Experience Aviation course, Experience Aviation training, Experience Aviation classes, Experience Aviation for high school students, Experience Aviation for teens, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for teenagers, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, aviation",
 
     //top header
     header: {
@@ -13,7 +14,7 @@ const aviation101Info = {
       imagePath: "/src/assets/AeroCamp11.jpg",
       imageAlt:
         "sun city aviation academy youth program students in the classroom",
-      headerH1: `Aviation</br><span class="text-accent-300">101</span>`,
+      headerH1: `Experience</br><span class="text-accent-300">Aviation</span>`,
       paragraph:
         "High School Aviation Program where the classroom is the sky. The High School Aviation Program is a unique opportunity designed to introduce younger minds to the marvels of flight.",
       buttons: [
@@ -31,26 +32,27 @@ const aviation101Info = {
     },
 
     pageSummary: {
-      title: `What Is Aviation 101?`,
+      title: `What Is Experience Aviation?`,
       paragraphs: [
-        "In our Aviation 101 - Ground Training Program, students aged 15 to 18 are invited to embark on a 13-week journey. Every Saturday morning from 10 am to 12 pm, participants will delve into an immersive course, culminating in test preparation and qualification for the Private Pilot Written Exam.",
-        "Your children can be the part of the future generation of skilled pilots and aviators. The Youth Aviation Class at Sun City Aviation Academy provides a fun environment for learning how to fly.",
+        "In our Experience Aviation - Ground Training Program, students in middle and high school, ages 12 to 18, are invited to embark on a journey to explore the amazing world of aviation and aerospace.Experience Aviation is a great way to get your young aviator's feet wet and introduce them to aviation.",
+        "Class is held every other Saturday from 10 am to 12 pm, for a two-hour ground lesson, building upon principles from previous lessons. Our certified instructors and team guide students through an entire year of ground school learning- the exact study material a private pilot would be required to know!",
       ],
     },
 
     expectAviation101: {
       imagePath: "/src/assets/Sun-city-aviation-academy-aerocamp-2025.jpeg",
       imageAlt: "Sun City Aviation Academy youth program students",
-      upperHeading: "Aviation 101",
+      upperHeading: "Experience Aviation",
       heading: "Training Future Pilots",
       description: `The High School Aviation Program is a unique opportunity designed to introduce younger minds to the marvels of flight. Led by experienced instructors, this program immerses aspiring aviators in the world of aircraft, aerodynamics, and the science of flying. It's not just a course though; it's a pathway to ignite a lifelong passion for aviation from an early age.`,
       paragraphs: [
-        "For parents, our commitment extends beyond the classroom. Sun City Aviation boasts a team of expert instructors dedicated to providing a safe and enriching learning environment. We believe in opening doors to diverse educational and career paths through aviation, and our curriculum prepares students to meet the requirements of the Airmen Certification Standards (ACS) laid out by the FAA. By the end of the course your child will be ready to take their FAA private pilot written exam.",
-        "Young aspiring aviators, aged 15 to 18, will find a dynamic and interactive learning environment. Our program lays the essential groundwork for future success in aviation, offering not just theoretical knowledge but practical experiences. With the opportunity to solo at 16 and achieve a private pilot certificate by 17, our program is designed not only to spark an interest in aviation but also to set participants on a trajectory toward success in the skies.",
+        "For parents, our commitment extends beyond the classroom. Sun City Aviation boasts a team of expert instructors dedicated to providing a safe and enriching learning environment. We believe in opening doors to diverse educational and career paths through aviation, and our curriculum prepares students to meet the requirements of the Airmen Certification Standards (ACS) laid out by the FAA. By the end of the course, your child will be ready to take their FAA private pilot written exam your young aviator will have learned the entire ground theory lessons in preparation for a private pilot course.",
+        "Young aspiring aviators, aged 15 12 to 18, will find a dynamic and interactive learning environment. Our program lays the essential groundwork for future success in aviation, offering not just theoretical knowledge but practical experiences. With the opportunity to solo at 16 and achieve a private pilot certificate by 17, our program is designed not only to spark an interest in aviation but also to set participants on a trajectory toward success in the skies.",
       ],
       afterListParagraphs: [
-        "Don't miss the chance for your high schooler to enter into the exciting realm of aviation. Remember, our next Aviation 101 course kicks off soon, so register your student today!",
+        `Don't miss the chance for your <strong>middle</strong> high schooler to enter into the exciting realm of aviation. Remember, our next Aviation 101 course kicks off soon, so register your student today <strong>before enrollment closes!</strong>`,
         `For more information, feel free to call us at <a href="tel:7544232159" class="text-accent-500 font-semibold hover:underline">(754) 314-5076</a> or email <a href="mailto:info@suncityaviation.com" class="text-accent-500 font-semibold hover:underline">info@suncityaviation.com</a>. We look forward to welcoming your child to the Sun City Aviation family!`,
+        `<strong>Duration: August 23rd - June 6th Last date to enroll: Septmeber 20th </strong>`,
         "The future generation of skilled pilots and aviators starts here! Enroll your child in the High School Aviation Program today!",
       ],
       finalButton: {
@@ -62,8 +64,8 @@ const aviation101Info = {
 
     form: {
       upperHeading: "Enroll Now",
-      heading: "Experience Aviation High School Program",
-      description: `Fill out the form below to enroll in the Experience Aviation High School Program at Sun City Aviation Academy. Our team will be in touch with you shortly to confirm your enrollment and provide you with more information about the program.`,
+      heading: "AeroCamp  High School Program",
+      description: `Fill out the form below to enroll in the AeroCamp High School Program at Sun City Aviation Academy. Our team will be in touch with you shortly to confirm your enrollment and provide you with more information about the program.`,
       checkboxText: `I agree to <a href="/terms-of-service" target="_blank" class="font-semibold hover:underline">terms</a> & <a href="/privacy-policy" target="_blank" class="font-semibold hover:underline">conditions</a> provided by the company. By providing my phone number, I agree to receive text messages from the business.`,
     },
 

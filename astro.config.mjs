@@ -114,8 +114,9 @@ export default defineConfig({
     "/planes": "/our-fleet",
     "/frequently-asked-questions": "/why-become-a-pilot",
     "/aerocamp": "/experience-aviation",
+    "/experience-aviation": "/aero-camp",
     "/cessna-172": "/our-fleet/cessna-172",
-    "/youth-aviation-programs": "/experience-aviation",
+    "/youth-aviation-programs": "/aero-camp",
     "/beechcraft-duchess-multi-engine-airplane":
       "/our-fleet/beechcraft-duchess",
     "/redbird-flight-simulator": "/our-fleet/redbird-simulator",

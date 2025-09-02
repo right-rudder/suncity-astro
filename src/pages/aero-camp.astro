@@ -7,8 +7,8 @@ import PageSummary from "../components/PageSummary.astro";
 import BookCTA from "../components/BookCTA.astro";
 import Content from "../components/Content.astro";
 import programsSwiper from "../data/programSwiper";
-import experienceAviationInfo from "../data/experience-aviation";
-import ExperienceAviationForm from "../components/ExperienceAviationForm.astro";
+import experienceAviationInfo from "../data/aero-camp";
+import AeroCampForm from "../components/AeroCampForm.astro";
 import bookCTA from "../data/book-cta";
 
 const { data } = experienceAviationInfo;
@@ -23,10 +23,7 @@ const { data } = experienceAviationInfo;
   <HeaderScreen content={data.header} />
   <PageSummary content={data.pageSummary} />
   <Content data={data.expectExpAviation} />
-  <ExperienceAviationForm
-    data={data.form}
-    options={data.expectExpAviation.list.items}
-  />
+  <AeroCampForm data={data.form} options={data.expectExpAviation.list.items} />
   <BookCTA content={bookCTA} />
   <ProgramSwiper content={programsSwiper} />
   <CTAColor content={data.flyWithUsCTA} />

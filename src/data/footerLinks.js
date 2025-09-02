@@ -15,8 +15,12 @@ export const footerLinks = [
         link: "/flight-training-pilot-programs",
       },
       {
+        name: "AeroCamp",
+        link: "/aero-camp",
+      },
+      {
         name: "Experience Aviation",
-        link: "/experience-aviation",
+        link: "/youth-aviation-classes",
       },
       {
         name: "Contact",
