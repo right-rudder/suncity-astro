@@ -13,7 +13,7 @@ const experienceAviationInfo = {
       imagePath: "/src/assets/AeroCamp165.jpg",
       imageAlt:
         "sun city aviation academy young program student smiling in a cessna cockpit",
-      headerH1: `Aero</br><span class="text-accent-300">Camp</span>`,
+      headerH1: `Aero<span class="text-accent-300">Camp</span>`,
       paragraph:
         "At Sun City Aviation Academy, we offer a range of youth programs designed to introduce young people to the world of aviation and inspire them to pursue a career in the field.",
       buttons: [
