@@ -33,7 +33,7 @@ const experienceAviationInfo = {
     pageSummary: {
       title: `What Is AeroCamp?`,
       paragraphs: [
-        "The AeroCampHigh School Program at Sun City Aviation Academy offers high school students a unique opportunity to explore the amazing world of aviation and aerospace at North Perry Airport.",
+        "The AeroCamp High School Program at Sun City Aviation Academy offers high school students a unique opportunity to explore the amazing world of aviation and aerospace at North Perry Airport.",
         "Our certified instructors and team guide program attendees through a week of exciting experiences, including the chance to sit in the front of a plane and go flying.",
         "Discover the wonders of aviation during this unforgettable adventure.",
       ],
