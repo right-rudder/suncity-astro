@@ -19,6 +19,10 @@ export const footerLinks = [
         link: "/aero-camp",
       },
       {
+        name: "Experience Aviation",
+        link: "/youth-aviation-classes",
+      },
+      {
         name: "Contact",
         link: "/contact",
       },

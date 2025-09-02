@@ -1,11 +1,12 @@
 const aviation101Info = {
   data: {
     //SEO Header Stuff
-    pageTitle: "Aviation 101 | Youth Programs | Sun City Aviation Academy",
+    pageTitle:
+      "Experience Aviation | Youth Programs | Sun City Aviation Academy",
     pageDescription:
-      "In our Aviation 101 - Ground Training Program, students aged 15 to 18 are invited to embark on a 13-week journey. Every Saturday morning from 10 am to 12 pm, participants will delve into an immersive course, culminating in test preparation and qualification for the Private Pilot Written Exam.",
+      "In our Experience Aviation - Ground Training Program, students aged 15 to 18 are invited to embark on a 13-week journey. Every Saturday morning from 10 am to 12 pm, participants will delve into an immersive course, culminating in test preparation and qualification for the Private Pilot Written Exam.",
     pageKeywords:
-      "aviation 101, youth programs, sun city aviation academy, aviation 101 program, aviation 101 course, aviation 101 training, aviation 101 classes, aviation 101 for high school students, aviation 101 for teens, aviation 101 for kids, aviation 101 for youth, aviation 101 for teenagers, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation 101 for teenagers, aviation 101 for kids, aviation 101 for youth, aviation 101 for children, aviation 101 for young people, aviation 101 for students, aviation 101 for high schoolers, aviation",
+      "Experience Aviation, youth programs, sun city aviation academy, Experience Aviation program, Experience Aviation course, Experience Aviation training, Experience Aviation classes, Experience Aviation for high school students, Experience Aviation for teens, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for teenagers, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, Experience Aviation for teenagers, Experience Aviation for kids, Experience Aviation for youth, Experience Aviation for children, Experience Aviation for young people, Experience Aviation for students, Experience Aviation for high schoolers, aviation",
 
     //top header
     header: {
@@ -31,9 +32,9 @@ const aviation101Info = {
     },
 
     pageSummary: {
-      title: `What Is Aviation 101?`,
+      title: `What Is Experience Aviation?`,
       paragraphs: [
-        "In our Aviation 101 - Ground Training Program, students aged 15 to 18 are invited to embark on a 13-week journey. Every Saturday morning from 10 am to 12 pm, participants will delve into an immersive course, culminating in test preparation and qualification for the Private Pilot Written Exam.",
+        "In our Experience Aviation - Ground Training Program, students aged 15 to 18 are invited to embark on a 13-week journey. Every Saturday morning from 10 am to 12 pm, participants will delve into an immersive course, culminating in test preparation and qualification for the Private Pilot Written Exam.",
         "Your children can be the part of the future generation of skilled pilots and aviators. The Youth Aviation Class at Sun City Aviation Academy provides a fun environment for learning how to fly.",
       ],
     },
@@ -41,7 +42,7 @@ const aviation101Info = {
     expectAviation101: {
       imagePath: "/src/assets/Sun-city-aviation-academy-aerocamp-2025.jpeg",
       imageAlt: "Sun City Aviation Academy youth program students",
-      upperHeading: "Aviation 101",
+      upperHeading: "Experience Aviation",
       heading: "Training Future Pilots",
       description: `The High School Aviation Program is a unique opportunity designed to introduce younger minds to the marvels of flight. Led by experienced instructors, this program immerses aspiring aviators in the world of aircraft, aerodynamics, and the science of flying. It's not just a course though; it's a pathway to ignite a lifelong passion for aviation from an early age.`,
       paragraphs: [
@@ -49,7 +50,7 @@ const aviation101Info = {
         "Young aspiring aviators, aged 15 to 18, will find a dynamic and interactive learning environment. Our program lays the essential groundwork for future success in aviation, offering not just theoretical knowledge but practical experiences. With the opportunity to solo at 16 and achieve a private pilot certificate by 17, our program is designed not only to spark an interest in aviation but also to set participants on a trajectory toward success in the skies.",
       ],
       afterListParagraphs: [
-        "Don't miss the chance for your high schooler to enter into the exciting realm of aviation. Remember, our next Aviation 101 course kicks off soon, so register your student today!",
+        "Don't miss the chance for your high schooler to enter into the exciting realm of aviation. Remember, our next Experience Aviation course kicks off soon, so register your student today!",
         `For more information, feel free to call us at <a href="tel:7544232159" class="text-accent-500 font-semibold hover:underline">(754) 314-5076</a> or email <a href="mailto:info@suncityaviation.com" class="text-accent-500 font-semibold hover:underline">info@suncityaviation.com</a>. We look forward to welcoming your child to the Sun City Aviation family!`,
         "The future generation of skilled pilots and aviators starts here! Enroll your child in the High School Aviation Program today!",
       ],
