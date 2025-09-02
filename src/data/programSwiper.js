@@ -29,7 +29,7 @@ const programsSwiper = {
         "sun city aviation youth program students in front of a cessna airplane",
       description:
         "Inspire the next generation of aviators with our youth programs. The sky is the limit!",
-      link: "/experience-aviation",
+      link: "/aero-camp",
     }, */
     {
       title: "Instrument Rating",

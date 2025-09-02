@@ -70,11 +70,11 @@ export const navbarLinks = [
 
   {
     name: "Youth Programs",
-    link: "/experience-aviation",
+    link: "/aero-camp",
     submenu: [
       {
-        name: "Experience Aviation",
-        link: "/experience-aviation",
+        name: "AeroCamp",
+        link: "/aero-camp",
       },
       {
         name: "Aviation 101",

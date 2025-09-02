@@ -70,8 +70,8 @@ export const mobileNavbarLinks = [
     name: "Youth Program",
     submenu: [
       {
-        name: "Experience Aviation",
-        link: "/experience-aviation",
+        name: "AeroCamp",
+        link: "/aero-camp",
       },
       {
         name: "Aviation 101",

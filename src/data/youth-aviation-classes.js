@@ -62,8 +62,8 @@ const aviation101Info = {
 
     form: {
       upperHeading: "Enroll Now",
-      heading: "Experience Aviation High School Program",
-      description: `Fill out the form below to enroll in the Experience Aviation High School Program at Sun City Aviation Academy. Our team will be in touch with you shortly to confirm your enrollment and provide you with more information about the program.`,
+      heading: "AeroCamp  High School Program",
+      description: `Fill out the form below to enroll in the AeroCamp High School Program at Sun City Aviation Academy. Our team will be in touch with you shortly to confirm your enrollment and provide you with more information about the program.`,
       checkboxText: `I agree to <a href="/terms-of-service" target="_blank" class="font-semibold hover:underline">terms</a> & <a href="/privacy-policy" target="_blank" class="font-semibold hover:underline">conditions</a> provided by the company. By providing my phone number, I agree to receive text messages from the business.`,
     },
 
