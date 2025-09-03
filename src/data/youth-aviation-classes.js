@@ -16,7 +16,7 @@ const aviation101Info = {
         "sun city aviation academy youth program students in the classroom",
       headerH1: `Experience</br><span class="text-accent-300">Aviation</span>`,
       paragraph:
-        "High School Aviation Program where the classroom is the sky. The High School Aviation Program is a unique opportunity designed to introduce younger minds to the marvels of flight.",
+        "Middle and High School Aviation Program where the classroom is the sky. This Aviation Program is a unique opportunity designed to introduce younger minds to the marvels of flight.",
       buttons: [
         {
           name: "Enroll Now",
@@ -44,16 +44,15 @@ const aviation101Info = {
       imageAlt: "Sun City Aviation Academy youth program students",
       upperHeading: "Experience Aviation",
       heading: "Training Future Pilots",
-      description: `The High School Aviation Program is a unique opportunity designed to introduce younger minds to the marvels of flight. Led by experienced instructors, this program immerses aspiring aviators in the world of aircraft, aerodynamics, and the science of flying. It's not just a course though; it's a pathway to ignite a lifelong passion for aviation from an early age.`,
+      description: `This Middle and High School Aviation Program is a unique opportunity designed to introduce younger minds to the marvels of flight. Led by experienced instructors, this program immerses aspiring aviators in the world of aircraft, aerodynamics, and the science of flying. It's not just a course though; it's a pathway to ignite a lifelong passion for aviation from an early age.`,
       paragraphs: [
         "For parents, our commitment extends beyond the classroom. Sun City Aviation boasts a team of expert instructors dedicated to providing a safe and enriching learning environment. We believe in opening doors to diverse educational and career paths through aviation, and our curriculum prepares students to meet the requirements of the Airmen Certification Standards (ACS) laid out by the FAA. By the end of the course, your child will be ready to take their FAA private pilot written exam your young aviator will have learned the entire ground theory lessons in preparation for a private pilot course.",
-        "Young aspiring aviators, aged 15 12 to 18, will find a dynamic and interactive learning environment. Our program lays the essential groundwork for future success in aviation, offering not just theoretical knowledge but practical experiences. With the opportunity to solo at 16 and achieve a private pilot certificate by 17, our program is designed not only to spark an interest in aviation but also to set participants on a trajectory toward success in the skies.",
+        "Young aspiring aviators, ages 12 to 18, will find a dynamic and interactive learning environment. Our program lays the essential groundwork for future success in aviation, offering not just theoretical knowledge but practical experiences. With the opportunity to solo at 16 and achieve a private pilot certificate by 17, our program is designed not only to spark an interest in aviation but also to set participants on a trajectory toward success in the skies.",
       ],
       afterListParagraphs: [
-        `Don't miss the chance for your <strong>middle</strong> high schooler to enter into the exciting realm of aviation. Remember, our next Aviation 101 course kicks off soon, so register your student today <strong>before enrollment closes!</strong>`,
+        `Don't miss the chance for your <strong>middle and high school</strong> students to enter into the exciting realm of aviation. Register your student today before enrollment closes! Last date to enroll is <strong>September 20th</strong>`,
         `For more information, feel free to call us at <a href="tel:7544232159" class="text-accent-500 font-semibold hover:underline">(754) 314-5076</a> or email <a href="mailto:info@suncityaviation.com" class="text-accent-500 font-semibold hover:underline">info@suncityaviation.com</a>. We look forward to welcoming your child to the Sun City Aviation family!`,
         `<strong>Duration: August 23rd - June 6th Last date to enroll: Septmeber 20th </strong>`,
-        "The future generation of skilled pilots and aviators starts here! Enroll your child in the High School Aviation Program today!",
       ],
       finalButton: {
         name: "Enroll Now",
