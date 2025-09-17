@@ -169,13 +169,6 @@ const ourTeam = {
           rank: "Flight Instructor",
         },
         {
-          name: "Andrew Graeler",
-          imagePath: "/src/assets/Sun-City-Andrew.jpeg",
-          imageAlt:
-            "Sun City Aviation Certified Flight Instructor Andrew Graeler",
-          rank: "Flight Instructor",
-        },
-        {
           name: "Chase Olson",
           imagePath:
             "/src/assets/Sun-City-Aviation-Academy-Chase-Olson-CFI.webp",
