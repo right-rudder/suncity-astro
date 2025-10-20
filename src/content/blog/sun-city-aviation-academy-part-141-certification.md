@@ -23,7 +23,7 @@ tags:
   ]
 ---
 
-**Sun City Aviation Academy**, located at **North Perry Airport (KHWO)** in **Pembroke Pines, Florida**, has officially earned **FAA Part 141 certification**—a distinction that underscores the academy’s dedication to structured, high-quality aviation education for students throughout **Miami, Fort Lauderdale, and South Florida**.
+**Sun City Aviation Academy**, located at **North Perry Airport (KHWO)** in **Pembroke Pines, Florida**, has officially earned **FAA Part 141 certification**, a distinction that underscores the academy’s dedication to structured, high-quality aviation education for students throughout **Miami, Fort Lauderdale, and South Florida**.
 
 This milestone signifies not just compliance with FAA oversight, but a deep commitment to the professionalism and precision that define Sun City’s approach to flight training.
 
@@ -31,13 +31,13 @@ This milestone signifies not just compliance with FAA oversight, but a deep comm
 
 Part 141 certification is awarded only to flight schools that meet rigorous **FAA standards for curriculum, training facilities, recordkeeping, and safety oversight**. These schools follow FAA-approved syllabi with defined stage checks and continuous evaluations to ensure that students meet performance benchmarks throughout their training.
 
-For students, this means a **more structured, efficient pathway** to achieving their pilot certificates—with the potential for **lower flight-hour requirements** for certain licenses compared to traditional Part 61 programs.
+For students, this means a **more structured, efficient pathway** to achieving their pilot certificates, with the potential for **lower flight-hour requirements** for certain licenses compared to traditional Part 61 programs.
 
 At its core, Part 141 certification assures students that every training activity, from ground lessons to checkrides, follows an FAA-verified framework designed to produce safe, competent, and career-ready pilots.
 
 ## Why This Matters for South Florida Pilots
 
-South Florida’s airspace is among the busiest and most diverse in the country, making it a premier location for professional flight training. Earning FAA Part 141 approval allows **Sun City Aviation Academy** to stand out as one of the few **structured, FAA-certified programs** in the region—offering both local and international students a trusted path toward professional pilot careers.
+South Florida’s airspace is among the busiest and most diverse in the country, making it a premier location for professional flight training. Earning FAA Part 141 approval allows **Sun City Aviation Academy** to stand out as one of the few **structured, FAA-certified programs** in the region, offering both local and international students a trusted path toward professional pilot careers.
 
 Operating out of **North Perry Airport**, Sun City provides students with valuable real-world experience in controlled and uncontrolled airspace, proximity to major Class B operations at Miami International (MIA) and Fort Lauderdale (FLL), and access to South Florida’s ideal year-round flying weather.
 
@@ -57,7 +57,7 @@ While Part 141 training is more structured, students still receive the personali
 
 ## A Milestone for the Sun City Team
 
-Earning Part 141 certification represents months of coordination between instructors, administrators, and maintenance personnel—all working to meet and exceed FAA expectations. The achievement highlights not only Sun City’s commitment to compliance, but also its **passion for elevating aviation education in South Florida**.
+Earning Part 141 certification represents months of coordination between instructors, administrators, and maintenance personnel, all working to meet and exceed FAA expectations. The achievement highlights not only Sun City’s commitment to compliance, but also its **passion for elevating aviation education in South Florida**.
 
 Students now benefit from a program that blends **structure and flexibility**, combining rigorous FAA standards with the individualized guidance that has defined the academy since its founding.
 
