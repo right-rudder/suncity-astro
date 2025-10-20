@@ -1,5 +1,5 @@
 ---
-pubDate: "October 17, 2025"
+pubDate: "October 20, 2025"
 author: Georgette Poulos
 title: "Sun City Aviation Academy Earns FAA Part 141 Certification"
 description: "Sun City Aviation Academy has officially earned FAA Part 141 certification, marking a major milestone in structured, high-quality pilot training for South Florida’s aviation community."
