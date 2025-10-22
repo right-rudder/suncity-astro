@@ -15,6 +15,7 @@ import BookCTA from "../components/BookCTA.astro";
 import bookCTA from "../data/book-cta";
 import UnderHeaderVideo from "../components/UnderHeaderVideo.astro";
 import Awards from "../components/Awards.astro";
+import InstagramFeed from "../components/InstagramFeed.astro";
 
 const { data } = homePage;
 ---
@@ -36,6 +37,7 @@ const { data } = homePage;
   <ContentSplit content={data.whySuncity} />
   <ContentCTA content={data.quizCTA} />
   <Testimonials content={data.testimonials} />
+  <InstagramFeed />
   <FAQ title={data.faq.title} items={data.faq.items} className="bg-gray-50" />
   <BookCTA content={bookCTA} />
   <BlogFeed data={data.blogfeed} />
