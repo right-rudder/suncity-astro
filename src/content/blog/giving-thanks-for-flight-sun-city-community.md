@@ -1,5 +1,5 @@
 ---
-pubDate: "November 15, 2025"
+pubDate: "November 19, 2025"
 author: Georgette Poulos
 title: "Giving Thanks for Flight: How Aviation Builds Community at Sun City"
 description: "As the season of gratitude arrives, Sun City Aviation Academy celebrates the friendships, mentorships, and shared passion that make flying more than a skill, it’s a family."
