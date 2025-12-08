@@ -1,0 +1,48 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION, KEYWORDS, OG_IMAGE } from "../consts";
+import "@fontsource-variable/montserrat";
+import "@fontsource/merriweather";
+import "@fontsource-variable/quicksand";
+
+const {
+  siteTitle,
+  siteDescription,
+  keywords,
+  ogImage,
+  breadcrumbs,
+  schemaType,
+  pageTitle,
+  pageDescription,
+  pageKeywords,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <BaseHead
+      title={siteTitle || pageTitle || SITE_TITLE}
+      description={siteDescription || pageDescription || SITE_DESCRIPTION}
+      keywords={keywords || pageKeywords || KEYWORDS}
+      image={ogImage || OG_IMAGE}
+      breadcrumbs={breadcrumbs}
+      schemaType={schemaType}
+    />
+  </head>
+  <body class="font-sans">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PW8G695M"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+
+    <main id="main-content" tabindex="-1">
+      <slot />
+    </main>
+  </body>
+</html>
