@@ -1,6 +1,7 @@
 ---
 import BareLayout from "../layouts/BareLayout.astro";
 import event from "../data/event-form";
+import ImageComp from "../components/ImageComp.astro";
 
 const GHL_WEBHOOK_URL = import.meta.env.GHL_EVENT_FORM_WEBHOOK_URL;
 const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
@@ -10,8 +11,16 @@ const { data } = event;
 
 <BareLayout siteTitle={data.pageTitle} siteDescription={data.pageDescription} keywords={data.pageKeywords}>
   <section class="relative isolate bg-gradient-to-b from-gray-700 to-gray-900">
-    <div class="mx-auto max-w-3xl">
-      <div class="min-h-screen bg-white bg-primary-500/20 size-full flex justify-center align-middle items-center p-6 lg:p-12">
+    <div class="mx-auto max-w-3xl pt-6">
+      <ImageComp
+        imagePath="/src/assets/sun-city-white-text-logo.webp"
+        imageAlt="Right Rudder Marketing Logo"
+        styles="object-contain mx-auto h-36 w-auto px-5 mb-6 lg:px-0"
+      />
+
+      <div
+        class="min-h-screen bg-white bg-primary-500/20 size-full flex justify-center align-middle items-center p-6 rounded-t-none lg:p-12 md:rounded-t-lg"
+      >
         <form id="event-form" class="w-full max-w-xl">
           <h1 class="text-5xl font-bold tracking-tight text-gray-900 text-center">
             {data.header.title}
