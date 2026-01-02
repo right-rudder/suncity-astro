@@ -44,29 +44,17 @@ const seaplanePilot = {
       imageAlt:
         "Sun City Aviation Academy student flying a plane over the city of Miami",
       heading: "Seaplane Safari",
-      upperHeading: "How To Start",
-      description: `With a focus on freshwater operations, this course ensures that your training maintains the longevity and durability of your aircraft while enhancing your capabilities as a pilot. It's more than just a skill—it's a transformation that makes you a well-rounded and resourceful aviator.`,
+
       paragraphs: [
         "At <strong>Sun City Aviation Academy</strong>, we train pilots to confidently navigate these dynamic aircraft. For pilots eager to expand their skill set, or for those pursuing a career that demands flexibility and precision, our Seaplane Safari Course equips you with the expertise needed to operate seaplanes safely and efficiently.",
         "Throughout your training, you’ll cover essential topics such as aquatic takeoffs, landings on freshwater lakes, and mastering seaplane-specific navigation and regulations. Our structured program caters to both seasoned pilots and those just beginning their adventure in seaplane flying. With comprehensive ground and flight instruction, you will experience firsthand the joy and challenge of amphibious aircraft operations.",
-        "To enroll in our Seaplane Safari Course, you'll need a private pilot certificate and a valid medical certificate. At <strong>Sun City Aviation Academy</strong>, we understand the steps involved in reaching this milestone, and we are here to guide you every step of the way. Our team is dedicated to ensuring you’re prepared for this thrilling chapter of your piloting career.",
       ],
-      list: {
-        heading: "Prepare for Your Seaplane Rating",
-        items: [
-          {
-            icon: "M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 0 1-1.125-1.125v-3.75ZM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 0 1-1.125-1.125v-8.25ZM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 0 1-1.125-1.125v-2.25Z",
-            title: "Requirements",
-            descriptions: [
-              "To earn your seaplane rating, the requirements remain straightforward: a private pilot certificate, a valid medical certificate, and around 10-15 hours of flight time in a seaplane. You'll also need to pass a specialized written knowledge exam and complete a practical flight test. These requirements ensure you’re thoroughly trained for safe and successful seaplane operations, whether landing on a glassy lake or taking off from a remote waterway.",
-            ],
-          },
-        ],
-      },
+
       afterListParagraphs: [
         "At <strong>Sun City Aviation Academy</strong>, we understand the steps involved in reaching this milestone, and we are here to guide you every step of the way. Our team is dedicated to ensuring you’re prepared for this thrilling chapter of your piloting career.",
         "Earning your seaplane rating with <strong>Sun City Aviation Academy</strong> means exploring new aviation horizons while honing your adaptability, precision, and skill as a pilot. Ready to take the next step?",
       ],
+
       finalButton: {
         name: "Enroll Now",
         link: "/enroll-now",
