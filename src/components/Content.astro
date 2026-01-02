@@ -144,7 +144,12 @@ if (!images[data.imagePath])
                         <p class="mb-2">
                           Spots remaining: {item.spotsRemaining}
                         </p>
-                        <p class="mb-2">Status: {item.status}</p>
+                        <p class="mb-2">
+                          Status:{" "}
+                          <strong class="uppercase font-bold text-accent-500">
+                            {item.status}
+                          </strong>{" "}
+                        </p>
                       </span>
                     </li>
                   ))}
