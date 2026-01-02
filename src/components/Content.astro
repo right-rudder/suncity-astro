@@ -110,6 +110,58 @@ if (!images[data.imagePath])
               </div>
             )
           }
+
+          {
+            data.availableWeekends && (
+              <div class="mt-12">
+                <h4 class="text-2xl font-bold tracking-tight text-muted-600">
+                  {data.availableWeekends.heading}
+                </h4>
+                <p class="tracking-tight text-muted-600">
+                  {data.availableWeekends.note}
+                </p>
+                <ul role="list" class="mt-4 space-y-8 text-muted-800 max-w-md">
+                  {data.availableWeekends.weekends.map((item) => (
+                    <li class="flex gap-x-3">
+                      <svg
+                        class="mt-1 size-8 flex-none text-accent-400"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d={item.icon}
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span class="leading-snug">
+                        <strong class="font-bold text-muted-500 tracking-tight uppercase">
+                          {item.date}
+                        </strong>{" "}
+                        <p class="mb-2">
+                          Spots remaining: {item.spotsRemaining}
+                        </p>
+                        <p class="mb-2">Status: {item.status}</p>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
+          }
+
+          {
+            data.finalParagraphs && (
+              <div class="mt-8 text-muted-800 font-medium">
+                {data.finalParagraphs.map((paragraph) => (
+                  <p class="mt-2" set:html={paragraph} />
+                ))}
+              </div>
+            )
+          }
           {
             data.finalSection && (
               <>
