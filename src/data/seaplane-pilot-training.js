@@ -78,8 +78,8 @@ const seaplanePilot = {
             status: "limited",
           },
           {
-            date: "January 22–26",
-            spotsRemaining: 2,
+            date: "January 22-26",
+            spotsRemaining: 1,
             status: "open",
           },
           {
