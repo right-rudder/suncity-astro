@@ -79,22 +79,22 @@ const seaplanePilot = {
           },
           {
             date: "January 22–26",
-            spotsRemaining: 2,
+            spotsRemaining: "1 / 22",
             status: "open",
           },
           {
             date: "February 5–9",
-            spotsRemaining: 2,
+            spotsRemaining: "2 / 22",
             status: "open",
           },
           {
             date: "February 19–23",
-            spotsRemaining: 2,
+            spotsRemaining: "2 / 22",
             status: "open",
           },
           {
             date: "March 5–9",
-            spotsRemaining: 2,
+            spotsRemaining: "2 / 22",
             status: "open",
           },
         ],
