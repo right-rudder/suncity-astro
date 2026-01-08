@@ -1,0 +1,117 @@
+---
+import { LOCATIONS } from "../consts";
+
+const data = {
+  btnId: "announcement-dismiss-button",
+  title: "Movie Night with Suncity Aviation",
+  description: `
+  	In <b>January 16th & 30th at 6:30 PM</b>, enjoy a movie night with us.<br/>
+	Bring your own comfy chairs, blankets, & snacks!<br/>
+	<b>Drinks, popcorn and foldable chairs will be provided</b>.</br>
+	Meet us at <b><a class="text-accent-500 transition duration-300 ease-in-out hover:text-black" href="${LOCATIONS[0].gMaps}">${LOCATIONS[0].address}</a> in the 603 hangar</b>.
+`,
+  cta: {
+    url: "",
+    text: "",
+  },
+};
+---
+
+<astro-popup
+  btnId={data.btnId}
+  section-key="homepage"
+  id="announcement-popup"
+  class="hidden"
+>
+  <div
+    class="fixed bottom-0 start-1/2 z-50 mx-auto w-full -translate-x-1/2 transform sm:max-w-4xl max-h-[40rem] overflow-y-auto translate-y-full flex flex-col gap-2 px-4 opacity-0 transition-all duration-500 ease-out"
+    role="region"
+    aria-label="Announcement Popup"
+  >
+    <button
+      type="button"
+      class="ml-auto inline-flex items-center gap-x-2 rounded-full border border-transparent bg-neutral-200/90 p-1 text-sm font-semibold text-dark-blue hover:bg-medium-blue duration-200 disabled:pointer-events-none disabled:opacity-50"
+      id={data.btnId}
+    >
+      <span class="sr-only">Dismiss</span>
+      <svg
+        class="size-5 flex-shrink-0"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg
+      >
+    </button>
+
+    <div class="rounded-lg bg-neutral-200/90 backdrop-blur-sm p-4 text-center">
+      <div
+        class="flex items-center justify-center flex-col gap-2 max-w-3xl mx-auto"
+      >
+        <span
+          class="font-bold uppercase text-accent-500 text-xl sm:text-3xl"
+          set:html={data.title}
+        />
+        <p class="font-medium text-sm sm:text-lg" set:html={data.description} />
+        {
+          data.cta.url && (
+            <div class="flex justify-center align-middle items-center mt-4">
+              <a href={data.cta.url} class="btn-accent">
+                {data.cta.text}
+              </a>
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</astro-popup>
+
+<script type="module">
+  class AstroPopup extends HTMLElement {
+    connectedCallback() {
+      const btnId = this.getAttribute("btnId");
+      const sectionKey = this.getAttribute("section-key") || "global";
+      const storageKey = `ht-banner:${sectionKey}:shown`;
+
+      // If already shown this session for this section, do nothing.
+      if (sessionStorage.getItem(storageKey) === "1") return;
+
+      const wrapper = this.querySelector('[role="region"]');
+      const button = this.querySelector(`#${CSS.escape(btnId)}`);
+
+      // Show after half a second
+      setTimeout(() => {
+        // Double-check: maybe another instance already showed
+        if (sessionStorage.getItem(storageKey) === "1") return;
+        if (wrapper) {
+          wrapper.classList.replace("opacity-0", "opacity-1");
+          wrapper.classList.replace("translate-y-full", "-translate-y-10");
+        }
+        sessionStorage.setItem(storageKey, "1");
+      }, 500);
+
+      if (button != null) {
+        button.addEventListener("click", () => this.remove());
+      }
+    }
+  }
+
+  customElements.define("astro-popup", AstroPopup);
+
+  const limitDate = new Date("2026-01-30T21:00:00");
+  const currentDate = new Date();
+
+  const popup = document.getElementById("announcement-popup");
+  if (currentDate > limitDate) {
+    if (popup) {
+      popup.remove();
+    }
+  } else {
+    popup.classList.remove("hidden");
+  }
+</script>
