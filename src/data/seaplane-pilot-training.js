@@ -74,18 +74,18 @@ const seaplanePilot = {
         weekends: [
           {
             date: "January 8–12",
-            spotsRemaining: 1,
-            status: "limited",
+            spotsRemaining: 0,
+            status: "past",
           },
           {
             date: "January 22-26",
-            spotsRemaining: 1,
-            status: "open",
+            spotsRemaining: 0,
+            status: "past",
           },
           {
             date: "February 5–9",
-            spotsRemaining: 2,
-            status: "open",
+            spotsRemaining: 0,
+            status: "Full",
           },
           {
             date: "February 19–23",
