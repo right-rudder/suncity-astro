@@ -369,6 +369,7 @@ const Navbar = ({ pathname }) => {
             <a
               href={`tel:${PHONE_NUMBER}`}
               className="border p-2 w-fit border-accent-200 rounded-full bg-black"
+              aria-label="Phone number link to call directly"
             >
               <FaPhone className="size-4 text-white" />
             </a>

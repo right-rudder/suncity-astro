@@ -2,7 +2,7 @@
 const { content } = Astro.props;
 ---
 
-<section id="testimonials" class="bg-white lg:py-24">
+<section id="testimonials" class="bg-white pt-24 lg:py-24">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="flex flex-wrap justify-evenly items-start align-middle">
       <div
@@ -10,7 +10,7 @@ const { content } = Astro.props;
       >
         {
           content.upperHeading && (
-            <p class="text-xl font-sans text-center uppercase lg:text-right font-bold tracking-tight text-accent-300">
+            <p class="text-xl font-sans text-center mb-2 uppercase lg:text-right font-black tracking-tight text-primary-800 bg-accent-300 w-fit px-4">
               {content.upperHeading}
             </p>
           )
@@ -83,7 +83,7 @@ const { content } = Astro.props;
                       <em>{review.body}</em>
                     </p>
                   </div>
-                  <p class="mt-4 text-3xl text-accent-400/80 font-bold italic font-sans text-center">
+                  <p class="mt-4 text-3xl text-neutral-800 font-bold italic font-sans text-center">
                     {review.author}
                   </p>
                 </blockquote>
