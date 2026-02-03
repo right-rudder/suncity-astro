@@ -17,7 +17,7 @@ const { data } = Astro.props;
     <div class="my-9 text-center">
       {
         data.upperHeading && (
-          <h3 class="mx-auto mt-12 uppercase text-lg lg:text-xl lg:max-w-3xl font-sans text-center font-bold tracking-tight text-accent-300">
+          <h3 class="mx-auto mt-12 mb-2 uppercase text-lg lg:text-xl lg:max-w-3xl font-sans text-center font-black tracking-tight text-primary-800 bg-accent-300 w-fit px-4">
             {data.upperHeading}
           </h3>
         )
@@ -31,7 +31,7 @@ const { data } = Astro.props;
       }
       {
         data.heading && (
-          <p class="mx-auto mb-12 text-lg max-w-3xl text-center tracking-loose text-muted-700">
+          <p class="mx-auto mb-12 text-lg max-w-3xl text-center tracking-loose text-muted-800">
             {data.description}
           </p>
         )

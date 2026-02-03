@@ -12,3 +12,6 @@ src/.DS_Store
 .astro
 /astro
 .DS_Store
+
+extract-knowledge.mjs
+client_knowledge_base/

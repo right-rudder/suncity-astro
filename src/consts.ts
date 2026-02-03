@@ -96,5 +96,5 @@ export const INSTAGRAM_URL = "https://www.instagram.com/suncity_aviation/";
 export const LINKEDIN_URL =
   "https://www.linkedin.com/company/sun-city-aviation-academy/";
 export const YOUTUBE_URL = "https://www.youtube.com/@suncityaviation/";
-export const TWITTER_URL = null;
+export const TWITTER_URL = "";
 export const EMAIL_ADDRESS = "info@suncityaviation.com";

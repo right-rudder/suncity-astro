@@ -132,8 +132,8 @@ const { pathname } = Astro.url;
         <a
           href={LINKEDIN_URL}
           target="_blank"
-          aria-label="LinkedIn"
-          title="LinkedIn"
+          aria-label="LinkedIn link to Sun City's profile"
+          title="LinkedIn link to Sun City's profile"
           class="transition-colors duration-300 text-white hover:text-white/70 hover:scale-105"
         >
           <svg viewBox="0 0 16 16" fill="currentColor" class="h-8 lg:h-5">
@@ -145,8 +145,8 @@ const { pathname } = Astro.url;
         <a
           href={INSTAGRAM_URL}
           target="_blank"
-          aria-label="Instagram"
-          title="Instagram"
+          aria-label="Instagram link to Sun City's profile"
+          title="Instagram link to Sun City's profile"
           class="transition-colors duration-300 text-white hover:text-white/70 hover:scale-105"
         >
           <svg viewBox="0 0 30 30" fill="currentColor" class="h-10 lg:h-6">
@@ -159,8 +159,8 @@ const { pathname } = Astro.url;
         <a
           href={FACEBOOK_URL}
           target="_blank"
-          aria-label="Facebook"
-          title="Facebook"
+          aria-label="Facebook link to Sun City's profile"
+          title="Facebook link to Sun City's profile"
           class="transition-colors duration-300 text-white hover:text-white/70 hover:scale-105"
         >
           <svg viewBox="0 0 24 24" fill="currentColor" class="h-8 lg:h-5">
@@ -169,11 +169,13 @@ const { pathname } = Astro.url;
             ></path>
           </svg>
         </a>
-        <a
+        {
+          (TWITTER_URL !== "") && (
+            <a
           href={TWITTER_URL}
           target="_blank"
-          aria-label="X"
-          title="X"
+          aria-label="X (formerly Twitter) link to Sun City's profile"
+          title="X (formerly Twitter) link to Sun City's profile"
           class="transition-colors duration-300 text-white hover:text-white/70 hover:scale-105"
         >
           <svg
@@ -191,11 +193,13 @@ const { pathname } = Astro.url;
             ></path>
           </svg>
         </a>
+          )
+        }
         <a
           href={YOUTUBE_URL}
           target="_blank"
-          aria-label="Youtube"
-          title="Youtube"
+          aria-label="Youtube link to Sun City's channel"
+          title="Youtube link to Sun City's channel"
           class="transition-colors duration-300 text-white hover:text-white/70 hover:scale-105"
         >
           <svg
@@ -217,3 +221,18 @@ const { pathname } = Astro.url;
     </div>
   </div>
 </footer>
+<style is:global>
+  div.metar-pp-code-cx {
+    background-color: #EAB308 !important;
+    color: #000000 !important;
+    font-weight: 800 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    text-transform: uppercase;
+  }
+
+  [style*="background-color: #28a745"], 
+  [style*="background-color:#28a745"] {
+      background-color: #EAB308 !important;
+      color: #000000 !important;
+  }
+</style>
